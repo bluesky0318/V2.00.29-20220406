@@ -1,0 +1,711 @@
+﻿<UserControl 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:local="clr-namespace:Cobra.LotusEvPanel"
+	        xmlns:controls="clr-namespace:Cobra.ControlLibrary;assembly=Cobra.ControlLibrary"
+	        mc:Ignorable="d"
+            x:Class="Cobra.LotusEvPanel.LotusEvControl"
+        	x:Name="UserControl"
+            d:DesignHeight="480" d:DesignWidth="640">
+
+    <UserControl.Resources>
+        <local:DCLDOSelector x:Key="DCLDOSelector" />
+        <DataTemplate x:Key="TemplateDCMargin">
+            <Grid x:Name="grdDCMargin">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.10*" MaxWidth="100"/>
+                    <ColumnDefinition Width="0.20*" />
+                    <ColumnDefinition Width="0.20*" />
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.25*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0"
+                                BorderBrush="Black" BorderThickness="0" 
+                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Right" 
+                                Content="{Binding strChannelName}"  />
+                <Button Name="btnDCRead" Grid.Row="0" Grid.Column="1" 
+                                Content="Read"
+                                HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                                Click="btnDCRead_Click" Tag="{Binding}" />
+                <ToggleButton Name="btnDCEnable" Grid.Row="0" Grid.Column="2" 
+                                Content="{Binding strChlEnable, Mode=TwoWay}" 
+                                IsChecked="{Binding bChannelEnable}"
+                                HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                                Click="btnDCEnable_Click" Tag="{Binding}" />
+                <ToggleButton Name="btnDCMarginEnable" Grid.Row="0" Grid.Column="3" 
+                                Content="{Binding strChlMarEn, Mode=TwoWay}"
+                                IsChecked="{Binding bMarginEnable}"
+                                HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                                Click="btnDCMarginEnable_Click" Tag="{Binding}" 
+                                Visibility="{Binding vsMarginButton, Mode=OneWay}" />
+                <TextBox x:Name="txtDCVolt" FontFamily="Arial" Grid.Row="0" Grid.Column="3" Margin="2,2,5,2" 
+                                 BorderThickness="2" BorderBrush="Black"
+                                Text="{Binding MarginPhysical}"
+                                Visibility="{Binding vsMarginPhysical, Mode=OneWay}" />
+                <ToggleButton Name="btnDCMarginValue" Grid.Row="0" Grid.Column="4" 
+                                Content="{Binding strChlMarVal, Mode=OneWay}"
+                                IsChecked="{Binding bMarginValue}" Visibility="{Binding vsMarginFixVal}"
+                                HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                                Click="btnDCMarginValue_Click" Tag="{Binding}" />
+                <Button Name="btnLDOMarginSet" Grid.Row="0" Grid.Column="4"
+                                Content="Set" Visibility="{Binding vsMarginMassVal}"
+                                HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                                Click="btnLDOMarginSet_Click" Tag="{Binding}" />
+            </Grid>
+        </DataTemplate> <!-- no used-->
+        <DataTemplate x:Key="TemplateDCLDO">
+            <Grid x:Name="grdDCLDOMargin">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.15*" MaxWidth="100"/>
+                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="0.3*" />
+                    <ColumnDefinition Width="0.25*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="0" 
+                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Right" 
+                       Content="{Binding Path=strChannelName}"/>
+                <ToggleButton Name="btnDCEnable" Grid.Row="0" Grid.Column="1" Margin="5,0,5,0"
+                              Content="{Binding Path=strChlEnable, Mode=TwoWay}" 
+                              IsChecked="{Binding Path=bChannelEnable}"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                              Click="btnDCEnable_Click" Tag="{Binding Path=iOrder}" />
+                <ToggleButton Name="btnDCMarginEnable" Grid.Row="0" Grid.Column="2" Margin="5,0,5,0"
+                              Content="{Binding Path=strChlMarEn, Mode=TwoWay}"
+                              IsChecked="{Binding Path=bMarginEnable}"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                              Click="btnDCMarginEnable_Click" Tag="{Binding Path=iOrder}" 
+                              Visibility="{Binding Path=vsMarginButton, Mode=OneWay}" />
+                <TextBox x:Name="txtDCVolt" FontFamily="Arial" Grid.Row="0" Grid.Column="2" Margin="2,2,5,2" 
+                         BorderThickness="2" BorderBrush="Black" IsReadOnly="True" 
+                         Text="{Binding Path=MarginPhysical, Mode=TwoWay}"
+                         Visibility="Collapsed" />
+                <Label x:Name="lblDCVolt" FontFamily="Arial" Grid.Row="0" Grid.Column="2" Margin="4,0,6,0" 
+                       VerticalAlignment="Center" BorderThickness="1" BorderBrush="Black" 
+                       Content="{Binding Path=MarginPhysical, Mode=TwoWay}" 
+                       Visibility="{Binding Path=vsMarginPhysical, Mode=OneWay}" 
+                       MouseDoubleClick="lblDCVolt_MouseDoubleClick"/>
+                <ToggleButton Name="btnDCMarginValue" Grid.Row="0" Grid.Column="3" Margin="5,0,5,0"
+                              Content="{Binding Path=strChlMarVal, Mode=OneWay}"
+                              IsChecked="{Binding Path=bMarginValue}" Visibility="{Binding Path=vsMarginFixVal}"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                              Click="btnDCMarginValue_Click" Tag="{Binding Path=iOrder}" />
+                <Button Name="btnLDOMarginSet" Grid.Row="0" Grid.Column="3" Margin="5,0,5,0"
+                        Content="Set" Visibility="{Binding Path=vsMarginMassVal}"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                        Click="btnLDOMarginSet_Click" Tag="{Binding Path=iOrder}" />
+            </Grid>
+        </DataTemplate> <!-- used in Command tab, DC/LDO control panel-->
+        <DataTemplate x:Key="TemplateStatus">
+            <Grid x:Name="grdStatusPresent">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.5*" />
+                </Grid.ColumnDefinitions>
+                <ToggleButton Name="tgbtnPG" Grid.Column="0" Margin="10,0,10,0" MaxWidth="160"
+                              Content="{Binding Path=strReg07Description, Mode=OneWay}"
+                              IsChecked="{Binding Path=bReg07Value, Mode=OneWay}"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+                <ToggleButton Name="tgbtnFault" Grid.Column="1" Margin="10,0,10,0"  MaxWidth="200" 
+                              Content="{Binding Path=strReg08Description, Mode=OneWay}" 
+                              IsChecked="{Binding Path=bReg08Value, Mode=OneWay}"
+                              Visibility="{Binding Path=bReg08Visible, Mode=OneWay}"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" />
+            </Grid>
+        </DataTemplate> <!-- used in Command tab, Status Panel -->
+        <DataTemplate x:Key="TemplateDCLDO3">
+            <Grid x:Name="grdDCLDO3Margin">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.10*" MaxWidth="100"/>
+                    <ColumnDefinition Width="0.225*" />
+                    <ColumnDefinition Width="0.225*" />
+                    <ColumnDefinition Width="0.225*" />
+                    <ColumnDefinition Width="0.225*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="0" 
+                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Right" 
+                       Content="{Binding Path=strChannelName}"/>
+                <ToggleButton Name="btnDCEnable" Grid.Row="0" Grid.Column="1" Margin="5,0,5,0"
+                              Content="{Binding Path=strChlEnable, Mode=TwoWay}" 
+                              IsChecked="{Binding Path=bChannelEnable}" IsHitTestVisible="False"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                              Tag="{Binding Path=iOrder}" />
+                <ToggleButton Name="btnDCMarginEnable" Grid.Row="0" Grid.Column="2" Margin="5,0,5,0"
+                              Content="{Binding Path=strChlMarEn, Mode=TwoWay}"
+                              IsChecked="{Binding Path=bMarginEnable}"  IsHitTestVisible="False"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                              Tag="{Binding Path=iOrder}" 
+                              Visibility="{Binding Path=vsMarginButton, Mode=OneWay}" />
+<!--                <TextBox x:Name="txtDCVolt" FontFamily="Arial" Grid.Row="0" Grid.Column="2" Margin="2,2,5,2" 
+                         BorderThickness="2" BorderBrush="Black" IsReadOnly="True" 
+                         Text="{Binding Path=MarginPhysical, Mode=TwoWay}"
+                         Visibility="Collapsed" />-->
+                <Label x:Name="lblDCVolt" FontFamily="Arial" Grid.Row="0" Grid.Column="2" Margin="4,0,6,0" 
+                       VerticalAlignment="Center" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Stretch"
+                       Content="{Binding Path=MarginPhysical, Mode=TwoWay}" 
+                       Visibility="{Binding Path=vsMarginPhysical, Mode=OneWay}" />
+                <ToggleButton Name="btnDCMarginValue" Grid.Row="0" Grid.Column="3" Margin="5,0,5,0"
+                              Content="{Binding Path=strChlMarVal, Mode=OneWay}" IsHitTestVisible="False"
+                              IsChecked="{Binding Path=bMarginValue}" Visibility="{Binding Path=vsMarginFixVal}"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                              Tag="{Binding Path=iOrder}" />
+<!--                <Button Name="btnLDOMarginSet" Grid.Row="0" Grid.Column="3" Margin="5,0,5,0"
+                        Content="Set" Visibility="{Binding Path=vsMarginMassVal}"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                        Click="btnLDOMarginSet_Click" Tag="{Binding Path=iOrder}" /> -->
+                <Label x:Name="lblDVReadVolt" FontFamily="Arial" Grid.Row="0" Grid.Column="4" Margin="4,0,6,0"
+                       VerticalAlignment="Center" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Stretch"
+                       Content="{Binding Path=strADTelemetryVal, Mode=TwoWay}"
+                       Visibility="{Binding Path=vsTelemetryVal, Mode=OneWay}" />
+            </Grid>
+        </DataTemplate> <!-- used in Random One tab-->
+        <DataTemplate x:Key="TemplateCombineRegister">
+            <Grid x:Name="grdTpltCombineReg">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="0" 
+                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Right" 
+                       Content="{Binding Path=strRegName, Mode=OneWay}"/>
+                <Label x:Name="lblDVReadVolt" FontFamily="Arial" Grid.Row="0" Grid.Column="1" Margin="1,0,1,0"
+                       VerticalAlignment="Center" BorderThickness="1" BorderBrush="Black"
+                       Content="{Binding Path=strRegValue, Mode=TwoWay}" />
+            </Grid>
+        </DataTemplate> <!-- used in Combination Test tab-->
+        <DataTemplate x:Key="TemplateDCCombine">
+            <Grid x:Name="grdDCCombine">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.02*" MaxWidth="80"/>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.06*" />
+                    <ColumnDefinition Width="0.12*" />
+                    <ColumnDefinition Width="0.25*" />
+                    <ColumnDefinition Width="0.13*" />
+                    <ColumnDefinition Width="0.11*" />
+                    <ColumnDefinition Width="0.11*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" BorderBrush="Black" BorderThickness="0" Margin="-5,0,-5,0"
+                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Right" 
+                       Content="{Binding Path=strChannelName}"/>
+                <ToggleButton Name="btnDCEnable" Grid.Row="0" Grid.Column="1" Margin="2,0,2,0"
+                              Content="{Binding Path=strChlEnable, Mode=TwoWay}" 
+                              Visibility="{Binding Path=vsISChannel, Mode=OneWay}"
+                              IsChecked="{Binding Path=bChannelEnable}" IsHitTestVisible="False"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                              Tag="{Binding Path=iOrder}" />
+                <ToggleButton Name="btnDCPowerGood" Grid.Row="0" Grid.Column="2" Margin="2,0,2,0"
+                              Content="{Binding Path=strChlPowerGood, Mode=TwoWay}"
+                              Visibility="{Binding Path=vsISChannel, Mode=OneWay}"
+                              IsChecked="{Binding Path=bChlPowerGood}"  IsHitTestVisible="False"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                              Tag="{Binding Path=iOrder}" />
+                <ToggleButton Name="btnDCFault" Grid.Row="0" Grid.Column="3" Margin="2,0,2,0"
+                              Content="{Binding Path=strChlFault, Mode=TwoWay}"
+                              Visibility="{Binding Path=vsISChannel, Mode=OneWay}"
+                              IsChecked="{Binding Path=bChlFault}"  IsHitTestVisible="False"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                              Tag="{Binding Path=iOrder}" />
+                <ToggleButton Name="btnDCMarginEnable" Grid.Row="0" Grid.Column="4" Margin="2,0,2,0"
+                              Content="{Binding Path=strChlMarEn, Mode=TwoWay}"
+                              IsChecked="{Binding Path=bMarginEnable}"  IsHitTestVisible="False"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                              Tag="{Binding Path=iOrder}" 
+                              Visibility="{Binding Path=vsMarginButton, Mode=OneWay}" />
+                <Label x:Name="lblDCVolt" FontFamily="Arial" Grid.Row="0" Grid.Column="4" Margin="2,0,2,0" 
+                       VerticalAlignment="Center" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Stretch"
+                       Content="{Binding Path=MarginPhysical, Mode=TwoWay}" 
+                       Visibility="{Binding Path=vsMarginPhysical, Mode=OneWay}" />
+                <ToggleButton Name="btnDCMarginValue" Grid.Row="0" Grid.Column="5" Margin="2,0,2,0"
+                              Content="{Binding Path=strChlMarVal, Mode=OneWay}" IsHitTestVisible="False"
+                              IsChecked="{Binding Path=bMarginValue}" Visibility="{Binding Path=vsMarginFixVal}"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Center" 
+                              Tag="{Binding Path=iOrder}" />
+                <Label x:Name="lblDDRSet" FontFamily="Arial" Grid.Row="0" Grid.Column="6" Margin="1,0,1,0"
+                       VerticalAlignment="Center" HorizontalAlignment="Stretch" BorderBrush="Black" BorderThickness="1"
+                       Content="{Binding Path=strChlDDRVal, Mode=TwoWay}"
+                       Visibility="{Binding Path=vsChlDDRVal, Mode=OneWay}"/>
+                <Label x:Name="lblDVReadVolt" FontFamily="Arial" Grid.Row="0" Grid.Column="7" Margin="1,0,2,0"
+                       VerticalAlignment="Center" HorizontalAlignment="Stretch" BorderThickness="1" BorderBrush="Black"
+                       Content="{Binding Path=strADTelemetryVal, Mode=TwoWay}"
+                       Visibility="{Binding Path=vsTelemetryVal, Mode=OneWay}" />
+            </Grid>
+        </DataTemplate> <!-- used in Combination Test tab -->
+    </UserControl.Resources>
+
+    <Grid x:Name="grdLotusEv">
+        <TabControl x:Name="tabLotusEv">
+            <TabItem Header="Command">
+                <Grid x:Name="grdCommand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.65*" />
+                        <ColumnDefinition Width="0.35*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.7*" MaxHeight="280" />
+                        <RowDefinition Height="0.3*" />
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="DC/LDO control" Name="grpboxDC" Grid.Row="0" Grid.Column="0"
+                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="13"
+                  BorderBrush="Gray" BorderThickness="2">
+                        <Grid Name="gridDCLDO">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Button x:Name="btnReadDCLDO" Content="Read All" Width="70" Margin="3,0,0,0"
+                        Grid.Row="0" FontSize="13" FontFamily="Arial" HorizontalAlignment="Left"
+                        Click="btnReadDCLDO_Click" />
+                            <ListBox x:Name="lstboxDC" FontFamily="Arial"  BorderThickness="0" BorderBrush="Gray" FontSize="13"
+                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1"
+                     HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" 
+                     ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                     VirtualizingStackPanel.IsVirtualizing="True" Visibility="Visible"
+                     ItemTemplate="{DynamicResource TemplateDCLDO}" >
+                                <!--                     ItemTemplateSelector="{DynamicResource DCLDOSelector}" -->
+                                <ListBox.ItemContainerStyle>
+                                    <Style TargetType="ListBoxItem">
+                                        <Setter Property="Focusable" Value="False"/>
+                                        <Setter Property="Visibility" Value="Visible" />
+                                        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                                    </Style>
+                                </ListBox.ItemContainerStyle>
+                            </ListBox>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Status" Name="grpboxStatus" Grid.Row="0" Grid.Column="1"
+                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="13"
+                  BorderBrush="Gray" BorderThickness="2">
+                        <Grid Name="gridStatus">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30" />
+                                <RowDefinition Height="*" />
+                                <!--<RowDefinition Height="30" />-->
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.5*"/>
+                                <ColumnDefinition Width="0.5*"/>
+                            </Grid.ColumnDefinitions>
+                            <ToggleButton Name="tgbtnMonitor" Content="Monitor" Width="70" Margin="3,0,0,0" 
+                              Grid.Row="0" Grid.Column="0" FontSize="13" FontFamily="Arial"  HorizontalAlignment="Left"
+                              Click="tgbtnMonitor_Click"/>
+                            <ListBox x:Name="lstboxStatus" Grid.Row="1" FontFamily="Arial"  FontSize="13"
+                         BorderThickness="0" BorderBrush="Gray"  Grid.ColumnSpan="2"
+                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" 
+                         ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                         VirtualizingStackPanel.IsVirtualizing="True" Visibility="Visible" 
+                         ItemTemplate="{DynamicResource TemplateStatus}" >
+
+                            </ListBox>
+                            <!--<ToggleButton x:Name="tgbtnAlert" Grid.Row="2" Grid.Column="0" Width="60" FontFamily="Arial" FontSize="13"
+                              Content="Alert" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="I2C commands" Name="grpboxI2C" Grid.Row="1" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="13"
+                  BorderBrush="Gray" BorderThickness="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.75*" />
+                                <RowDefinition Height="0.25*"  MaxHeight="30"/>
+                            </Grid.RowDefinitions>
+                            <DataGrid Name="dtgCommandsI2C" CanUserAddRows="True" Grid.Row="0" 
+                          CanUserDeleteRows="True" IsReadOnly="False" AreRowDetailsFrozen="False" 
+                          IsSynchronizedWithCurrentItem="True" SelectionMode="Single" 
+                          VerticalScrollBarVisibility="Visible"
+                          SelectionUnit="FullRow"  HeadersVisibility="All" AutoGenerateColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="R/W" IsReadOnly="False" CanUserResize="False" Width="0.1*">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock HorizontalAlignment="Stretch" TextAlignment="Left" Tag="0"
+                                               Text="{Binding Path=strCmdRW, Mode=TwoWay}" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="Register Index" IsReadOnly="False" CanUserResize="False" Width="0.18*">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBox Name="txbIndex" HorizontalAlignment="Stretch" TextAlignment="Left" MaxLength="2"
+                                             Text="{Binding Path=strRegIndex, Mode=TwoWay}" KeyDown="TextBlock_KeyDown" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="Register Value" IsReadOnly="False" CanUserResize="False" Width="0.18*">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBox Name="txbValue" HorizontalAlignment="Stretch" TextAlignment="Left" MaxLength="2"
+                                             Text="{Binding Path=strRegValue, Mode=TwoWay}" KeyDown="TextBlock_KeyDown" />
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="Blank Time(ms)" IsReadOnly="False" CanUserResize="False" Width="0.23*">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBox Name="txbBlank" TextAlignment="Left" Text="{Binding Path=uBlanktime, Mode=TwoWay}"
+                                             KeyDown="TextBox_KeyDown_NumbOnly"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="Repeated" IsReadOnly="False" CanUserResize="False" Width="0.12*" Visibility="Collapsed">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock TextAlignment="Left"  HorizontalAlignment="Stretch" Tag="4"
+                                               Text="{Binding Path=bRepeat, Mode=TwoWay}" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp"/>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.25*" />
+                                    <ColumnDefinition Width="0.25*" />
+                                    <ColumnDefinition Width="0.25*" />
+                                    <ColumnDefinition Width="0.25*" />
+                                </Grid.ColumnDefinitions>
+                                <Button Name="btnRunI2C" Content=" Run " Grid.Column="0" Margin="45,0,45,0"
+                            HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                            Click="btnRunI2C_Click" />
+                                <Button Name="btnRepeatI2C" Content="Repeat All" Grid.Column="1" Margin="40,0,40,0"
+                            HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Visibility="Collapsed"
+                            Click="btnRepeatI2C_Click" />
+                                <Button Name="btnLoad" Content="Load Config" Grid.Column="2" Margin="30,0,30,0"
+                            HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                            Click="btnLoad_Click" />
+                                <Button Name="btnSave" Content="Save Config" Grid.Column="3" Margin="30,0,30,0"
+                            HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
+                            Click="btnSave_Click" />
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox x:Name="grpVIDSelect" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Column="0" Grid.Row="0" 
+                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Visible" Background="Transparent">
+                        <DataGrid Name="dtgVIDSelect" CanUserAddRows="False" 
+                        CanUserDeleteRows="False" IsReadOnly="True" AreRowDetailsFrozen="False" FontFamily="Arial" FontSize="13"
+                        IsSynchronizedWithCurrentItem="True" SelectionMode="Single" AutoGenerateColumns="False" SelectionUnit="Cell" 
+                        VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"  HeadersVisibility="None" 
+                        HorizontalAlignment="Center" VerticalAlignment="Center" MouseDoubleClick="dtgVIDSelect_MouseUp"
+                        Visibility="Visible" Keyboard.KeyUp="dtgVIDSelect_KeyUp">
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID00, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID01, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID02, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID03, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID04, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID05, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID06, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID07, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID08, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID09, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID0A, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID0B, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID0C, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID0D, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID0E, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn IsReadOnly="False" CanUserResize="False" >
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Tag="0" 
+                                   Content="{Binding Path=strVID0F, Mode=TwoWay}" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Random" Visibility="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}, Path=bTabItemShow, Mode=OneWay}">
+                <Grid x:Name="grdRandomOne">
+                    <!--<Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.65*" />
+                        <ColumnDefinition Width="0.35*" />
+                    </Grid.ColumnDefinitions>-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.8*" MaxHeight="300" />
+                        <RowDefinition Height="0.3*" />
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="DC/LDO Random" Name="grpboxRandom" Grid.Row="0" 
+                                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="13"
+                                        BorderBrush="Gray" BorderThickness="2">
+                        <Grid Name="gridRandom">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.10*" MaxWidth="100"/>
+                                    <ColumnDefinition Width="0.225*" />
+                                    <ColumnDefinition Width="0.225*" />
+                                    <ColumnDefinition Width="0.225*" />
+                                    <ColumnDefinition Width="0.225*" />
+                                </Grid.ColumnDefinitions>
+                                <ToggleButton x:Name="tbnRandom" Content="Random" Width="70" Margin="5,0,0,5" Grid.ColumnSpan="2"
+                                                    Grid.Row="0" Grid.Column="0" FontSize="13" FontFamily="Arial" HorizontalAlignment="Left"
+                                                    Click="btnRandom_Click" />
+                                <Label x:Name="lblRepeat" Content="Duration(ms):" Margin="5,5,-2,0" Width="100" FontFamily="Arial" FontSize="13"
+                                       Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" HorizontalContentAlignment="Right"/>
+                                <TextBox x:Name="txbDuraTime" Text="1000" Margin="5,0,0,0" FontFamily="Arial" FontSize="13"  Width="100"
+                                         Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"
+                                         KeyDown="txbDuraTime_KeyDown"/>
+                                <Label x:Name="lblTelemetry" Content="Telemetry Read value" Margin="0,5,0,5" FontFamily="Arial" FontSize="13" 
+                                       Grid.Row="0" Grid.Column="4" HorizontalAlignment="Left" HorizontalContentAlignment="Left"/>
+                            </Grid>
+                            <ListBox x:Name="lstboxRandom" FontFamily="Arial"  BorderThickness="0" BorderBrush="Gray" FontSize="13"
+                                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1"
+                                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" 
+                                         ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                         VirtualizingStackPanel.IsVirtualizing="True" Visibility="Visible"
+                                         ItemTemplate="{DynamicResource TemplateDCLDO3}" >
+                                <ListBox.ItemContainerStyle>
+                                    <Style TargetType="ListBoxItem">
+                                        <Setter Property="Focusable" Value="False"/>
+                                        <Setter Property="Visibility" Value="Visible" />
+                                        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                                    </Style>
+                                </ListBox.ItemContainerStyle>
+                            </ListBox>
+                        </Grid>
+                    </GroupBox>
+                    <Grid Grid.Row="1">
+                        <Button x:Name="btnViewFolder" Content="View Log" FontFamily="Arial" FontSize="13" Height="40" Width="80"
+                                HorizontalAlignment="Right" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                Click="btnViewFolder_Click" />
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Combination/Reliability">
+                <Grid x:Name="grdCombine">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.05*" MinHeight="50" MaxHeight="50" />
+                        <RowDefinition Height="0.65*" />
+                        <RowDefinition Height="0.3*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.22*" MaxWidth="250" />
+                        <ColumnDefinition Width="0.78*" />
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Name="grpboxCombineDC" Grid.Row="1" Grid.Column="1"  Margin="0,-10,0,0" Header=""
+                              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12"
+                              BorderBrush="Gray" BorderThickness="2">
+                        <ListBox x:Name="lstboxCombine" FontFamily="Arial"  BorderThickness="0" BorderBrush="Gray" FontSize="12"
+                                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" 
+                                         ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                         VirtualizingStackPanel.IsVirtualizing="True" Visibility="Visible" 
+                                         ItemTemplate="{DynamicResource TemplateDCCombine}" >
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="Focusable" Value="True"/>
+                                    <Setter Property="Visibility" Value="Visible" />
+                                    <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Name="grpboxCombineCommand" Grid.Row="0" Grid.Column="1" Header="" Margin="0,-5,0,0"
+                                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12"
+                                        BorderBrush="Gray" BorderThickness="2">
+                        <Grid x:Name="grdCombineCommand" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.3*"/>
+                                <ColumnDefinition Width="0.2*"/>
+                                <ColumnDefinition Width="0.25*"/>
+                                <ColumnDefinition Width="0.125*"/>
+                                <ColumnDefinition Width="0.125*"/>
+                            </Grid.ColumnDefinitions>
+                            <ToggleButton x:Name="tbnCombine" Content="Start DC Combination" Grid.Column="0" FontSize="12" FontFamily="Arial" Margin="2,2,1,2"
+                                          VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="tbnCombine_Click"/>
+                            <Button x:Name="btnViewLog" Content="View Log" Grid.Column="1" FontSize="12" FontFamily="Arial" Margin="1,2,1,2"
+                                    VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="btnViewLog_Click"/>
+                            <Button x:Name="bthReliability" Content="Start Reliable Read" Grid.Column="2" FontSize="12" FontFamily="Arial" Margin="1,2,2,2"
+                                        VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="bthReliability_Click" />
+                            <TextBox x:Name="txblkReliaTimes" Text="1000" Grid.Column="3" FontSize="12" FontFamily="Arial"
+                                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="1,2,1,2" 
+                                     VerticalContentAlignment="Center" HorizontalContentAlignment="Left" 
+                                     KeyDown="txblkReliaTimes_KeyDown"/>
+                            <Label Grid.Column="4" FontSize="12" FontFamily="Arial" Content="Times" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Name="grpboxCombineRegister" Grid.Row="0" Grid.RowSpan="3" Margin="0,-5,0,-5" Header="Register"
+                              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12"
+                              BorderBrush="Gray" BorderThickness="2">
+                        <ListBox x:Name="lstboxCombineRegister" FontFamily="Arial"  BorderThickness="0" BorderBrush="Gray" FontSize="12"
+                                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1"
+                                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" 
+                                         ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                         VirtualizingStackPanel.IsVirtualizing="True" Visibility="Visible"
+                                         ItemTemplate="{DynamicResource TemplateCombineRegister}" >
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="Focusable" Value="False"/>
+                                    <Setter Property="Visibility" Value="Visible" />
+                                    <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                        </ListBox>
+                    </GroupBox>
+                    <GroupBox Name="grpboxCombineMessage" Grid.Row="2" Grid.Column="1" Margin="0,-10,0,-5" Header=""
+                              HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="12" BorderBrush="Gray" BorderThickness="2">
+                        <ListBox x:Name="lstboxCombineMessage" FontFamily="Arial" FontSize="12" BorderBrush="Gray" BorderThickness="0"
+                                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="1"
+                                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" 
+                                         ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                         VirtualizingStackPanel.IsVirtualizing="True" Visibility="Visible" >
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBox x:Name="txtboxMessage" Text="{Binding Path=strMessage, Mode=OneTime}" />
+                                    <DataTemplate.Triggers>
+                                        <DataTrigger Binding="{Binding Path=bRedAlert}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Foreground" Value="Red" TargetName="txtboxMessage"/>
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+                                    </DataTemplate.Triggers>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                            <ListBox.ItemContainerStyle>
+                                <Style TargetType="ListBoxItem">
+                                    <Setter Property="Focusable" Value="False"/>
+                                    <Setter Property="Visibility" Value="Visible" />
+                                    <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                                </Style>
+                            </ListBox.ItemContainerStyle>
+                        </ListBox>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <!--<TabItem Header="Reliability">
+                <GroupBox Name="grpboxReliability" Header="Reliability" HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                          FontSize="13" BorderBrush="Gray" BorderThickness="2">
+                    <ListBox x:Name="lstboxReliability" FontFamily="Arial"  BorderThickness="0" BorderBrush="Gray" FontSize="13"
+                                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                         HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" 
+                                         ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                                         VirtualizingStackPanel.IsVirtualizing="True" Visibility="Visible"
+                                         ItemTemplate="{DynamicResource TemplateDCCombine}" >
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="IsSelected" Value="True" />
+                                <Setter Property="Focusable" Value="True"/>
+                                <Setter Property="Visibility" Value="Visible" />
+                                <Setter Property="VerticalContentAlignment" Value="Stretch" />
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                    </ListBox>
+                </GroupBox>
+            </TabItem> -->
+        </TabControl>
+        <controls:WaitControl x:Name="LotusWaitControl" Margin="0,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <controls:WarningControl x:Name="LotusWarnMsg" Margin="0,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="SD77060" chiptype="14" bustype ="I2C" libname ="Cobra.SD77060" AppVersion="2.00.03" OCEVersion="1.00.02.00" ProjectCode="OCWIZRDY">
+  <Part Name="DBConfig">
+    <ChipName>SD77060</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20200927</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Expert"       Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "Scan"      DBModuleName="Scan"      Name = "ScanV2"         PanelName ="Cobra.ScanPanel">
+      <ScanRate>
+        <Item>128mS</Item>
+        <Item>256mS</Item>
+        <Item>512mS</Item>
+        <Item>1S</Item>
+        <Item>2S</Item>
+        <Item>5S</Item>
+      </ScanRate>
+    </Button>
+    <Button Label = "Trim"   DBModuleName="Trim"        Name = "Trim"         PanelName ="Cobra.TrimPanel">
+      <Layout Name="layout">
+        <Button Name ="SlopeTrimBtn" IsEnable ="True" SubTask ="0x0b"/>
+        <Button Name ="OffsetTrimBtn" IsEnable ="True" SubTask ="0x0c"/>
+      </Layout>
+    </Button>
+  </Part>
+</Root>

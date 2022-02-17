@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="93510R" chiptype="9390|93a0|9383|93b0|93b1|93b2|93b3" bustype ="I2C" libname ="Cobra.OZ93510" AppVersion="2.00.09" OCEVersion="1.00.00.00" ProjectCode="OCEBIGSY">
+  <Part Name="DBConfig">
+    <ChipName>OZ93510R</ChipName>
+    <ChipVersion>B3</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20200312</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Board Config"  NoMapping="True"  Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel">
+      <Layout Name="layout" bOrder ="true">
+        <Button Name ="EraseBtn" IsEnable ="False" Visibility="Collapsed"/>
+        <Button Name ="SaveBtn" IsEnable ="False" Visibility="Collapsed"/>
+        <Button Name ="LoadBtn" Recontent="Load CSV" IsEnable ="True=" Visibility="Visible"/>
+        <Button Name ="ReadBtn" Recontent="Reset" IsEnable ="True" Visibility="Visible"/>
+        <Button Name ="WriteBtn" Recontent="Apply" IsEnable ="False" Visibility="Collapsed"/>
+      </Layout>
+    </Button>
+    <Button Label = "MTPConfig" DBModuleName="MTPConfig"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+    <Button Label = "Scan"      DBModuleName="Scan"        Name = "FSBS2"          PanelName ="Cobra.FSBS2Panel">
+      <Section Name ="Configuration">
+        <Element Name ="IntervalTime">
+          <Catalog>Common Setting</Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="1000">1s</Item>
+            <Item Value ="2000">2s</Item>
+            <Item Value ="3000">3s</Item>
+            <Item Value ="4000">4s</Item>
+          </ItemList>
+        </Element>
+        <Element Name ="ScanMode">
+          <Catalog>Scan Setting</Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="TrigEight">TrigEight</Item>
+            <Item Value ="TrigOne">TrigOne</Item>
+            <Item Value ="AutoScanEight">AutoScanEight</Item>
+            <Item Value ="AutoScanOne">AutoScanOne</Item>
+          </ItemList>
+        </Element>
+        <Element Name ="CADCMode">
+          <Catalog>Scan Setting</Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="Disable">Disable</Item>
+            <Item Value ="Trigger">Trigger</Item>
+            <Item Value ="Moving">Moving</Item>
+          </ItemList>
+        </Element>
+      </Section>
+    </Button>
+    <Button Label = "Expert"    DBModuleName="Expert"      Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "Trim2"      DBModuleName="Trim2"        Name = "Trim2"          PanelName ="Cobra.Trim2Panel">
+      <Layout Name="layout" TrimTimes="5">
+        <Button Name = "countSlopeBtn"  IsEnable="True"  SubTask ="0x40" />
+        <Button Name = "countOffsetBtn" IsEnable="True"  SubTask ="0x41" />
+        <Button Name = "resetBtn"       IsEnable="True"  SubTask ="0x42" />
+        <Button Name = "startSlopeBtn"       IsEnable="True"  SubTask ="0x43" />
+        <Button Name = "startOffsetBtn"       IsEnable="True"  SubTask ="0x44" />
+      </Layout>
+    </Button>
+    <Button Label = "SCS"      DBModuleName="SCS"       Name = "SCS"         PanelName ="Cobra.SCSPanel">
+      <Layout Name="layout">
+        <Button Name = "runBtn" IsEnable="True"  SubTask ="0x31" />
+      </Layout>
+    </Button>
+  </Part>
+</Root>

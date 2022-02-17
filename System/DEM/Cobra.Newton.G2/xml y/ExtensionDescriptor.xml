@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="Newton" chiptype="6320" bustype ="I2C" libname ="Cobra.Newton.G2" OCEVersion ="2.00.00" ProjectCode ="OCENTONY" AppVersion="2.00.03" chipMode="0">
+  <Part Name="DBConfig">
+    <ChipName>NewtonG2</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20200525</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+	  <Button Label = "BoardConfig"  NoMapping="True"  Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel">
+		  <Layout Name="layout" bOrder ="true">
+			  <Button Name ="EraseBtn" IsEnable ="False" Visibility="Collapsed"/>
+			  <Button Name ="SaveBtn" IsEnable ="False" Visibility="Collapsed"/>
+			  <Button Name ="LoadBtn" Recontent="Load CSV" IsEnable ="True=" Visibility="Visible"/>
+			  <Button Name ="ReadBtn" Recontent="Reset" IsEnable ="True" Visibility="Visible"/>
+			  <Button Name ="WriteBtn" Recontent="Apply" IsEnable ="False" Visibility="Collapsed"/>
+		  </Layout>
+	  </Button>
+    <Button Label = "MTPConfig" DBModuleName="MTPConfig"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+    <Button Label = "Scan"      DBModuleName="Scan"        Name = "FSBS2"          PanelName ="Cobra.FSBS2Panel">
+      <Section Name ="Configuration" SubTask ="0x32">
+        <Element Name ="IntervalTime">
+          <Catalog>Common Setting</Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="1000">1s</Item>
+            <Item Value ="2000">2s</Item>
+            <Item Value ="3000">3s</Item>
+            <Item Value ="4000">4s</Item>
+          </ItemList>
+        </Element>
+        <Element Name ="ScanMode">
+          <Catalog>Scan Setting</Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="TrigFour">TrigFour</Item>
+            <Item Value ="TrigOne">TrigOne</Item>
+            <Item Value ="AutoScanFour">AutoScanFour</Item>
+            <Item Value ="AutoScanOne">AutoScanOne</Item>
+          </ItemList>
+        </Element>
+        <Element Name ="CellNumber">
+          <Catalog>Common Setting</Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="OneCell">OneCell</Item>
+            <Item Value ="TwoCells">TwoCells</Item>
+          </ItemList>
+        </Element>
+      </Section>
+    </Button>
+    <Button Label = "Expert"    DBModuleName="Expert"      Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "I2CExpert"    DBModuleName="Expert"      Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "EEPROMController"    DBModuleName="Expert"      Name = "Exper"        PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "I2CRegisters"    DBModuleName="Expert"      Name = "Exper"        PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "TimerRegisters"    DBModuleName="Expert"      Name = "Exper"        PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "WDTRegisters"    DBModuleName="Expert"      Name = "Exper"        PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "UARTRegisters"    DBModuleName="Expert"      Name = "Exper"        PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "Trim2"      DBModuleName="Trim2"        Name = "Trim2"          PanelName ="Cobra.Trim2Panel">
+      <Layout Name="layout" TrimTimes="5">
+        <Button Name = "countSlopeBtn"  IsEnable="True"  SubTask ="0x40" />
+        <Button Name = "countOffsetBtn" IsEnable="True"  SubTask ="0x41" />
+        <Button Name = "resetBtn"       IsEnable="True"  SubTask ="0x42" />
+        <Button Name = "startSlopeBtn"       IsEnable="True"  SubTask ="0x43" />
+        <Button Name = "startOffsetBtn"       IsEnable="True"  SubTask ="0x44" />
+      </Layout>
+    </Button>
+    <Button Label = "SCS"      DBModuleName="SCS"       Name = "SCS"         PanelName ="Cobra.SCSPanel">
+      <Layout Name="layout">
+        <Button Name = "runBtn" IsEnable="True"  SubTask ="0x31" />
+      </Layout>
+    </Button>
+    <Button Label = "DBG"                   DBModuleName="DBG"      	    Name = "DBG2"            PanelName ="Cobra.DBG2Panel">
+      <UserControls>
+        <UserControl Name="MemoryUserControl" Header="EEPROM" Index ="0">
+          <StartAddr>0x0000</StartAddr>
+          <Size>64512</Size>
+          <IntervalTime>
+            <Item Value ="5000">5s</Item>
+            <Item Value ="60000">1min</Item>
+            <Item Value ="120000">2min</Item>
+          </IntervalTime>
+        </UserControl>
+        <UserControl Name="MemoryUserControl" Header="SRAM" Index ="1">
+          <StartAddr>0x8000</StartAddr>
+          <Size>4096</Size>
+          <IntervalTime>
+            <Item Value ="3000">3s</Item>
+            <Item Value ="4000">4s</Item>
+            <Item Value ="5000">5s</Item>
+            <Item Value ="60000">1min</Item>
+            <Item Value ="120000">2min</Item>
+          </IntervalTime>
+        </UserControl>
+        <UserControl Name="MemoryUserControl" Header="Information" Index ="2">
+          <StartAddr>0x5000</StartAddr>
+          <Size>512</Size>
+          <IntervalTime>
+            <Item Value ="2000">2s</Item>
+            <Item Value ="3000">3s</Item>
+            <Item Value ="4000">4s</Item>
+            <Item Value ="5000">5s</Item>
+            <Item Value ="60000">1min</Item>
+            <Item Value ="120000">2min</Item>
+          </IntervalTime>
+        </UserControl>
+        <UserControl Name="MemoryUserControl" Header="System" Index ="3">
+          <StartAddr>0x6000</StartAddr>
+          <Size>512</Size>
+          <IntervalTime>
+            <Item Value ="1000">1s</Item>
+            <Item Value ="2000">2s</Item>
+            <Item Value ="3000">3s</Item>
+            <Item Value ="4000">4s</Item>
+            <Item Value ="5000">5s</Item>
+            <Item Value ="60000">1min</Item>
+            <Item Value ="120000">2min</Item>
+          </IntervalTime>
+        </UserControl>
+      </UserControls>
+    </Button>
+  </Part>
+</Root>

@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Cobra.CalibratePanel.SubGroup.tmpCalibControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Cobra.CalibratePanel.SubGroup"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <DockPanel LastChildFill="False" Margin="15,5,15,5">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Left">
+            <TextBlock Text="{Binding Path= nickname,Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Height="25" VerticalAlignment="Center" Margin="4,8,8,2" />
+            <Border BorderThickness="2">
+                <TextBox x:Name="tmpTb" Text="{Binding Path=data,Mode=TwoWay,UpdateSourceTrigger=LostFocus}" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="120" Height="25" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            </Border>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
+            <Button Content="Calibrate"  Width="80" Height="30" Margin="5" Click="tmpBtn_Click"/>
+        </StackPanel>
+    </DockPanel>
+</UserControl>

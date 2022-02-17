@@ -1,0 +1,117 @@
+﻿<UserControl x:Class="Cobra.FSBS2Panel.SBSControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	         xmlns:local="clr-namespace:Cobra.FSBS2Panel"
+             mc:Ignorable="d" 
+             xmlns:ds="http://research.microsoft.com/DynamicDataDisplay/1.0"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <local:HiddenConverter x:Key="HiddenConverter"/>
+        <Style x:Key="styleItem"  TargetType="{x:Type ListBoxItem}">
+            <Setter Property="Foreground"   Value="Black"/>
+            <Setter Property="FontFamily"   Value="Arial"/>
+            <Setter Property="FontSize"     Value="12"/>
+            <Setter Property="Height"	    Value="20"/>
+            <Setter Property="FontWeight"	Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        </Style>
+        <DataTemplate x:Key="textROBlock" >
+            <TextBox x:Name="textBlock" BorderThickness="0" TextAlignment="Left" Text="{Binding Path= sphydata, Mode = TwoWay}" IsReadOnly="True" TextWrapping="Wrap" VerticalContentAlignment="Center"/>
+        </DataTemplate>
+        <DataTemplate x:Key="textWRBlock" >
+            <TextBox x:Name="textBlock" BorderThickness="0" TextAlignment="Left" Text="{Binding Path= sphydata, Mode = TwoWay}" IsReadOnly="{Binding bWrite}" TextWrapping="Wrap" VerticalContentAlignment="Center"/>
+        </DataTemplate>
+        <DataTemplate x:Key="comboBox">
+            <ComboBox x:Name="comboBox" SelectedIndex="{Binding listindex,Mode=TwoWay, UpdateSourceTrigger = PropertyChanged}" ItemsSource="{Binding itemlist,Mode= OneWay}"
+				BorderThickness="0" HorizontalContentAlignment="Left" FontSize="14" IsEnabled="False">
+            </ComboBox>
+        </DataTemplate>
+        <DataTemplate x:Key="detailBtn">
+            <Button Style="{DynamicResource btn-deviceConfiguration}" IsEnabled="{Binding bEnable}"  Content="Detail" FontSize="14" Click="DetailBtn_Click" Margin="2" Height="28"/>
+        </DataTemplate>
+        <DataTemplate x:Key="writeBtn">
+            <Button Style="{DynamicResource btn-deviceConfiguration}" Content="Write" FontSize="14" Click="WriteBtn_Click" Margin="2" Height="28" IsEnabled="{Binding bEnable}"/>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <DockPanel LastChildFill="True">
+        <Expander Header="Dynamic" Style="{DynamicResource expander-shell}" DockPanel.Dock="Left" IsExpanded="False">
+            <DataGrid x:Name="dynamicDG" ItemsSource="{Binding}" Style="{DynamicResource dataGrid-deviceConfiguration}"  Width="360">
+                <DataGrid.RowStyle>
+                    <Style TargetType="{x:Type DataGridRow}">
+                        <Setter Property="Visibility" Value="{Binding bShow, Converter={StaticResource HiddenConverter},Mode=OneWay}"/>
+                    </Style>
+                </DataGrid.RowStyle>
+                <DataGrid.GroupStyle>
+                    <GroupStyle>
+                        <GroupStyle.ContainerStyle>
+                            <Style TargetType="{x:Type GroupItem}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type GroupItem}">
+                                            <Expander x:Name="exp" IsExpanded="True">
+                                                <Expander.Header>
+                                                    <TextBlock Text="{Binding Name}" IsEnabled="False"/>
+                                                </Expander.Header>
+                                                <ItemsPresenter />
+                                            </Expander>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </GroupStyle.ContainerStyle>
+                    </GroupStyle>
+                </DataGrid.GroupStyle>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="CMD" IsReadOnly="True" CanUserResize="False" Width="50">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="IDTextBlock" Style="{DynamicResource textBlk-deviceConfiguration}"  Text="{Binding Path= order, Mode = OneTime}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Name" IsReadOnly="True" CanUserResize="False" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="NameTextBlock" Style="{DynamicResource textBlk-deviceConfiguration}"  Text="{Binding Path= nickname, Mode = OneTime}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Value" CanUserResize="False" Width="100">
+                        <DataGridTemplateColumn.CellTemplateSelector>
+                            <local:DataTypeTemplateSelector ROTextBoxTemplate="{StaticResource textROBlock}"
+                                                            WRTextBoxTemplate="{StaticResource textWRBlock}"
+                                            	ComboBoxTemplate="{StaticResource comboBox}">
+                            </local:DataTypeTemplateSelector>
+                        </DataGridTemplateColumn.CellTemplateSelector>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Detail" CanUserResize="False" Width="50">
+                        <DataGridTemplateColumn.CellTemplateSelector>
+                            <local:ButtonTypeTemplateSelector DetailBtnTemplate="{StaticResource detailBtn}"
+                                            	WriteBtnTemplate="{StaticResource writeBtn}">
+                                </local:ButtonTypeTemplateSelector>
+                            </DataGridTemplateColumn.CellTemplateSelector>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Expander>
+        <Expander Header="Event" Style="{DynamicResource expander-shell2}" DockPanel.Dock="Right" IsExpanded="False">
+            <local:EventPanel x:Name="ePnl" Width="360"/>
+        </Expander>
+        <DockPanel LastChildFill="True">
+            <UniformGrid Rows="2">
+                <local:VoltagePanel Grid.Row="0" x:Name="vPnl"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.6*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <local:TemperaturePanel x:Name ="tPnl" Grid.Column="0"/>
+                    <local:CurrentPanel x:Name ="cPnl" Grid.Column="1"/>
+                </Grid>
+            </UniformGrid>
+        </DockPanel>
+    </DockPanel>
+</UserControl>

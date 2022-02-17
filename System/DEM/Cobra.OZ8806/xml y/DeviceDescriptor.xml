@@ -1,0 +1,2284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root usage="DeviceDescriptor" chip="OZ8806" version ="1.0212">
+  <Section Name ="BusOptions" Guid ="0x00100000">
+    <Element Guid ="0x00100000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList></ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>Connect Port:</NickName>
+          <Catalog>Common Configuration</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>16</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100001">
+      <PhysicalData>100</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>I2C Bus Frequency(KHZ):</NickName>
+          <Catalog>Common Configuration</Catalog>
+          <DefValue>400</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>63</MinValue>
+          <MaxValue>400</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100002">
+      <PhysicalData>7</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>0x50</Item>
+        <Item>0x52</Item>
+        <Item>0x54</Item>
+        <Item>0x56</Item>
+        <Item>0x58</Item>
+        <Item>0x5a</Item>
+        <Item>0x5c</Item>
+        <Item>0x5e</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>I2C Address:</NickName>
+          <Catalog>Monitor</Catalog>
+          <DefValue>7</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100003">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>false</Item>
+        <Item>true</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>1</Order>
+          <NickName>PEC enable</NickName>
+          <Catalog>Monitor</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name ="AutomationTestElement" Guid ="0x00200000">
+    <Element Guid="0x00200001">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+        <Item>True</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>0</Order>
+          <NickName>Automation Enable </NickName>
+          <Catalog>Common Setting</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200002">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>1</Order>
+          <NickName>Repeat Times </NickName>
+          <Catalog>Common Setting</Catalog>
+          <DefValue>1000</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200101">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+        <Item>True</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>1</Order>
+          <NickName>Simulation Enable</NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>1</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200102">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>1</Order>
+          <NickName>Test Sensitive </NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>10</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>99</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200201">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+        <Item>True</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>3</Order>
+          <NickName>Out of Maximum Error </NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>1</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200202">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+        <Item>True</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>4</Order>
+          <NickName>Out of Minumum Error </NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>1</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200203">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+        <Item>True</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>5</Order>
+          <NickName>PEC Error </NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>1</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200204">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+        <Item>True</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>6</Order>
+          <NickName>CRC Error </NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>1</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name ="TempSettings" Guid ="0x00010000">
+    <Element Guid ="0x00010000">
+      <PhysicalData>20</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>41</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>0</Order>
+          <NickName>Rsense(mohm)</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>20</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0.1</MinValue>
+          <MaxValue>25.5</MaxValue>
+          <Description>The value of the sensor resistor</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010001">
+      <PhysicalData>121</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>41</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1</Order>
+          <NickName>ETPullupR(Kohm)</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>121</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1023</MaxValue>
+          <Description>External temperature pull up resistor</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010002">
+      <PhysicalData>69204</PhysicalData>
+      <Key>-20</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>2</Order>
+          <NickName>-20℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>69204</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010003">
+      <PhysicalData>54464</PhysicalData>
+      <Key>-15</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>3</Order>
+          <NickName>-15℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>54464</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010004">
+      <PhysicalData>43139</PhysicalData>
+      <Key>-10</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>4</Order>
+          <NickName>-10℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>43139</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010005">
+      <PhysicalData>34386</PhysicalData>
+      <Key>-5</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>5</Order>
+          <NickName>-5℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>34386</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010006">
+      <PhysicalData>27580</PhysicalData>
+      <Key>0</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>6</Order>
+          <NickName>0℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>27580</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010007">
+      <PhysicalData>22257</PhysicalData>
+      <Key>5</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>7</Order>
+          <NickName>5℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>22257</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010008">
+      <PhysicalData>18067</PhysicalData>
+      <Key>10</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>8</Order>
+          <NickName>10℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>18067</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010009">
+      <PhysicalData>14752</PhysicalData>
+      <Key>15</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>9</Order>
+          <NickName>15℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>14752</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000A">
+      <PhysicalData>12112</PhysicalData>
+      <Key>20</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>0a</Order>
+          <NickName>20℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>12112</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000B">
+      <PhysicalData>10000</PhysicalData>
+      <Key>25</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>0b</Order>
+          <NickName>25℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>10000</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000C">
+      <PhysicalData>8300</PhysicalData>
+      <Key>30</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>0c</Order>
+          <NickName>30℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>8300</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000D">
+      <PhysicalData>6924</PhysicalData>
+      <Key>35</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>0d</Order>
+          <NickName>35℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>6924</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000E">
+      <PhysicalData>5806</PhysicalData>
+      <Key>40</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>0e</Order>
+          <NickName>40℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>5806</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000F">
+      <PhysicalData>4891</PhysicalData>
+      <Key>45</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>0f</Order>
+          <NickName>45℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>4891</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010010">
+      <PhysicalData>4140</PhysicalData>
+      <Key>50</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>10</Order>
+          <NickName>50℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>4140</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010011">
+      <PhysicalData>3521</PhysicalData>
+      <Key>55</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>11</Order>
+          <NickName>55℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>3521</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010012">
+      <PhysicalData>3007</PhysicalData>
+      <Key>60</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>12</Order>
+          <NickName>60℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>3007</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010013">
+      <PhysicalData>2578</PhysicalData>
+      <Key>65</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>13</Order>
+          <NickName>65℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>2578</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010014">
+      <PhysicalData>2221</PhysicalData>
+      <Key>70</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>14</Order>
+          <NickName>70℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>2221</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010015">
+      <PhysicalData>1920</PhysicalData>
+      <Key>75</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>15</Order>
+          <NickName>75℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>1920</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010016">
+      <PhysicalData>1666</PhysicalData>
+      <Key>80</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>16</Order>
+          <NickName>80℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>1666</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010017">
+      <PhysicalData>1451</PhysicalData>
+      <Key>85</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>17</Order>
+          <NickName>85℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>1451</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010018">
+      <PhysicalData>1269</PhysicalData>
+      <Key>90</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>18</Order>
+          <NickName>90℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>1269</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010019">
+      <PhysicalData>1113</PhysicalData>
+      <Key>95</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>19</Order>
+          <NickName>95℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>1113</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001001A">
+      <PhysicalData>980</PhysicalData>
+      <Key>100</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1a</Order>
+          <NickName>100℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>980</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001001B">
+      <PhysicalData>865</PhysicalData>
+      <Key>105</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1b</Order>
+          <NickName>105℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>865</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001001C">
+      <PhysicalData>766</PhysicalData>
+      <Key>110</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1c</Order>
+          <NickName>110℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>766</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001001D">
+      <PhysicalData>681</PhysicalData>
+      <Key>115</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1d</Order>
+          <NickName>115℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>681</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001001E">
+      <PhysicalData>606</PhysicalData>
+      <Key>120</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1E</Order>
+          <NickName>120℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>606</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001001F">
+      <PhysicalData>542</PhysicalData>
+      <Key>125</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1F</Order>
+          <NickName>125℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>542</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010020">
+      <PhysicalData>2000</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>50</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1</Order>
+          <NickName>DesignCapacity(mAhr)</NickName>
+          <Catalog>GasGauge Configuration</Catalog>
+          <DefValue>2000</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>65536</MaxValue>
+          <Description>Design Capacity of battery(mAhr)</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>1000</Type>
+          <Format>0201</Format>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010021">
+      <PhysicalData>4100</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>50</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1</Order>
+          <NickName>ChargeCV(mV)</NickName>
+          <Catalog>GasGauge Configuration</Catalog>
+          <DefValue>4100</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>5000</MaxValue>
+          <Description>Constant Voltage mode of Charge(mV)</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>1000</Type>
+          <Format>0205</Format>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010022">
+      <PhysicalData>3500</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>50</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1</Order>
+          <NickName>DishcargeEndVoltage(mV)</NickName>
+          <Catalog>GasGauge Configuration</Catalog>
+          <DefValue>3500</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>5000</MaxValue>
+          <Description>Discharge End Voltage(mV)</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>1000</Type>
+          <Format>0207</Format>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010023">
+      <PhysicalData>20</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>50</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1</Order>
+          <NickName>Rbat(mOhm)</NickName>
+          <Catalog>GasGauge Configuration</Catalog>
+          <DefValue>20</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>65536</MaxValue>
+          <Description>Battery internal Resistor, in mOhm format(mOhm)</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>1000</Type>
+          <Format>0209</Format>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010024">
+      <PhysicalData>90</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>50</SubType>
+      <Private>
+        <SFL Name ="Configuration">
+          <Order>1</Order>
+          <NickName>RCon(mOhm)</NickName>
+          <Catalog>GasGauge Configuration</Catalog>
+          <DefValue>90</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>65536</MaxValue>
+          <Description>Contact Resistor, in mOhm format(mOhm)</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>1000</Type>
+          <Format>020a</Format>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name ="Operation" Guid ="0x00030000">
+    <Element Guid ="0x00030000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>0</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>00</Index>
+          <BitStart>0</BitStart>
+          <Length>03</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>chip revision</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030003">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>0</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>5</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>00</Index>
+          <BitStart>3</BitStart>
+          <Length>05</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>chip ID</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030100">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>01</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>7</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>01</Index>
+          <BitStart>0</BitStart>
+          <Length>07</Length>
+          <Value>00</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>bandgap trim</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030107">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>1</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>01</Index>
+          <BitStart>7</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>dither support</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030200">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>02</Address>
+          <StartBit>00</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>02</Index>
+          <BitStart>00</BitStart>
+          <Length>08</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>clock trim</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030300">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>03</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>7</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>03</Index>
+          <BitStart>0</BitStart>
+          <Length>07</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>current trim</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030307">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>03</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>03</Index>
+          <BitStart>7</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>ldo trim [1]</Description>
+        </SFL>
+        <SFL Name="Init">
+          <Index>0</Index>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0100</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030400">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>04</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>04</Index>
+          <BitStart>0</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>ldo trim[0]</Description>
+        </SFL>
+        <SFL Name="Init">
+          <Index>1</Index>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0100</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030401">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>04</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>04</Index>
+          <BitStart>1</BitStart>
+          <Length>03</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>I2C address config</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030404">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>04</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>04</Index>
+          <BitStart>4</BitStart>
+          <Length>03</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>ocv delay</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030407">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>04</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>04</Index>
+          <BitStart>7</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>ATE freeze</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030800">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>08</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>08</Index>
+          <BitStart>0</BitStart>
+          <Length>02</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>ldo trim</Description>
+        </SFL>
+        <SFL Name="Init">
+          <Index>2</Index>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0300</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030802">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>08</Address>
+          <StartBit>02</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>08</Index>
+          <BitStart>2</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>pec enable</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0300</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030900">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>09</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>09</Index>
+          <BitStart>0</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>BI</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0100</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030901">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>09</Address>
+          <StartBit>01</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>09</Index>
+          <BitStart>1</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>chg sel</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030902">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>09</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>09</Index>
+          <BitStart>2</BitStart>
+          <Length>02</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>vme sel</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0300</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030904">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>09</Address>
+          <StartBit>04</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>09</Index>
+          <BitStart>4</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>charge active</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030905">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>09</Address>
+          <StartBit>05</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>09</Index>
+          <BitStart>5</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>sleep ocv enable</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0300</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030906">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>09</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>09</Index>
+          <BitStart>6</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>SleepMode</Description>
+        </SFL>
+        <SFL Name="Init">
+          <Index>3</Index>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0300</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030907">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>09</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>09</Index>
+          <BitStart>7</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>software reset</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0300</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030a02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>5120</PhyRef>
+      <RegRef>2048</RegRef>
+      <SubType>1</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>0a</Address>
+          <StartBit>02</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>0a</Index>
+          <BitStart>2</BitStart>
+          <Length>06</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>volt offset</Description>
+          <PhyUnit> mV</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030b00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>40</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>1</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>0b</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>0b</Index>
+          <BitStart>0</BitStart>
+          <Length>08</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>battery id</Description>
+          <PhyUnit> mV</PhyUnit>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0100</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030c04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>5120</PhyRef>
+      <RegRef>2048</RegRef>
+      <SubType>4</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>0c</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+        <Location Position ="High">
+          <Address>0d</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>0c</Index>
+          <BitStart>4</BitStart>
+          <Length>0c</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>cell temp</Description>
+          <PhyUnit> mV</PhyUnit>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0104</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030e04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>5120</PhyRef>
+      <RegRef>2048</RegRef>
+      <SubType>1</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>0e</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+        <Location Position ="High">
+          <Address>0f</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>0e</Index>
+          <BitStart>4</BitStart>
+          <Length>0c</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>cell volt</Description>
+          <PhyUnit> mV</PhyUnit>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0101</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>10</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>10</Index>
+          <BitStart>0</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>PoOCV</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0100</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031001">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>10</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>10</Index>
+          <BitStart>1</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>SleepOCV</Description>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0100</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031004">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>5120</PhyRef>
+      <RegRef>2048</RegRef>
+      <SubType>1</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>10</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+        <Location Position ="High">
+          <Address>11</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>10</Index>
+          <BitStart>4</BitStart>
+          <Length>0c</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>OCV</Description>
+          <PhyUnit> mV</PhyUnit>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0100</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031202">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>64</PhyRef>
+      <RegRef>8192</RegRef>
+      <SubType>2</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>12</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+        <Location Position ="High">
+          <Address>13</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>12</Index>
+          <BitStart>2</BitStart>
+          <Length>0e</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>CurrValue</Description>
+          <PhyUnit> mV</PhyUnit>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0102</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031400">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>5</PhyRef>
+      <RegRef>1000</RegRef>
+      <SubType>14</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>14</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+        <Location Position ="High">
+          <Address>15</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>14</Index>
+          <BitStart>0</BitStart>
+          <Length>10</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>CAR</Description>
+          <PhyUnit> mVHr</PhyUnit>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0308</Type>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031602">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>64</PhyRef>
+      <RegRef>8192</RegRef>
+      <SubType>2</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>16</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+        <Location Position ="High">
+          <Address>17</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>16</Index>
+          <BitStart>2</BitStart>
+          <Length>0e</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>CurrOffset</Description>
+          <PhyUnit> mV</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031800">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>64</PhyRef>
+      <RegRef>8192</RegRef>
+      <SubType>2</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>18</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+        <Location Position ="High">
+          <Address>19</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>18</Index>
+          <BitStart>0</BitStart>
+          <Length>0b</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>BoardCurrOffset</Description>
+          <PhyUnit> mV</PhyUnit>
+        </SFL>
+        <SFL Name = "SBS">
+          <Type>0300</Type>
+        </SFL>
+        <SFL Name="Init">
+          <Index>4</Index>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031a00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>1a</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>1a</Index>
+          <BitStart>0</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>false</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>OTP write</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031a01">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>1a</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>1a</Index>
+          <BitStart>1</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>false</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>OTP read</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031a02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>1a</Address>
+          <StartBit>02</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>1a</Index>
+          <BitStart>2</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>OTP busy</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031a07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>1a</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>1a</Index>
+          <BitStart>7</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>false</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>OTP Margin Read</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031f00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>1f</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>1f</Index>
+          <BitStart>0</BitStart>
+          <Length>02</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>Test mode</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031f02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>1f</Address>
+          <StartBit>02</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>1f</Index>
+          <BitStart>2</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>select tclk</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031f03">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>1f</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>1f</Index>
+          <BitStart>3</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>test enable</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031f04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>1f</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>1f</Index>
+          <BitStart>4</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>speedup</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031f07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>2</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>1f</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>1f</Index>
+          <BitStart>7</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Battery Monitor Part</Group>
+          <Description>Adc fft event</Description>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+</Root>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ1C82"
+      chiptype="0500" bustype ="I2C" libname ="Cobra.HQG" AMTEnable="false"
+      AppVersion="2.00.03" OCEVersion="1.00.02.00" ProjectCode="OCECHQGY">
+  <Part Name="DBConfig">
+    <ChipName>OZ1C82</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20180706</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>false</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Config" DBModuleName="DeviceConfig"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+    <Button Label = "Expert"  DBModuleName="Expert"   Name ="Exper"   PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "Scan"    DBModuleName="Scan"  Name ="Scan"   PanelName ="Cobra.MonitorPanel">
+      <ScanRate>1S</ScanRate>
+      <ScanRate>2S</ScanRate>
+      <ScanRate>5S</ScanRate>
+    </Button>
+    <Button Label = "DBG"  DBModuleName="DBG"   Name ="DBG"   PanelName ="Cobra.DBGPanel">
+      <SubTask>
+        <DGB>0</DGB>
+        <BURN>1</BURN>
+        <FREEZE>2</FREEZE>
+      </SubTask>
+    </Button>
+  </Part>
+</Root>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ935xx" chiptype="0100" bustype ="RS232" libname ="Cobra.FWBigsur" OCEVersion ="2.00.00" ProjectCode ="OCEFWBIGSY" AppVersion="2.00.03" chipMode="1">
+	<Part Name="DBConfig">
+    <ChipName>OZ935xxMCU</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>X</UserType>
+    <Date>20190902</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "HexEditor"      Name ="HexEditor"     PanelName ="Cobra.HexEditorPanel">
+      <Layout Name="layout">
+        <ComboBox Name ="selectCB">
+          <ComboBoxItem>Main Block</ComboBoxItem>
+        </ComboBox>
+      </Layout>
+    </Button>
+  </Part>
+</Root>

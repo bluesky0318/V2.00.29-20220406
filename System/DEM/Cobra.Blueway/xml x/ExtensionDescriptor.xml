@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ93510" chiptype="9390|93a0|9383|93b0|93b1|93b2|93b3" bustype ="I2C" libname ="Cobra.Blueway" OCEVersion ="2.00.00" ProjectCode ="SCBABLUE" AppVersion="2.00.03" chipMode="0">
+	<Part Name="DBConfig">
+		<ChipName>OZ93510</ChipName>
+		<ChipVersion>A0</ChipVersion>
+		<UserType>X</UserType>
+		<Date>20201103</Date>
+		<HasCom>true</HasCom>
+		<HasAMT>true</HasAMT>
+	</Part>
+	<Part Name = "MainBtnList">
+		<Button Label = "Project"      Name ="Project"     PanelName ="Cobra.ProjectPanel"/>
+		<Button Label = "SBS"      DBModuleName="SBS"        Name = "FSBS2"          PanelName ="Cobra.FSBS2Panel">
+			<Section Name ="Configuration" SubTask ="0x32">
+				<Element Name ="IntervalTime">
+					<Catalog>Common Setting</Catalog>
+					<DefValue>0</DefValue>
+					<EditorType>1</EditorType>
+					<ItemList>
+						<Item Value ="1000">1s</Item>
+						<Item Value ="2000">2s</Item>
+						<Item Value ="3000">3s</Item>
+						<Item Value ="4000">4s</Item>
+						<Item Value ="10000">10s</Item>
+					</ItemList>
+				</Element>
+				<Element Name ="SHA-1 Switch">
+					<Catalog>SHA-1</Catalog>
+					<DefValue>1</DefValue>
+					<EditorType>2</EditorType>
+				</Element>        
+				<Element Name ="SHA-1 Plaintext">
+					<Catalog>SHA-1</Catalog>
+					<DefValue>00112233445566778899AABBCCDDEEFF</DefValue>
+					<EditorType>0</EditorType>
+				</Element>
+			</Section>
+		</Button>
+		<Button Label = "BlackBox"      Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel">
+			<Layout Name="layout">
+				<Button Name ="WriteBtn" IsEnable ="False" Visibility="Visible"/>
+				<Button Name ="EraseBtn" Recontent="Clear Log" IsEnable ="True" Visibility="Visible"/>
+			</Layout>
+		</Button>
+		<Button Label = "DBG"                   DBModuleName="DBG"      	    Name = "DBG2"            PanelName ="Cobra.DBG2Panel"/>
+	</Part>
+</Root>

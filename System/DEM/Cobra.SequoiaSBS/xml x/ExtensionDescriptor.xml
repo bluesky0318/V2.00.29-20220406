@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="SequoiaSBS" chiptype="79A0" bustype ="I2C" libname ="Cobra.SequoiaSBS" OCEVersion ="2.00.00" ProjectCode ="OCESEQ14" AppVersion="2.00.03">
+  <Part Name="DBConfig">
+    <ChipName>SequoiaSBS</ChipName>
+    <ChipVersion>A0</ChipVersion>
+    <UserType>X</UserType>
+    <Date>20190710</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "HexEditor"      Name ="HexEditor"     PanelName ="Cobra.HexEditorPanel"/>
+    <Button Label = "Scan"      DBModuleName="Scan"        Name = "FSBS2"          PanelName ="Cobra.FSBS2Panel">
+      <IntervalTime>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>3s</Item>
+        <Item>4s</Item>
+      </IntervalTime>
+      <ScanMode/>
+      <DemoMode>false</DemoMode>
+    </Button>
+    <Button Label = "Parameter"  NoMapping="True"  Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel">
+      <Layout Name="layout" bOrder ="false">
+        <Button Name ="EraseBtn" IsEnable ="False" Visibility="Collapsed"/>
+      </Layout>
+    </Button>
+  </Part>
+</Root>

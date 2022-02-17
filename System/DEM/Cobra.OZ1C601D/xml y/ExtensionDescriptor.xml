@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ1C601D"
+      chiptype="0500" bustype ="I2C" libname ="Cobra.OZ1C601D" AMTEnable="false"
+      AppVersion="2.00.03" OCEVersion="1.00.00.00" ProjectCode="OCEPPANY ">
+  <Part Name="DBConfig">
+    <ChipName>OZ1C601D</ChipName>
+    <ChipVersion>A0</ChipVersion>
+    <UserType>y</UserType>
+    <Date>20200304</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>false</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Configuration" DBModuleName="DeviceConfig"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+    <Button Label = "Expert"  DBModuleName="Expert"   Name ="Exper"   PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "Scan"    DBModuleName="Scan"  Name ="Scan"   PanelName ="Cobra.MonitorPanel">
+      <ScanRate>1S</ScanRate>
+      <ScanRate>2S</ScanRate>
+      <ScanRate>5S</ScanRate>
+    </Button>
+  </Part>
+</Root>

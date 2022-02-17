@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="SeagullPD" chiptype="0002" bustype ="I2C" libname ="Cobra.SeagullPD" OCEVersion ="2.00.00" ProjectCode ="OCEFWBIGSY" AppVersion="2.00.03">
+	<Part Name="DBConfig">
+    <ChipName>SeagullPD</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20200531</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+	  <Button Label = "HexEditor"      Name ="HexEditor"     PanelName ="Cobra.HexEditorPanel">
+		  <Layout Name="layout" bMask="false">
+			  <ComboBox Name ="selectCB">
+				  <ComboBoxItem>0-63.875K</ComboBoxItem>
+				  <ComboBoxItem>0-63.5K</ComboBoxItem>
+				  <ComboBoxItem>0-62K</ComboBoxItem>
+				  <ComboBoxItem>0-31K</ComboBoxItem>
+				  <ComboBoxItem>62K-63.5K</ComboBoxItem>
+				  <ComboBoxItem>63.5K-63.875K</ComboBoxItem>
+			  </ComboBox>
+		  </Layout>
+	  </Button>
+	  <Button Label = "BBCTRLExpert"         Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+	  <Button Label = "PDCTRLExpert"         Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+	  <Button Label = "APBExpert"			 Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+	  <Button Label = "EEPROMConfig"		 NoMapping="True"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+	  <Button Label = "Port1SystemConfig"	 NoMapping="True"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+	  <Button Label = "Port2SystemConfig"	 NoMapping="True"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+	  <Button Label = "Port1BuckBoostConfig" NoMapping="True"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+	  <Button Label = "Port2BuckBoostConfig" NoMapping="True"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+	  <Button Label = "Port1PDConfig"		 NoMapping="True"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+    <Button Label = "Port1PD2Config"		 NoMapping="True"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+	  <Button Label = "Port2PDConfig"		 NoMapping="True"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+    <Button Label = "Port2PD2Config"		 NoMapping="True"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+    <Button Label = "Robot"		 Name ="Robot"   PanelName ="Cobra.RobotPanel">
+      <Layout Name="layout" ReadTask ="0x50" WriteTask ="0x51" FormulaTask="0x52" CountTask="0x53"/>
+    </Button>
+	  <Button Label = "DBG"          ShowMode="4"                 Name = "DBG2"            PanelName ="Cobra.DBG2Panel">
+		  <UserControls>
+			  <UserControl Name="MemoryUserControl" Header="ROM" Index ="0">
+				  <StartAddr>0x00000000</StartAddr>
+				  <Size>16384</Size>
+				  <IntervalTime>
+					  <Item Value ="60000">1min</Item>
+					  <Item Value ="120000">2min</Item>
+				  </IntervalTime>
+			  </UserControl>
+			  <UserControl Name="MemoryUserControl" Header="EEPROM" Index ="1">
+				  <StartAddr>0x00004000</StartAddr>
+				  <Size>65536</Size>
+				  <IntervalTime>
+					  <Item Value ="60000">1min</Item>
+					  <Item Value ="120000">2min</Item>
+				  </IntervalTime>
+			  </UserControl>
+			  <UserControl Name="MemoryUserControl" Header="SPI_FLASH" Index ="2">
+				  <StartAddr>0x00014000</StartAddr>
+				  <Size>65536</Size>
+				  <IntervalTime>
+					  <Item Value ="60000">1min</Item>
+					  <Item Value ="120000">2min</Item>
+				  </IntervalTime>
+			  </UserControl>
+			  <UserControl Name="MemoryUserControl" Header="RAM" Index ="4">
+				  <StartAddr>0x20000000</StartAddr>
+				  <Size>8192</Size>
+				  <IntervalTime>
+					  <Item Value ="60000">1min</Item>
+					  <Item Value ="120000">2min</Item>
+				  </IntervalTime>
+			  </UserControl>
+		  </UserControls>
+	  </Button>
+  </Part>
+</Root>

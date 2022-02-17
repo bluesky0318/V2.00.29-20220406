@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="PinkFloyd" chiptype="0000" bustype ="I2C2" libname ="Cobra.PinkFloyd" ProjectCode="OCPKAC5Y" AppVersion="2.00.03" OCEVersion="1.0.7.0">
+	<Part Name="DBConfig">
+		<ChipName>PinkFloyd</ChipName>
+		<ChipVersion>A0</ChipVersion>
+		<UserType>X</UserType>
+		<Date>20201203</Date>
+		<HasCom>true</HasCom>
+		<HasAMT>true</HasAMT>
+	</Part>
+	<Part Name = "MainBtnList">
+		<Button Label = "I2CExpert"	Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+		<Button Label = "SMBusExpert"	Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+	</Part>
+</Root>

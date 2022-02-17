@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Cobra.FSBS2Panel.MainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	         xmlns:local="clr-namespace:Cobra.FSBS2Panel"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	         xmlns:controls="clr-namespace:Cobra.ControlLibrary;assembly=Cobra.ControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <local:SBSControl x:Name="sbsctrl" Margin="0,10,0,0" Visibility="Visible" />
+                <local:LogDataControl x:Name="ldctrl" Margin="0,10,0,0" Visibility="Collapsed" />
+                <controls:WaitControl x:Name="WaitPopControl"/>
+            </Grid>
+            <Grid Grid.Row="1" Background="#FFC4C4C4">
+                <local:PageBarControl HorizontalAlignment="Center" x:Name="pageBar" VerticalAlignment="Center" Visibility="Visible"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <DockPanel LastChildFill="False">
+                <ToggleButton Height="28" Width="60" Name="runBtn" DockPanel.Dock="Right" Click="RunBtn_Click">Run</ToggleButton>
+                <ComboBox Name="ScanModeCB" Height="28" Width="100" DockPanel.Dock="Right" Margin="0,0,5,0" IsEditable="False" IsReadOnly="True" ItemsSource="{Binding}"></ComboBox>
+                <ComboBox Name="ScanIntervalCB" Height="28" Width="80" DockPanel.Dock="Right" Margin="0,0,5,0" IsEditable="False" IsReadOnly="True" ItemsSource="{Binding}"></ComboBox>
+                <Button Name="configBtn" Content="Configuration"  Height="28" Width="120" DockPanel.Dock="Right" Margin="0,0,5,0" Click="workModeBtn_Click"/>
+            </DockPanel>
+        </Grid>
+        <controls:WarningControl x:Name="WarningPopControl"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ1C82"
+      chiptype="0500" bustype ="I2C" libname ="O2Micro.Cobra.HQG" AMTEnable="false"
+      AppVersion="2.00.03" OCEVersion="1.00.01.00" ProjectCode="OCECHQGX">
+  <Part Name="DBConfig">
+    <ChipName>OZ1C82</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>X</UserType>
+    <Date>20180509</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>false</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Config" DBModuleName="DeviceConfig"   Name ="DeviceConfig"   PanelName ="O2Micro.Cobra.DeviceConfigurationPanel"/>
+    <Button Label = "Expert"  DBModuleName="Expert"   Name ="Exper"   PanelName ="O2Micro.Cobra.ExperPanel"/>
+    <Button Label = "Scan"    DBModuleName="Scan"  Name ="Scan"   PanelName ="O2Micro.Cobra.MonitorPanel">
+      <ScanRate>1S</ScanRate>
+      <ScanRate>2S</ScanRate>
+      <ScanRate>5S</ScanRate>
+    </Button>
+    <Button Label = "DBG"  DBModuleName="DBG"   Name ="DBG"   PanelName ="O2Micro.Cobra.DBGPanel">
+      <SubTask>
+        <DGB>0</DGB>
+        <BURN>1</BURN>
+        <FREEZE>2</FREEZE>
+      </SubTask>
+    </Button>
+  </Part>
+</Root>

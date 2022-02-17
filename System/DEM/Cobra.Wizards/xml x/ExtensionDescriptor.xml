@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="SD77060" chiptype="14" bustype ="I2C" libname ="Cobra.SD77060" AppVersion="2.00.03" OCEVersion="1.00.02.00" ProjectCode="OCWIZRDY">
+  <Part Name="DBConfig">
+    <ChipName>SD77060</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>X</UserType>
+    <Date>20201130</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Expert"       Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "Scan"      DBModuleName="Scan"      Name = "ScanV2"         PanelName ="Cobra.ScanPanel">
+      <Section Name ="Configuration">
+        <Element Name ="Scan Rate">
+          <Catalog></Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="200mS">200mS</Item>
+            <Item Value ="500mS">500mS</Item>
+            <Item Value ="1000mS">1S</Item>
+            <Item Value ="2000mS">2S</Item>
+            <Item Value ="5000mS">5S</Item>
+            <Item Value ="10000mS">10S</Item>
+            <Item Value ="20000mS">20S</Item>
+            <Item Value ="50000mS">50S</Item>
+            <Item Value ="100000mS">100S</Item>
+          </ItemList>
+        </Element>
+        <Element Name ="Work Mode">
+          <Catalog></Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="Normal">Normal</Item>
+            <Item Value ="Switch">Switch</Item>
+          </ItemList>
+        </Element>
+      </Section>
+    </Button>
+  </Part>
+</Root>

@@ -1,0 +1,6705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root usage="DeviceDescriptor" chip="OZ89725" version="1.00"  PRODUCT_FAMILY="OZ89725">
+	<Section Name ="BusOptions" Guid ="0x00100000">
+		<Element Guid ="0x00100000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList></ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>Connect Port:</NickName>
+					<Catalog>Common Configuration</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>16</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100001">
+			<PhysicalData>100</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>I2C Bus Frequency(KHZ):</NickName>
+					<Catalog>Common Configuration</Catalog>
+					<DefValue>400</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>63</MinValue>
+					<MaxValue>400</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100002">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>0x50</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>I2C Address:</NickName>
+					<Catalog>OZ89725</Catalog>
+					<DefValue>20</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>8</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100003">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>true</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>1</Order>
+					<NickName>PEC enable</NickName>
+					<Catalog>OZ89725</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>0</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="Mapping" Guid ="0x00020000">
+		<Element Guid ="0x00021000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>3F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>63</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>10</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>1</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>vref_vtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>63</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>Reference VR25V voltage trimming data.(target value is 2265mV).</Description>
+				</SFL>
+			</Private>
+		</Element>
+    <Element Guid ="0x00021006">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>0</SubSection>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>10</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>CUT: -5Deg.C, DUT: -20Deg.C</Item>
+        <Item>CUT: 0Deg.C, DUT: -18Deg.C</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EEPROM Config">
+          <Order>10</Order>
+          <Catalog>User</Catalog>
+          <NickName>UT_TH</NickName>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>CUT and DUT threshold.</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021007">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>0</SubSection>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>10</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Internal bat pin balance always ON during CTO check</Item>
+        <Item>Internal bat pin balance always OFF during CTO check</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EEPROM Config">
+          <Order>2</Order>
+          <Catalog>ATE</Catalog>
+          <NickName>CTO check</NickName>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Used as an option for CTO check, 0 means internal bat pin balance always ON during CTO check, and 1 means internal bat pin balance OFF during CTO check.</Description>
+        </SFL>
+      </Private>
+    </Element>
+		<Element Guid ="0x00021100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>11</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>3</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>vref_ttrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>band-gap reference temperature trimming data..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00021104">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>11</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>4</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>osc8k_ftrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OSC8K frequency trimming data.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00021200">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>12</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>5</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>cell1_ovtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OV trimming data for cell1 (-4 ~ 3 steps -> 100~011)..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00021204">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>12</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>6</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>cell2_ovtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OV trimming data for cell2 (-4 ~ 3 steps -> 100~011)..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00021300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>13</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>7</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>cell3_ovtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OV trimming data for cell3(-4 ~ 3 steps -> 100~011)..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00021304">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>13</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>8</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>cell4_ovtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OV trimming data for cell4(-4 ~ 3 steps -> 100~011)..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00021404">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>14</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>9</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>cell5_ovtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OV trimming data for cell5(-4 ~ 3 steps -> 100~011)..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00021400">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>14</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>A</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>v50_vtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>LDO5V voltage trimming.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00021500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>15</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>B</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>ate_crc_sum</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>4bits CRC (X4 + X + 1) check is used for ATE data (0x0~0x6). Don’t map it into register.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00021504">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>15</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>C</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>ate_frozen</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>'1010':frozen,other value means not frozen.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021606">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>6</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>4</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>3 cells</Item>
+				<Item>4 cells</Item>
+				<Item>5 cells</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>1</Order>
+					<Catalog>User</Catalog>
+					<NickName>Ncell</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>4</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Cell number(Number of cells in series).</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021604">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Do not output UV state on CHG pin</Item>
+				<Item>Output UV state on CHG pin</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>2</Order>
+					<Catalog>User</Catalog>
+					<NickName>UV_ON_CHGPAD</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>CHG pin output UV state.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021603">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>CHG output low when no events </Item>
+				<Item>CHG output high/high-Z when no events </Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>3</Order>
+					<Catalog>User</Catalog>
+					<NickName>CHGPAD_ACTIVE_O</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>CHG output state.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021602">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>CHG open drain output</Item>
+				<Item>CHG push-pull output(default)</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>4</Order>
+					<Catalog>User</Catalog>
+					<NickName>CHGPAD_TYPE</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>CHG output state.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021601">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>DSG output low when no fault events </Item>
+				<Item>DSG output high/high-Z when no fault events </Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>5</Order>
+					<Catalog>User</Catalog>
+					<NickName>DSGPAD_ACTIVE_O</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>DSG output state.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>DSG open drain output</Item>
+				<Item>DSG push-pull output(default)</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>6</Order>
+					<Catalog>User</Catalog>
+					<NickName>DSGPAD_TYPE</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>DSG output state.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021704">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>17</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2400mV</Item>
+				<Item>2600mV</Item>
+				<Item>2800mV</Item>
+				<Item>3000mV</Item>
+				<Item>3200mV</Item>
+				<Item>3400mV</Item>
+				<Item>3600mV</Item>
+				<Item>3800mV</Item>
+				<Item>4000mV</Item>
+				<Item>4200mV</Item>
+				<Item>4400mV</Item>
+				<Item>4600mV</Item>
+				<Item>4800mV</Item>
+				<Item>5000mV</Item>
+				<Item>5200mV</Item>
+				<Item>5400mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>7</Order>
+          <bEdit>false</bEdit>
+					<Catalog>User</Catalog>
+					<NickName>VDDA_TH_FOR_CTO</NickName>
+					<DefValue>9</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>VDDA threshold to start CTO check.</Description>
+				</SFL>
+			</Private>
+		</Element>
+    <Element Guid="0x00021701">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>17</Address>
+          <StartBit>01</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable this option</Item>
+        <Item>Generate one pulse output on DSG when uvp_state or cto_state is confirmed</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EEPROM Config">
+          <Order>8</Order>
+          <Catalog>User</Catalog>
+          <NickName>DSG_PULSE OPTION</NickName>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>DSG pulse output enble/disable.</Description>
+        </SFL>
+      </Private>
+    </Element>
+		<Element Guid="0x00021702">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>17</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>1s</Item>
+				<Item>2s</Item>
+				<Item>4s</Item>
+				<Item>8s</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>9</Order>
+					<Catalog>User</Catalog>
+					<NickName>DSG_PULSE_CFG</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>DSG output pulse width.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021701">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>17</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Disable DSG output pulse function when uvp_state or cto_state is confirmed</Item>
+				<Item>Enable DSG output pulse function when uvp_state or cto_state is confirmed</Item>
+			</ItemList>
+      <Private>
+      </Private>
+		</Element>
+		<Element Guid="0x00021700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>17</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>CTO enable detection</Item>
+				<Item>CTO disable detection</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>A</Order>
+					<Catalog>User</Catalog>
+					<NickName>CTO_DIS</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>CTO function enable/disable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>18</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Disable COT</Item>
+				<Item>COT 45 degree</Item>
+				<Item>COT 50 degree</Item>
+				<Item>COT 55 degree</Item>
+			</ItemList>
+			<Private>				
+				<SFL Name="EEPROM Config">
+					<Order>F</Order>
+					<Catalog>User</Catalog>
+					<NickName>COT_TH</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Charge-Over-Temperature threshold.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021802">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>1</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>18</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Disable DOT</Item>
+				<Item>DOT 65 degree</Item>
+				<Item>DOT 70 degree</Item>
+				<Item>DOT 75 degree</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>E</Order>
+					<Catalog>User</Catalog>
+					<NickName>DOT_TH</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Discharge-Over-Temperature threshold.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021804">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>18</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2*Ttdp</Item>
+				<Item>4*Ttdp</Item>
+				<Item>6*Ttdp</Item>
+				<Item>8*Ttdp</Item>
+			</ItemList>
+			<Private>
+        <SFL Name="EEPROM Config">
+          <Order>D</Order>
+          <Catalog>User</Catalog>
+          <NickName>Tot-ut-dly</NickName>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>OT/UT delay time.</Description>
+        </SFL>		
+			</Private>
+		</Element>
+		<Element Guid="0x00021806">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>18</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>DUT enable detection</Item>
+				<Item>DUT disable detection</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>C</Order>
+					<Catalog>User</Catalog>
+					<NickName>DUT_DIS</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>DUT enable/disable.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021807">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>3</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>18</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>CUT enable detection</Item>
+				<Item>CUT disable detection</Item>
+			</ItemList>
+			<Private>				
+				<SFL Name="EEPROM Config">
+					<Order>B</Order>
+					<Catalog>User</Catalog>
+					<NickName>CUT_DIS</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>CUT enable/disable.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021907">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>19</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>OV threshold range,4000mV to 4500mV</Item>
+				<Item>OV threshold range,3500mV to 4000mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>11</Order>
+					<Catalog>User</Catalog>
+					<NickName>BAT_TYPE</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Battery Type.</Description>
+					<Relations>
+						<Item>0x00021900</Item>
+						<Item>0x00021B04</Item>
+						<Item>0x00021A04</Item>
+					</Relations>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021900">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>10</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>2</SubType>
+			<Offset>3900</Offset>
+			<HexMin>a</HexMin>
+			<HexMax>3c</HexMax>
+			<PhyMin>3500</PhyMin>
+			<PhyMax>4500</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>19</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>12</Order>
+					<Catalog>User</Catalog>
+					<NickName>Vovp</NickName>
+					<DefValue>4000</DefValue>
+					<MinValue>4000</MinValue>
+					<MaxValue>4500</MaxValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<Description>OV voltage threshold.</Description>
+					<Relations>
+						<Item>0x00021B04</Item>
+					</Relations>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021B04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1B</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>50mV</Item>
+				<Item>100mV</Item>
+				<Item>150mV</Item>
+				<Item>200mV</Item>
+				<Item>250mV</Item>
+				<Item>300mV</Item>
+				<Item>350mV</Item>
+				<Item>400mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>17</Order>
+					<Catalog>User</Catalog>
+					<NickName>Vovr-hys</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Over-Voltage release hysteresis.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021A07">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1A</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Enable UV check</Item>
+				<Item>Disable UV check(default)</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>13</Order>
+					<Catalog>User</Catalog>
+					<NickName>UVP_DIS</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>UV Enable/Disable.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021A00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1A</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>1200mV</Item>
+				<Item>1400mV</Item>
+				<Item>1600mV</Item>
+				<Item>1800mV</Item>
+				<Item>1900mV</Item>
+				<Item>2000mV</Item>
+				<Item>2100mV</Item>
+				<Item>2200mV</Item>
+				<Item>2300mV</Item>
+				<Item>2400mV</Item>
+				<Item>2500mV</Item>
+				<Item>2600mV</Item>
+				<Item>2700mV</Item>
+				<Item>2800mV</Item>
+				<Item>2900mV</Item>
+				<Item>3000mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>15</Order>
+					<Catalog>User</Catalog>
+					<NickName>Vuvp</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Under voltage threshold.</Description>
+					<Relations>
+						<Item>0x00021A04</Item>
+					</Relations>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021A04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1A</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>100mV</Item>
+				<Item>200mV</Item>
+				<Item>300mV</Item>
+				<Item>400mV</Item>
+				<Item>500mV</Item>
+				<Item>600mV</Item>
+				<Item>700mV</Item>
+				<Item>800mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>14</Order>
+					<Catalog>User</Catalog>
+					<NickName>Vuvr-hys</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Under-Vlotage release hysteresis.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021B07">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1B</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>62.5ms</Item>
+				<Item>250ms</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>16</Order>
+					<Catalog>User</Catalog>
+					<NickName>Tsc</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>OV/UV scan cycle.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021B00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1B</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2*Tsc</Item>
+				<Item>4*Tsc</Item>
+				<Item>8*Tsc</Item>
+				<Item>16*Tsc</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>19</Order>
+					<Catalog>User</Catalog>
+					<NickName>Tovp</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>OV events delay time.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021B02">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1B</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2*Tsc</Item>
+				<Item>4*Tsc</Item>
+				<Item>8*Tsc</Item>
+				<Item>16*Tsc</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="EEPROM Config">
+					<Order>18</Order>
+					<Catalog>User</Catalog>
+					<NickName>Tuvp</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>UV events delay time.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00021C00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1c</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+			</Private>
+		</Element>
+		<Element Guid="0x00021C04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1c</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+			</Private>
+		</Element>
+		<Element Guid ="0x00022000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>3F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>63</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>20</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>vref_vtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>63</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>Reference VR25V voltage trimming data.(target value is 2265mV).</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00022100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>21</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>vref_ttrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>band-gap reference temperature trimming data..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00022104">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>21</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>osc8k_ftrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OSC8K frequency trimming data.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00022200">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>22</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>cell1_ovtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OV trimming data for cell1 (-4 ~ 3 steps -> 100~011)..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00022204">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>22</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>cell2_ovtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OV trimming data for cell2 (-4 ~ 3 steps -> 100~011)..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00022300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>23</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>cell3_ovtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OV trimming data for cell3(-4 ~ 3 steps -> 100~011)..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00022304">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>23</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>cell4_ovtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OV trimming data for cell4(-4 ~ 3 steps -> 100~011)..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00022404">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>24</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>cell5_ovtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>OV trimming data for cell5(-4 ~ 3 steps -> 100~011)..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00022400">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>24</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>v50_vtrim</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>LDO5V voltage trimming.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00022500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>25</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>ate_crc_sum</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>4bits CRC (X4 + X + 1) check is used for ATE data (0x0~0x6). Don’t map it into register.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00022504">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>25</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>ATE</Catalog>
+					<NickName>ate_frozen</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>‘1010’: frozen (means 0x0~0x5 is frozen, can’t be written), other value means not frozen.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Open drain output</Item>
+				<Item>Push-pull output</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>dsgpad_type</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>‘0’: open drain output (default), ‘1’: push-pull output.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022601">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>DSGPAD output low when no events </Item>
+				<Item>Output high/high-Z when no events </Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>dsgpad_active_option</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>‘0’: DSGPAD output low when no events (default, i.e. output high-Z/high when events occurred), ‘1’: output high/high-Z when no events (i.e. output low when events occurred).</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022602">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Open drain output</Item>
+				<Item>Push-pull output</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>chgpad_type</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>‘0’: open drain output (default), ‘1’: push-pull output.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022603">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>CHGPAD output low when no events </Item>
+				<Item>Output high/high-Z when no events </Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>chgpad_active_option</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>: ‘0’: CHGPAD output low when no events (default, i.e. output high-Z/high when events occurred), ‘1’: output high/high-Z when no events (i.e. output low when events occurred).</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022604">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Don’t do that</Item>
+				<Item>Output UV status on CHGPAD</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>uv_on_chgpad</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>‘1’: output UV status on CHGPAD, ‘0’: don’t do that.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022606">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>3 cells</Item>
+				<Item>3 cells</Item>
+				<Item>4 cells</Item>
+				<Item>5 cells</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>cell_num</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Cell number configuration. “00”: 2 cells,“01”: 3 cells, “10”: 4 cells, “11”: 5 cells.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>17</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Enable CTO check with fixed scan rate of 64s, and confirmed with one time.</Item>
+				<Item>Disable CTO check</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>cto_disable</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>‘1’: disable CTO check, ‘0’: enable CTO check with fixed scan rate of 64s, and confirmed with one time.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022701">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>27</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Disable this option</Item>
+				<Item>Generate one pulse output on DSGPAG when uvp_state or cto_state is confirmed</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>dsg_option</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Once this option is enabled, OT/UT will be disabled automatically.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022702">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>27</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>1s</Item>
+				<Item>2s</Item>
+				<Item>4s</Item>
+				<Item>8s</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>dsg_pulse_cfg</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>When uvp_state or cto_state confirmed, if dsg_option = 1, will output one pulse on DSGPAD.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022704">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>17</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+			<Item>2400mV</Item>
+			<Item>2600mV</Item>
+			<Item>2800mV</Item>
+			<Item>3000mV</Item>
+			<Item>3200mV</Item>
+			<Item>3400mV</Item>
+			<Item>3600mV</Item>
+			<Item>3800mV</Item>
+			<Item>4000mV</Item>
+			<Item>4200mV</Item>
+			<Item>4400mV</Item>
+			<Item>4600mV</Item>
+			<Item>4800mV</Item>
+			<Item>5000mV</Item>
+			<Item>5200mV</Item>
+			<Item>5400mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>vdda_th</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>when checking VDDA if >4.8V or not before CTO check, used {1’b0, vdda_th[3:0]} as uv_th[4:0] for the UVP comparator. (expected value is 4’b1100).</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>28</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>disable COT check</Item>
+				<Item>45 degree</Item>
+				<Item>50 degree</Item>
+				<Item>55 degree</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>cotp_th_sel</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Release with fixed 5 degree hysteresis.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022802">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>1</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>28</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>disable DOT check</Item>
+				<Item>65 degree</Item>
+				<Item>70 degree</Item>
+				<Item>75 degree</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>dotp_th_sel</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Release with fixed 5 degree hysteresis.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022804">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>28</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2s</Item>
+				<Item>4s</Item>
+				<Item>6s</Item>
+				<Item>8s</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>otut_dly</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>“00”: 2s (2 scan cycles), “01: 4s, “10”: 6s, “11”: 8s.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022806">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>28</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Enable DUT detection with fixed -20 degree.</Item>
+				<Item>Disable DUT detection</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>dut_disable</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>‘1’: disable DUT detection, ‘0’: enable DUT detection with fixed -20 degree.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022807">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>3</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>28</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Enable CUT detection with fixed -20 degree.</Item>
+				<Item>Disable CUT detection</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>cut_disable</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>‘1’: disable DUT detection, ‘0’: enable DUT detection with fixed -20 degree.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022907">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>29</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Select OVP range 4.0V~4.5V for Li_ion Cobalt type.</Item>
+				<Item>Select OVP range 3.5V~4.0V for Li_ion Phosphate type.</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>bat_type</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Battery Type.</Description>
+					<Relations>
+						<Item>0x00022900</Item>
+						<Item>0x00022B04</Item>
+					</Relations>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022900">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>10</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>2</SubType>
+			<Offset>3900</Offset>
+			<HexMin>a</HexMin>
+			<HexMax>3c</HexMax>
+			<PhyMin>3500</PhyMin>
+			<PhyMax>4500</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>29</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>ovp_th</NickName>
+					<DefValue>4000</DefValue>
+					<MinValue>4000</MinValue>
+					<MaxValue>4500</MaxValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<Description>OV protection threshold for each cell.</Description>
+					<Relations>
+						<Item>0x00022B04</Item>
+					</Relations>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022B04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2B</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>50mV</Item>
+				<Item>100mV</Item>
+				<Item>150mV</Item>
+				<Item>200mV</Item>
+				<Item>250mV</Item>
+				<Item>300mV</Item>
+				<Item>350mV</Item>
+				<Item>400mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>ovr-hys</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Hysteresis for OV release.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022A07">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2A</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Enable UV check</Item>
+				<Item>Disable UV check</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>uv_disable</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>‘0’: enable UV check,‘1’: disable UV check.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022A00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2A</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>1200mV</Item>
+				<Item>1400mV</Item>
+				<Item>1600mV</Item>
+				<Item>1800mV</Item>
+				<Item>1900mV</Item>
+				<Item>2000mV</Item>
+				<Item>2100mV</Item>
+				<Item>2200mV</Item>
+				<Item>2300mV</Item>
+				<Item>2400mV</Item>
+				<Item>2500mV</Item>
+				<Item>2600mV</Item>
+				<Item>2700mV</Item>
+				<Item>2800mV</Item>
+				<Item>2900mV</Item>
+				<Item>3000mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>uvp_th</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>UV protection threshold for each cell.</Description>
+					<Relations>
+						<Item>0x00022A04</Item>
+					</Relations>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022A04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2A</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>100mV</Item>
+				<Item>200mV</Item>
+				<Item>300mV</Item>
+				<Item>400mV</Item>
+				<Item>500mV</Item>
+				<Item>600mV</Item>
+				<Item>700mV</Item>
+				<Item>800mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>uvr_hys</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Hysteresis for UV release. The range is 100mV~800mV with 100mV/step.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022B07">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2B</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>62.5ms</Item>
+				<Item>250ms</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>ovuv_scan_rate</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>OV UV scan rate.</Description>
+					<Relations>
+						<Item>0x00022B02</Item>
+						<Item>0x00022B00</Item>
+					</Relations>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022B00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2B</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2*Tsc</Item>
+				<Item>4*Tsc</Item>
+				<Item>8*Tsc</Item>
+				<Item>16*Tsc</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>ovp_dly</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Delay time for OV confirmation.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022B02">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2B</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2*Tsc</Item>
+				<Item>4*Tsc</Item>
+				<Item>8*Tsc</Item>
+				<Item>16*Tsc</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>uvp_dly</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<EditType>1</EditType>
+					<Format>0</Format>
+					<Description>Delay time for UV confirmation.</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022C00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2c</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>user_crc_sum</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>4bits CRC (X4 + X + 1) check is used for USER data (0x7~0xE). Don’t map it into register..</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00022c04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2c</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Register Config">
+					<Order>0</Order>
+					<Catalog>User</Catalog>
+					<NickName>user_forzen</NickName>
+					<DefValue>0</DefValue>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<Description>‘10’: frozen (means 0x7~0xD is frozen, can’t be written). Other value means not frozen. After mapping, will set 1 to bit[4] when ‘010’, set 0 when others.</Description>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="Operation" Guid ="0x00030000">
+		<Element Guid ="0x00030000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>00</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>8</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>00</Index>
+					<BitStart>00</BitStart>
+					<Length>08</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>HWID1</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>01</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>8</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>01</Index>
+					<BitStart>00</BitStart>
+					<Length>08</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>HWID2</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>3F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>63</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>10</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>10</Index>
+					<BitStart>00</BitStart>
+					<Length>06</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>vref_vtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+    <Element Guid ="0x00031006">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>0</SubSection>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>10</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>CUT: -5Deg.C, DUT: -20Deg.C</Item>
+        <Item>CUT: 0Deg.C, DUT: -18Deg.C</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <bPhyDataFromList>true</bPhyDataFromList>
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>10</Index>
+          <BitStart>06</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>EEPROM Data</Group>
+          <Description>UT_TH</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031007">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>0</SubSection>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>10</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Not support</Item>
+        <Item>Support</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <bPhyDataFromList>true</bPhyDataFromList>
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>10</Index>
+          <BitStart>07</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>EEPROM Data</Group>
+          <Description>CTO detection</Description>
+        </SFL>
+      </Private>
+    </Element>
+		<Element Guid ="0x00031100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>11</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>11</Index>
+					<BitStart>00</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>vref_ttrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031104">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>11</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>11</Index>
+					<BitStart>04</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>osc8k_ftrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031200">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>12</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>12</Index>
+					<BitStart>00</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>cell1_ovtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031204">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>12</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>12</Index>
+					<BitStart>04</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>cell2_ovtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031207">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>12</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>12</Index>
+					<BitStart>07</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>Reserved</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>13</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>13</Index>
+					<BitStart>00</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>cell3_ovtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031304">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>13</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>13</Index>
+					<BitStart>04</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>cell4_ovtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031404">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>14</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>14</Index>
+					<BitStart>04</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>cell5_ovtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031400">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>14</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>14</Index>
+					<BitStart>00</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>v50_vtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>15</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>15</Index>
+					<BitStart>00</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>ate_crc_sum</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031504">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>15</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>15</Index>
+					<BitStart>04</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>ate_frozen</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Open drain output</Item>
+				<Item>Push-pull output</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>16</Index>
+					<BitStart>0</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>dsgpad_type</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031601">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>DSGPAD output low when no events </Item>
+				<Item>Output high/high-Z when no events </Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>16</Index>
+					<BitStart>01</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>dsgpad_active_option</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031602">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Open drain output</Item>
+				<Item>Push-pull output</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>16</Index>
+					<BitStart>02</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>chgpad_type</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031603">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>CHGPAD output low when no events </Item>
+				<Item>Output high/high-Z when no events </Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>16</Index>
+					<BitStart>03</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>chgpad_active_option</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031604">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Don’t do that</Item>
+				<Item>Output UV status on CHGPAD</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>16</Index>
+					<BitStart>04</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>uv_on_chgpad</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031606">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>16</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2 cells</Item>
+				<Item>3 cells</Item>
+				<Item>4 cells</Item>
+				<Item>5 cells</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>16</Index>
+					<BitStart>6</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Data</Group>
+					<Description>cell_num</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>17</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Enable CTO check with fixed scan rate of 64s, and confirmed with one time.</Item>
+				<Item>Disable CTO check</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>17</Index>
+					<BitStart>0</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>cto_disable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031701">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>17</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>17</Index>
+					<BitStart>01</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>dsg_option</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031702">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<ItemList>
+				<Item>1s</Item>
+				<Item>2s</Item>
+				<Item>4s</Item>
+				<Item>8s</Item>
+			</ItemList>
+			<LocationList>
+				<Location Position="Low">
+					<Address>17</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>17</Index>
+					<BitStart>02</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Data</Group>
+					<Description>dsg_pulse_cfg</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031704">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>17</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2400mV</Item>
+				<Item>2600mV</Item>
+				<Item>2800mV</Item>
+				<Item>3000mV</Item>
+				<Item>3200mV</Item>
+				<Item>3400mV</Item>
+				<Item>3600mV</Item>
+				<Item>3800mV</Item>
+				<Item>4000mV</Item>
+				<Item>4200mV</Item>
+				<Item>4400mV</Item>
+				<Item>4600mV</Item>
+				<Item>4800mV</Item>
+				<Item>5000mV</Item>
+				<Item>5200mV</Item>
+				<Item>5400mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>17</Index>
+					<BitStart>4</BitStart>
+					<Length>4</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Data</Group>
+					<Description>vdda_th</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>18</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>disable COT check</Item>
+				<Item>45 degree</Item>
+				<Item>50 degree</Item>
+				<Item>55 degree</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>18</Index>
+					<BitStart>0</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Data</Group>
+					<Description>cotp_th_sel</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031802">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>1</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>18</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>disable DOT check</Item>
+				<Item>65 degree</Item>
+				<Item>70 degree</Item>
+				<Item>75 degree</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>18</Index>
+					<BitStart>2</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Data</Group>
+					<Description>dotp_th_sel</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031804">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>18</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2s</Item>
+				<Item>4s</Item>
+				<Item>6s</Item>
+				<Item>8s</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>18</Index>
+					<BitStart>4</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Data</Group>
+					<Description>otut_dly</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031806">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>18</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Enable DUT detection with fixed -20 degree.</Item>
+				<Item>Disable DUT detection</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>18</Index>
+					<BitStart>6</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>dut_disable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031807">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>3</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>18</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Enable CUT detection with fixed -20 degree.</Item>
+				<Item>Disable CUT detection</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>18</Index>
+					<BitStart>7</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>cut_disable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031900">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>10</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>2</SubType>
+			<Offset>3900</Offset>
+			<HexMin>a</HexMin>
+			<HexMax>3c</HexMax>
+			<PhyMin>3500</PhyMin>
+			<PhyMax>4500</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>19</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>19</Index>
+					<BitStart>0</BitStart>
+					<Length>6</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>ovp_th</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031907">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>19</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Select OVP range 4.0V~4.5V for Li_ion Cobalt type.</Item>
+				<Item>Select OVP range 3.5V~4.0V for Li_ion Phosphate type.</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>19</Index>
+					<BitStart>7</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>bat_type</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031A07">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1A</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Enable UV check</Item>
+				<Item>Disable UV check</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>1A</Index>
+					<BitStart>7</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>uv_disable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031A00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1A</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>1200mV</Item>
+				<Item>1400mV</Item>
+				<Item>1600mV</Item>
+				<Item>1800mV</Item>
+				<Item>1900mV</Item>
+				<Item>2000mV</Item>
+				<Item>2100mV</Item>
+				<Item>2200mV</Item>
+				<Item>2300mV</Item>
+				<Item>2400mV</Item>
+				<Item>2500mV</Item>
+				<Item>2600mV</Item>
+				<Item>2700mV</Item>
+				<Item>2800mV</Item>
+				<Item>2900mV</Item>
+				<Item>3000mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>1A</Index>
+					<BitStart>0</BitStart>
+					<Length>4</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Data</Group>
+					<Description>uvp_th</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031A04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1A</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>100mV</Item>
+				<Item>200mV</Item>
+				<Item>300mV</Item>
+				<Item>400mV</Item>
+				<Item>500mV</Item>
+				<Item>600mV</Item>
+				<Item>700mV</Item>
+				<Item>800mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>1A</Index>
+					<BitStart>4</BitStart>
+					<Length>3</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Data</Group>
+					<Description>uvr_hys</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031B00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1B</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2*Tsc</Item>
+				<Item>4*Tsc</Item>
+				<Item>8*Tsc</Item>
+				<Item>16*Tsc</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>1B</Index>
+					<BitStart>0</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Description>ovp_dly</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031B02">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1B</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2*Tsc</Item>
+				<Item>4*Tsc</Item>
+				<Item>8*Tsc</Item>
+				<Item>16*Tsc</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>1B</Index>
+					<BitStart>2</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Data</Group>
+					<Description>uvp_dly</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031B04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1B</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>50mV</Item>
+				<Item>100mV</Item>
+				<Item>150mV</Item>
+				<Item>200mV</Item>
+				<Item>250mV</Item>
+				<Item>300mV</Item>
+				<Item>350mV</Item>
+				<Item>400mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>1B</Index>
+					<BitStart>4</BitStart>
+					<Length>3</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Data</Group>
+					<Description>ovr-hys</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031B07">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1B</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>62.5ms</Item>
+				<Item>250ms</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>1B</Index>
+					<BitStart>7</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Data</Group>
+					<Description>ovuv_scan_rate</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031C00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1C</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>1C</Index>
+					<BitStart>0</BitStart>
+					<Length>4</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>user_scr_sum</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00031C04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>1C</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>1C</Index>
+					<BitStart>4</BitStart>
+					<Length>4</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Data</Group>
+					<Description>user_forzen</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>3F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>63</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>20</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>20</Index>
+					<BitStart>00</BitStart>
+					<Length>06</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>vref_vtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+    <Element Guid ="0x00032006">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>0</SubSection>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>20</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>CUT: -5Deg.C, DUT: -20Deg.C</Item>
+        <Item>CUT: 0Deg.C, DUT: -18Deg.C</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <bPhyDataFromList>true</bPhyDataFromList>
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>20</Index>
+          <BitStart>06</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>EEPROM Map Data</Group>
+          <Description>UT_TH</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00032007">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>0</SubSection>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>20</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Not support</Item>
+        <Item>Support</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <bPhyDataFromList>true</bPhyDataFromList>
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>20</Index>
+          <BitStart>07</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>EEPROM Map Data</Group>
+          <Description>CTO detection</Description>
+        </SFL>
+      </Private>
+    </Element>
+		<Element Guid ="0x00032100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>21</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>21</Index>
+					<BitStart>00</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>vref_ttrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032104">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>21</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>21</Index>
+					<BitStart>04</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>osc8k_ftrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032200">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>22</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>22</Index>
+					<BitStart>00</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>cell1_ovtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032204">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>22</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>22</Index>
+					<BitStart>04</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>cell2_ovtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032207">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>22</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>22</Index>
+					<BitStart>07</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>Reserved</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>23</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>23</Index>
+					<BitStart>00</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>cell3_ovtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032304">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>23</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>23</Index>
+					<BitStart>04</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>cell4_ovtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032404">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>24</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>24</Index>
+					<BitStart>04</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>cell5_ovtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032400">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>24</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>24</Index>
+					<BitStart>00</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>v50_vtrim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>25</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>25</Index>
+					<BitStart>00</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>ate_crc_sum</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032504">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>25</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>25</Index>
+					<BitStart>04</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>ate_frozen</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>26</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>26</Index>
+					<BitStart>0</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>dsgpad_type</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032601">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>26</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>26</Index>
+					<BitStart>01</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>dsgpad_active_option</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032602">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>26</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>26</Index>
+					<BitStart>02</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>chgpad_type</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032603">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>26</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>26</Index>
+					<BitStart>03</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>chgpad_active_option</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032604">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>26</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>26</Index>
+					<BitStart>04</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>uv_on_chgpad</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032606">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>26</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>3 cells</Item>
+				<Item>3 cells</Item>
+				<Item>4 cells</Item>
+				<Item>5 cells</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>26</Index>
+					<BitStart>6</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>cell_num</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>27</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Open-drain output</Item>
+				<Item>Push-pull output</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>27</Index>
+					<BitStart>0</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>cto_disable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032701">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>27</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>27</Index>
+					<BitStart>01</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>dsg_option</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032702">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<ItemList>
+				<Item>1s</Item>
+				<Item>2s</Item>
+				<Item>4s</Item>
+				<Item>8s</Item>
+			</ItemList>
+			<LocationList>
+				<Location Position="Low">
+					<Address>27</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>27</Index>
+					<BitStart>02</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>dsg_pulse_cfg</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032704">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>27</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2400mV</Item>
+				<Item>2600mV</Item>
+				<Item>2800mV</Item>
+				<Item>3000mV</Item>
+				<Item>3200mV</Item>
+				<Item>3400mV</Item>
+				<Item>3600mV</Item>
+				<Item>3800mV</Item>
+				<Item>4000mV</Item>
+				<Item>4200mV</Item>
+				<Item>4400mV</Item>
+				<Item>4600mV</Item>
+				<Item>4800mV</Item>
+				<Item>5000mV</Item>
+				<Item>5200mV</Item>
+				<Item>5400mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>27</Index>
+					<BitStart>4</BitStart>
+					<Length>4</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>vdda_th</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>28</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>disable COT check</Item>
+				<Item>45 degree</Item>
+				<Item>50 degree</Item>
+				<Item>55 degree</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>28</Index>
+					<BitStart>0</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>cotp_th_sel</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032802">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>1</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>28</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>disable DOT check</Item>
+				<Item>65 degree</Item>
+				<Item>70 degree</Item>
+				<Item>75 degree</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>28</Index>
+					<BitStart>2</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>dotp_th_sel</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032804">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>28</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2s</Item>
+				<Item>4s</Item>
+				<Item>6s</Item>
+				<Item>8s</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>28</Index>
+					<BitStart>4</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>otut_dly</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032806">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>28</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Do not need software to clear the event flags so as to release the protections</Item>
+				<Item>Need software to clear the event flags so as to release the protections</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>28</Index>
+					<BitStart>6</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>dut_disable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032807">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>3</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>28</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>28</Index>
+					<BitStart>7</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>cut_disable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032900">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>10</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>2</SubType>
+			<Offset>3900</Offset>
+			<HexMin>a</HexMin>
+			<HexMax>3c</HexMax>
+			<PhyMin>3500</PhyMin>
+			<PhyMax>4500</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>29</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>29</Index>
+					<BitStart>0</BitStart>
+					<Length>6</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>ovp_th</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032907">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>29</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Do not initiate protection on CHG when UV occurs</Item>
+				<Item>Initiate protection on CHG when UV occurs</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>29</Index>
+					<BitStart>7</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>bat_type</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032A00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2A</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>1200mV</Item>
+				<Item>1400mV</Item>
+				<Item>1600mV</Item>
+				<Item>1800mV</Item>
+				<Item>1900mV</Item>
+				<Item>2000mV</Item>
+				<Item>2100mV</Item>
+				<Item>2200mV</Item>
+				<Item>2300mV</Item>
+				<Item>2400mV</Item>
+				<Item>2500mV</Item>
+				<Item>2600mV</Item>
+				<Item>2700mV</Item>
+				<Item>2800mV</Item>
+				<Item>2900mV</Item>
+				<Item>3000mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>2A</Index>
+					<BitStart>0</BitStart>
+					<Length>4</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>uvp_th</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032A04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2A</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>100mV</Item>
+				<Item>200mV</Item>
+				<Item>300mV</Item>
+				<Item>400mV</Item>
+				<Item>500mV</Item>
+				<Item>600mV</Item>
+				<Item>700mV</Item>
+				<Item>800mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>2A</Index>
+					<BitStart>4</BitStart>
+					<Length>3</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>uvr_hys</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032A07">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2A</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>Enable UV check</Item>
+				<Item>Disable UV check</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>2A</Index>
+					<BitStart>7</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>uv_disable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032B00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2B</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2*Tsc</Item>
+				<Item>4*Tsc</Item>
+				<Item>8*Tsc</Item>
+				<Item>16*Tsc</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>2B</Index>
+					<BitStart>0</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>ovp_dly</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032B02">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2B</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>2*Tsc</Item>
+				<Item>4*Tsc</Item>
+				<Item>8*Tsc</Item>
+				<Item>16*Tsc</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>2B</Index>
+					<BitStart>2</BitStart>
+					<Length>2</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>uvp_dly</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032B04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2B</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>50mV</Item>
+				<Item>100mV</Item>
+				<Item>150mV</Item>
+				<Item>200mV</Item>
+				<Item>250mV</Item>
+				<Item>300mV</Item>
+				<Item>350mV</Item>
+				<Item>400mV</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>2B</Index>
+					<BitStart>4</BitStart>
+					<Length>3</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>ovr-hys</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032B07">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2B</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<ItemList>
+				<Item>62.5ms</Item>
+				<Item>250ms</Item>
+			</ItemList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>2B</Index>
+					<BitStart>7</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<bPhyDataFromList>true</bPhyDataFromList>
+					<Group>EEPROM Map Data</Group>
+					<Description>ovuv_scan_rate</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032c00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2c</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>2C</Index>
+					<BitStart>0</BitStart>
+					<Length>4</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>user_scr_sum</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00032c04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>2C</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>2C</Index>
+					<BitStart>4</BitStart>
+					<Length>4</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>EEPROM Map Data</Group>
+					<Description>user_forzen</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>30</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>5</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>30</Index>
+					<BitStart>0</BitStart>
+					<Length>05</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>cell_sel</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033007">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>30</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>30</Index>
+					<BitStart>07</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>eprom_busy</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>31</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>5</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>31</Index>
+					<BitStart>0</BitStart>
+					<Length>05</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>cto_sel</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033200">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>32</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>32</Index>
+					<BitStart>0</BitStart>
+					<Length>06</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>ov_th</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033207">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>32</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>32</Index>
+					<BitStart>07</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>ovp_enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>33</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>5</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>33</Index>
+					<BitStart>0</BitStart>
+					<Length>05</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>uv_th</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033006">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>33</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>33</Index>
+					<BitStart>06</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>uvp_enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033007">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>33</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>33</Index>
+					<BitStart>07</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>cto_enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033400">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>34</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>34</Index>
+					<BitStart>0</BitStart>
+					<Length>06</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>otut_th_sel</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00034006">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>34</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>34</Index>
+					<BitStart>06</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>cotp_enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00034007">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>34</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>34</Index>
+					<BitStart>07</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>dotp_enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>35</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>35</Index>
+					<BitStart>00</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>uvp_state</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033501">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>35</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>35</Index>
+					<BitStart>01</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>ovp_state</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033502">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>35</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>35</Index>
+					<BitStart>02</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>dotp_state</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033503">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>35</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>35</Index>
+					<BitStart>03</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>cotp_state</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033504">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>35</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>35</Index>
+					<BitStart>04</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>cutp_state</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033505">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>35</Address>
+					<StartBit>05</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>35</Index>
+					<BitStart>05</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>cto_state</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033506">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>35</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>35</Index>
+					<BitStart>06</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>dutp_state</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>36</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>36</Index>
+					<BitStart>00</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>is_observe</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033601">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>36</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>36</Index>
+					<BitStart>01</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>vref_observe</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033602">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>36</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>36</Index>
+					<BitStart>02</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>vref_enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033604">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>36</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>36</Index>
+					<BitStart>04</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>cutp_enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033605">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>36</Address>
+					<StartBit>05</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>36</Index>
+					<BitStart>05</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>dutp_enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033606">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>36</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>36</Index>
+					<BitStart>06</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>vpp_enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033607">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>36</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>36</Index>
+					<BitStart>07</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>vd_enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>38</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>38</Index>
+					<BitStart>00</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>uvp_flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033801">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>38</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>38</Index>
+					<BitStart>01</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>ovp_flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033802">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>38</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>38</Index>
+					<BitStart>02</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>dotp_flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033803">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>38</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>38</Index>
+					<BitStart>03</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>cotp_flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033804">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>38</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>38</Index>
+					<BitStart>04</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>cutp_flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033805">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>38</Address>
+					<StartBit>05</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>38</Index>
+					<BitStart>05</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>cto_flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033806">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>38</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>38</Index>
+					<BitStart>06</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>dutp_flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033903">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>39</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>39</Index>
+					<BitStart>03</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>sw_mapping_req</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033A02">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3A</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>3A</Index>
+					<BitStart>02</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>chgpad_out</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033A03">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3A</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>3A</Index>
+					<BitStart>03</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Operation</Group>
+					<Description>dsgpad_out</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00034000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>40</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>40</Index>
+					<BitStart>0</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>eprom_mode</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00034004">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>40</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>40</Index>
+					<BitStart>04</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>sw_speedup_enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00034005">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>40</Address>
+					<StartBit>05</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>40</Index>
+					<BitStart>05</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>mapping_disable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00034007">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>40</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>40</Index>
+					<BitStart>07</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>allow_wr</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00034100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>41</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>04</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>41</Index>
+					<BitStart>00</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>test_ctrl</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00034104">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>41</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>04</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>8</BitTotal>
+					<Index>41</Index>
+					<BitStart>04</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Operation</Group>
+					<Description>test_sim</Description>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+</Root>

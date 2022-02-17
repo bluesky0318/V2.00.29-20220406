@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ7714" chiptype="7714" bustype ="I2C" libname ="Cobra.KALL14" AppVersion="2.00.03" OCEVersion="1.00.10.00" AMTEnable = "false" ProjectCode="OCEKL14M">
+  <Part Name="DBConfig">
+    <ChipName>KALL14|OZ7714</ChipName>
+    <ChipVersion>C0|C1</ChipVersion>
+    <UserType>M</UserType>
+    <Date>20191226</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Mass Production"    DBModuleName="Production"        Name = "Production"  ShowVerify="False" ShowConfig="False" ShowHEX="False"         PanelName ="Cobra.ProductionPanel" External="EFUSE Config|Board Config">
+      <Password>111111</Password>
+      <Verification SubTaskID="20">Read Back Check</Verification>
+</Button>
+  </Part>
+</Root>

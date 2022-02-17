@@ -1,0 +1,1922 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root usage="DeviceDescriptor" chip="OZ1C105T" version ="1.0212">
+  <Section Name ="BusOptions" Guid ="0x00100000">
+    <Element Guid ="0x00100000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList></ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>Connect Port:</NickName>
+          <Catalog>Common Configuration</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>16</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100001">
+      <PhysicalData>100</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>I2C Bus Frequency(KHZ):</NickName>
+          <Catalog>Common Configuration</Catalog>
+          <DefValue>400</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>63</MinValue>
+          <MaxValue>400</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100002">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>0x20</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>I2C Address:</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>0</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100003">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>false</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>1</Order>
+          <NickName>PEC enable</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>0</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name ="AutomationTestElement" Guid ="0x00200000">
+    <Element Guid="0x00200001">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+        <Item>True</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>0</Order>
+          <NickName>Automation Enable </NickName>
+          <Catalog>Common Setting</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200002">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>1</Order>
+          <NickName>Repeat Times </NickName>
+          <Catalog>Common Setting</Catalog>
+          <DefValue>1000</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200101">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+        <Item>True</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>1</Order>
+          <NickName>Simulation Enable</NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>1</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200102">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>1</Order>
+          <NickName>Test Sensitive </NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>10</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>99</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200201">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+        <Item>True</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>3</Order>
+          <NickName>Out of Maximum Error </NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>1</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200202">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+        <Item>True</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>4</Order>
+          <NickName>Out of Minumum Error </NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>1</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200203">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>5</Order>
+          <NickName>PEC Error </NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00200204">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>False</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="ATTestSelection">
+          <Order>6</Order>
+          <NickName>CRC Error </NickName>
+          <Catalog>Data Configure</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name ="Operation" Guid ="0x00030000">
+    <Element Guid ="0x00030000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>5</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>0</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>5</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>4000mV</Item>
+        <Item>4025mV</Item>
+        <Item>4050mV</Item>
+        <Item>4075mV</Item>
+        <Item>4100mV</Item>
+        <Item>4125mV</Item>
+        <Item>4150mV</Item>
+        <Item>4175mV</Item>
+        <Item>4200mV</Item>
+        <Item>4225mV</Item>
+        <Item>4250mV</Item>
+        <Item>4275mV</Item>
+        <Item>4300mV</Item>
+        <Item>4325mV</Item>
+        <Item>4350mV</Item>
+        <Item>4375mV</Item>
+        <Item>4400mV</Item>
+        <Item>4425mV</Item>
+        <Item>4450mV</Item>
+        <Item>4475mV</Item>
+        <Item>4500mV</Item>
+        <Item>4525mV</Item>
+        <Item>4550mV</Item>
+        <Item>4575mV</Item>
+        <Item>4600mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="DeviceConfig">
+          <Order>01</Order>
+          <NickName>CV</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>8</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>24</MaxValue>
+          <Description>Charger Voltage</Description>
+        </SFL>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>00</Index>
+          <BitStart>0</BitStart>
+          <Length>05</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>charger voltage</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030005">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>0</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>35mV</Item>
+        <Item>75mV</Item>
+        <Item>115mV</Item>
+        <Item>160mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="DeviceConfig">
+          <Order>02</Order>
+          <NickName>RECHG</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>2</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>4</MaxValue>
+          <Description>Battery Recharge Threshold</Description>
+        </SFL>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>00</Index>
+          <BitStart>5</BitStart>
+          <Length>03</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>RECHG</Description>
+          <PhyUnit> mV</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030100">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>01</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>3000mV</Item>
+        <Item>3100mV</Item>
+        <Item>3200mV</Item>
+        <Item>3300mV</Item>
+        <Item>3400mV</Item>
+        <Item>3500mV</Item>
+        <Item>3600mV</Item>
+        <Item>3700mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="DeviceConfig">
+          <Order>03</Order>
+          <NickName>SYSMIN</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>5</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <Description>Minimum System Voltage Limit</Description>
+        </SFL>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>01</Index>
+          <BitStart>0</BitStart>
+          <Length>03</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>Minimum System Voltage Limit</Description>
+          <PhyUnit> mV</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030103">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>01</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>2800mV</Item>
+        <Item>3000mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>01</Index>
+          <BitStart>3</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>WK_TH</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+        <SFL Name="DeviceConfig">
+          <Order>04</Order>
+          <NickName>WK_TH</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>1</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Wakeup Charge to Fast Charge Threshold</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030104">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>01</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>CV-200mV</Item>
+        <Item>CV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>01</Index>
+          <BitStart>4</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>JEITA_CV</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+        <SFL Name="DeviceConfig">
+          <Order>05</Order>
+          <NickName>JEITA_CV</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>JEITA High Temperature Charge Voltage Setting</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030105">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>01</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>4500mV</Item>
+        <Item>4600mV</Item>
+        <Item>4700mV</Item>
+        <Item>4900mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="DeviceConfig">
+          <Order>06</Order>
+          <NickName>VLMT</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <Description>Input Voltage Limit</Description>
+        </SFL>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>01</Index>
+          <BitStart>5</BitStart>
+          <Length>02</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>VLMT</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030107">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>01</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>01</Index>
+          <BitStart>7</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>SHIPMODE</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030200">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>02</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>0mA</Item>
+        <Item>200mA</Item>
+        <Item>400mA</Item>
+        <Item>600mA</Item>
+        <Item>800mA</Item>
+        <Item>1000mA</Item>
+        <Item>1200mA</Item>
+        <Item>1400mA</Item>
+        <Item>1600mA</Item>
+        <Item>1800mA</Item>
+        <Item>2000mA</Item>
+        <Item>2200mA</Item>
+        <Item>2400mA</Item>
+        <Item>2600mA</Item>
+        <Item>2800mA</Item>
+        <Item>3000mA</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="DeviceConfig">
+          <Order>07</Order>
+          <NickName>CC</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>10</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>15</MaxValue>
+          <Description>Fast Charge Current Limit</Description>
+        </SFL>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>02</Index>
+          <BitStart>0</BitStart>
+          <Length>04</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>Fast Charge Current Limit</Description>
+          <PhyUnit> mA</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030204">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>12</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>02</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>100mA</Item>
+        <Item>150mA</Item>
+        <Item>500mA</Item>
+        <Item>900mA</Item>
+        <Item>1000mA</Item>
+        <Item>1500mA</Item>
+        <Item>2000mA</Item>
+        <Item>3000mA</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="DeviceConfig">
+          <Order>08</Order>
+          <NickName>ILMT</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>7</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <Description>Input Current Limit</Description>
+        </SFL>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>02</Index>
+          <BitStart>4</BitStart>
+          <Length>04</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>Input Current Limit</Description>
+          <PhyUnit> mA</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030300">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>03</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>100mA</Item>
+        <Item>200mA</Item>
+        <Item>300mA</Item>
+        <Item>400mA</Item>
+        <Item>500mA</Item>
+        <Item>600mA</Item>
+        <Item>700mA</Item>
+        <Item>800mA</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="DeviceConfig">
+          <Order>09</Order>
+          <NickName>WKC</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>1</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <Description>Wakeup Charge Current Limit</Description>
+        </SFL>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>03</Index>
+          <BitStart>0</BitStart>
+          <Length>03</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>Wakeup Charge Current Limit</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030303">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>03</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>03</Index>
+          <BitStart>3</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>Suspend buck</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+        <SFL Name="DeviceConfig">
+          <Order>a</Order>
+          <NickName>SUS</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Suspend buck</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030304">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>03</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>100mA</Item>
+        <Item>200mA</Item>
+        <Item>300mA</Item>
+        <Item>400mA</Item>
+        <Item>500mA</Item>
+        <Item>600mA</Item>
+        <Item>700mA</Item>
+        <Item>800mA</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="DeviceConfig">
+          <Order>b</Order>
+          <NickName>EOC</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>1</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <Description>EOC Current Limit</Description>
+        </SFL>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>03</Index>
+          <BitStart>4</BitStart>
+          <Length>03</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>EOC Current Limit</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030307">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>03</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>03</Index>
+          <BitStart>7</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>EN_TMR2X</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+        <SFL Name="DeviceConfig">
+          <Order>c</Order>
+          <NickName>EN_TMR2X</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Safety Timer Setting during input current limit or input voltage regulation active</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>0</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>Safety Timer Setting during input current limit or input voltage regulation active</Description>
+          <NickName>EN_TMR2X</NickName>
+          <LogName>EN_TMR2X</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030400">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>04</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>04</Index>
+          <BitStart>0</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>reg duv</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030401">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>04</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>04</Index>
+          <BitStart>1</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>reg dasy</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030402">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>04</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>04</Index>
+          <BitStart>2</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>reg clrtimer</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>1</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>reg clrtimer</Description>
+          <NickName>CLR_TIMER</NickName>
+          <LogName>CLR_TIMER</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030403">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>04</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>04</Index>
+          <BitStart>3</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>WK_TO</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>2</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means WK timer expired</Description>
+          <NickName>WKTO</NickName>
+          <LogName>WKTO</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030404">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>04</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>3hour</Item>
+        <Item>6hour</Item>
+        <Item>9hour</Item>
+        <Item>12hour</Item>
+        <Item>15hour</Item>
+        <Item>18hour</Item>
+        <Item>21hour</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="DeviceConfig">
+          <Order>0d</Order>
+          <NickName>CCT</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>4</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <Description>Fast Charge Timer Setting</Description>
+        </SFL>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>04</Index>
+          <BitStart>4</BitStart>
+          <Length>03</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>Fast Charge Timer Setting</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030407">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>04</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>04</Index>
+          <BitStart>7</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>CC_TO</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <GroupName>Status</GroupName>
+          <SubGroup>0</SubGroup>
+          <Order>3</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means CC timer expired</Description>
+          <NickName>CCTO</NickName>
+          <LogName>CCTO</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030500">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>05</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1.2</Item>
+        <Item>1.8</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>05</Index>
+          <BitStart>0</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>TSET0</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030501">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>05</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>2.2A</Item>
+        <Item>1.5A</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>05</Index>
+          <BitStart>1</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>reg otgocp</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+        <SFL Name="DeviceConfig">
+          <Order>e</Order>
+          <NickName>OTGOCP</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Otg ocp current setting</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030502">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>05</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>5.3V</Item>
+        <Item>5.2V</Item>
+        <Item>5.1V</Item>
+        <Item>5.0V</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="DeviceConfig">
+          <Order>0f</Order>
+          <NickName>BSTV</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>2</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <Description>Boost Output Voltage regulation</Description>
+        </SFL>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>05</Index>
+          <BitStart>2</BitStart>
+          <Length>02</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>BSTV</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030504">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>05</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>34.5%</Item>
+        <Item>37.5%</Item>
+        <Item>31.5%</Item>
+        <Item>Disable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="DeviceConfig">
+          <Order>10</Order>
+          <NickName>BHOT</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <Description>Boost Mode Hot Temperature Monitor Threshold</Description>
+        </SFL>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>05</Index>
+          <BitStart>4</BitStart>
+          <Length>02</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>BHOT</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030506">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>05</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>77%</Item>
+        <Item>80%</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>05</Index>
+          <BitStart>6</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>BCOLD</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+        <SFL Name="DeviceConfig">
+          <Order>11</Order>
+          <NickName>BCOLD</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Boost Mode Cold Temperature Monitor Threshold</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030507">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>05</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>05</Index>
+          <BitStart>7</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C105T</Group>
+          <Description>OTG</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+        <SFL Name="DeviceConfig">
+          <Order>12</Order>
+          <NickName>OTG</NickName>
+          <Catalog>OZ1C105T</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Enable OTG</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030600">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>06</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>06</Index>
+          <BitStart>0</BitStart>
+          <Length>03</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>NTC_FAULT</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030603">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>06</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>06</Index>
+          <BitStart>3</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>OTP</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>8</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>IC internal OTP</Description>
+          <NickName>OTP</NickName>
+          <LogName>OTP</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030604">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>06</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>06</Index>
+          <BitStart>4</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>VSYSOVP</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>7</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means VSYSOVP</Description>
+          <NickName>VSYSOVP</NickName>
+          <LogName>VSYSOVP</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030605">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>06</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>06</Index>
+          <BitStart>5</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>VBUSUVP</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>6</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means VBUS UVP</Description>
+          <NickName>VBUSUVP</NickName>
+          <LogName>VBUSUVP</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030606">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>06</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>06</Index>
+          <BitStart>6</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>VBUSOK</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>5</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means VBUS OK</Description>
+          <NickName>VBUSOK</NickName>
+          <LogName>VBUSOK</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030607">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>06</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>06</Index>
+          <BitStart>7</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>VBUSOVP</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>4</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means VBUS OVP</Description>
+          <NickName>VBUSOVP</NickName>
+          <LogName>VBUSOVP</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030700">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>07</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>07</Index>
+          <BitStart>0</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>CHGOFF</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>9</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means charger is disabled</Description>
+          <NickName>CHGOFF</NickName>
+          <LogName>CHGOFF</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030701">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>07</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>07</Index>
+          <BitStart>1</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>WK</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>a</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means in wakeup charge state</Description>
+          <NickName>WK</NickName>
+          <LogName>WK</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030702">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>07</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>07</Index>
+          <BitStart>2</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>CC</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>b</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means in CC state</Description>
+          <NickName>CC</NickName>
+          <LogName>CC</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030703">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>07</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>07</Index>
+          <BitStart>3</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>CV</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>c</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means in CV state</Description>
+          <NickName>CV</NickName>
+          <LogName>CV</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030704">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>07</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>07</Index>
+          <BitStart>4</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>FULL</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>d</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means fully charged</Description>
+          <NickName>FULL</NickName>
+          <LogName>FULL</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030705">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>07</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>07</Index>
+          <BitStart>5</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>ILMT_REG</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>e</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means charger in ILMT regulation</Description>
+          <NickName>ILMT_REG</NickName>
+          <LogName>ILMT_REG</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030706">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>3</SubSection>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>07</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>08</BitTotal>
+          <Index>07</Index>
+          <BitStart>6</BitStart>
+          <Length>01</Length>
+          <Value>5</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C105T</Group>
+          <Description>VLMT_REG</Description>
+          <PhyUnit> V</PhyUnit>
+        </SFL>
+		<SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>f</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>false</Usability>
+          <Description>1 means charger in VLMT regulation</Description>
+          <NickName>VLMT_REG</NickName>
+          <LogName>VLMT_REG</LogName>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+</Root>
+

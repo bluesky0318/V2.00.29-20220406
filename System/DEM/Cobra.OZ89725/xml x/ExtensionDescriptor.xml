@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ89725" chiptype="0587" bustype ="I2C" libname ="Cobra.OZ89725" ProjectCode="OCPKAC5X" AppVersion="2.00.03" OCEVersion="1.0.8.0">
+  <Part Name="DBConfig">
+    <ChipName>OZ89725</ChipName>
+    <ChipVersion>A0</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20200623</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+	  <Button Label = "EEPROM Config"	NoMapping="True"    Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel">
+		  <Layout Name ="layout" bOrder ="True">
+			  <Button Name ="EraseBtn" IsEnable ="False" Visibility="Collapsed"/>
+        <Button Name ="LoadBinBtn" Recontent="Load Bin File" IsEnable ="True" Visibility="Visible"/>
+      </Layout>
+		  <SubTask>
+			  <SaveHex>18</SaveHex>
+        <LoadBin>22</LoadBin>
+		  </SubTask>
+	  </Button>
+    <Button Label = "Mass Production" DBModuleName="Production"  Name = "Production" ShowVerify="True" ShowConfig="True" ShowHEX="True"  PanelName ="Cobra.ProductionPanel">
+      <Process>
+        <Item SubTaskID="9" RadioOption="0">Chip Frozen Check(PC)</Item>
+        <Item SubTaskID="10" RadioOption="1">Chip Frozen Check</Item>
+        <Item SubTaskID="11" RadioOption="0">Chip Dirty Check(PC)</Item>
+        <Item SubTaskID="12" RadioOption="1">Chip Dirty Check</Item>
+        <Item SubTaskID="13" RadioOption="0">Download(PC)</Item>
+        <Item SubTaskID="14" RadioOption="1">Download</Item>
+        <Item SubTaskID="15" RadioOption="0">Read Back Check(PC)</Item>
+        <Item SubTaskID="16" RadioOption="1">Read Back Check</Item>
+      </Process>
+      <GetEfuseHexDataCommand>17</GetEfuseHexDataCommand>
+    </Button>
+  </Part>
+</Root>

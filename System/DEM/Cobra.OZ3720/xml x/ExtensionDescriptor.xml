@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ3720" chiptype="2080" bustype ="I2C" libname ="Cobra.Azalea20" AppVersion="2.00.03" OCEVersion="1.00.01.00" ProjectCode="OCAZL20Y">
+  <Part Name="DBConfig">
+    <ChipName>OZ3720</ChipName>
+    <ChipVersion>C0</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20200428</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Board Config"  NoMapping="True"  Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel">
+      <Layout Name="layout" bOrder ="true">
+        <Button Name ="EraseBtn" IsEnable ="False" Visibility="Collapsed"/>
+        <Button Name ="SaveBtn" IsEnable ="False" Visibility="Collapsed"/>
+        <Button Name ="LoadBtn" Recontent="Load CSV" IsEnable ="True=" Visibility="Visible"/>
+        <Button Name ="ReadBtn" Recontent="Reset" IsEnable ="True" Visibility="Visible"/>
+        <Button Name ="WriteBtn" Recontent="Apply" IsEnable ="False" Visibility="Collapsed"/>
+      </Layout>
+    </Button>
+    <Button Label = "EfuseConfig"     Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel">
+      <Layout Name="layout" bOrder ="false"> 
+        <Button Name ="EraseBtn" IsEnable ="False"/>
+      </Layout>
+    </Button>
+    <Button Label = "Expert"      DBModuleName="Expert"       Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "Scan"      DBModuleName="Scan"        Name = "FSBS2"          PanelName ="Cobra.FSBS2Panel">
+      <Section Name ="Configuration"  SubTask="32">
+        <Element Name ="IntervalTime">
+          <Catalog></Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+			<Item Value ="1000mS">1S</Item>
+			<Item Value ="2000mS">2S</Item>
+			<Item Value ="3000mS">3S</Item>
+            <Item Value ="4000mS">4S</Item>
+            <Item Value ="5000mS">5S</Item>
+          </ItemList>
+        </Element>
+        <Element Name ="VADCMode">
+          <Catalog></Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="TrigEight">TrigEight</Item>
+            <Item Value ="TrigOne">TrigOne</Item>
+          </ItemList>
+        </Element>
+      </Section>
+    </Button>
+  </Part>
+</Root>

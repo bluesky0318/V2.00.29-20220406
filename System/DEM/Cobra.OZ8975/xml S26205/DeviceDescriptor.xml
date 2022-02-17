@@ -1,0 +1,3757 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root usage="DeviceDescriptor" chip="OZ26205" version ="1.1221" PRODUCT_FAMILY="OZ26205">
+  <Section Name ="BusOptions" Guid ="0x00100000">
+    <Element Guid ="0x00100000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList></ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>Connect Port:</NickName>
+          <Catalog>Common Configuration</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>16</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100001">
+      <PhysicalData>100</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>I2C Bus Frequency(KHZ):</NickName>
+          <Catalog>Common Configuration</Catalog>
+          <DefValue>400</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>63</MinValue>
+          <MaxValue>400</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100002">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>0x50</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>I2C Address:</NickName>
+          <Catalog>OZ8975</Catalog>
+          <DefValue>20</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>8</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100003">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>true</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>1</Order>
+          <NickName>PEC enable</NickName>
+          <Catalog>OZ8975</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>0</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name ="TempSettings" Guid ="0x00010000">
+    <Element Guid ="0x00010000">
+      <PhysicalData>2.5</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>41</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>0</Order>
+          <NickName>Rsense(mohm)</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>2.5</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0.1</MinValue>
+          <MaxValue>25.5</MaxValue>
+          <Description>The value of the sensor resistor</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010001">
+      <PhysicalData>230</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>41</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>1</Order>
+          <NickName>ETPullupR(Kohm)</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>230</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1023</MaxValue>
+          <Description>External temperature pull up resistor</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010002">
+      <PhysicalData>111300</PhysicalData>
+      <Key>-30</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>2</Order>
+          <NickName>-30℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>111300</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010003">
+      <PhysicalData>86430</PhysicalData>
+      <Key>-25</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>3</Order>
+          <NickName>-25℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>86430</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010004">
+      <PhysicalData>67770</PhysicalData>
+      <Key>-20</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>4</Order>
+          <NickName>-20℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>67770</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010005">
+      <PhysicalData>53410</PhysicalData>
+      <Key>-15</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>5</Order>
+          <NickName>-15℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>53410</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010006">
+      <PhysicalData>42470</PhysicalData>
+      <Key>-10</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>6</Order>
+          <NickName>-10℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>42470</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010007">
+      <PhysicalData>33900</PhysicalData>
+      <Key>-5</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>7</Order>
+          <NickName>-5℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>33900</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010008">
+      <PhysicalData>27280</PhysicalData>
+      <Key>0</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>8</Order>
+          <NickName>0℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>27280</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010009">
+      <PhysicalData>22050</PhysicalData>
+      <Key>5</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>9</Order>
+          <NickName>5℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>22050</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000A">
+      <PhysicalData>17960</PhysicalData>
+      <Key>10</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>10℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>17960</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000B">
+      <PhysicalData>14690</PhysicalData>
+      <Key>15</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>15℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>14690</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000C">
+      <PhysicalData>12090</PhysicalData>
+      <Key>20</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>20℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>12090</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000D">
+      <PhysicalData>10000</PhysicalData>
+      <Key>25</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>25℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>10000</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000E">
+      <PhysicalData>8313</PhysicalData>
+      <Key>30</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>30℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>8313</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001000F">
+      <PhysicalData>6940</PhysicalData>
+      <Key>35</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>35℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>6940</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010010">
+      <PhysicalData>5827</PhysicalData>
+      <Key>40</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>40℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>5827</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010011">
+      <PhysicalData>4911</PhysicalData>
+      <Key>45</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>45℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>4911</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010012">
+      <PhysicalData>4160</PhysicalData>
+      <Key>50</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>50℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>4160</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010013">
+      <PhysicalData>3800</PhysicalData>
+      <Key>55</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>55℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>3800</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010014">
+      <PhysicalData>3020</PhysicalData>
+      <Key>60</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>60℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>3020</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010015">
+      <PhysicalData>2588</PhysicalData>
+      <Key>65</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>65℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>2588</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010016">
+      <PhysicalData>2228</PhysicalData>
+      <Key>70</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>70℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>2228</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010017">
+      <PhysicalData>1924</PhysicalData>
+      <Key>75</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+
+          <NickName>75℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>1924</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010018">
+      <PhysicalData>1668</PhysicalData>
+      <Key>80</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>18</Order>
+          <NickName>80℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>1668</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x00010019">
+      <PhysicalData>1451</PhysicalData>
+      <Key>85</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>19</Order>
+          <NickName>85℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>1451</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+    <Element Guid ="0x0001001A">
+      <PhysicalData>1266</PhysicalData>
+      <Key>90</Key>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>40</SubType>
+      <Private>
+        <SFL Name ="BoardConfig">
+          <Order>1a</Order>
+          <NickName>90℃</NickName>
+          <Catalog>Temperature Configuration</Catalog>
+          <DefValue>1266</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>1000000</MaxValue>
+          <Description>External temperature R-T item</Description>
+        </SFL>
+        <SFL Name ="TemperTable"/>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name ="Mapping" Guid ="0x00020000">
+    <Element Guid="0x00022700">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>27</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Open-drain output</Item>
+        <Item>Push-pull output</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>DSGPAD_TYPE</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies the output type of DSG. Only effective for the CMOS type IC.</Description>
+          <Order>10</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022701">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>27</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>DSG outputs Low when no events (i.e. outputs Hi-Z or High when events occur)</Item>
+        <Item>DSG outputs Hi-Z or High when no events (i.e. outputs Low when events occur)</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>DSGPAD_ACTIVE_O</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies the output state of DSG when protection events occur.</Description>
+          <Order>E</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022702">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>27</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Open-drain output</Item>
+        <Item>Push-pull output</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>CHGPAD_TYPE</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies the output type of CHG. Only effective for the CMOS type IC.</Description>
+          <Order>D</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022703">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>27</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>CHG outputs Low when no events (i.e. outputs Hi-Z or High when events occur)</Item>
+        <Item>CHG outputs Hi-Z or High when no events (i.e. outputs Low when events occur)</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>CHGPAD_ACTIVE_O</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies the output state of CHG when protection events occur.</Description>
+          <Order>C</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022704">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>27</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Enable</Item>
+        <Item>Disable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>UVP_DIS</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Disable or enable UV protection</Description>
+          <Order>6</Order>
+          <Relations>
+            <Item>0x00022a00</Item>
+            <Item>0x00022a04</Item>
+            <Item>0x00022b02</Item>
+            <Item>0x00022907</Item>
+          </Relations>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022805">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>28</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Do not need software to clear the event flags so as to release the protections</Item>
+        <Item>Need software to clear the event flags so as to release the protections</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>SW_RELEASE</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies how to release protection events. Only effective in I2C mode.</Description>
+          <Order>F</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022806">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>3</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>28</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>3 cells</Item>
+        <Item>4 cells</Item>
+        <Item>5 cells</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>Ncell</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>2</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Number of cells in series</Description>
+          <Order>1</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022900">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>10</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>2</SubType>
+      <Offset>3900</Offset>
+      <HexMin>a</HexMin>
+      <HexMax>3c</HexMax>
+      <PhyMin>3500</PhyMin>
+      <PhyMax>4500</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>29</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>Vovp1</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>4050</DefValue>
+          <MinValue>4000</MinValue>
+          <MaxValue>4500</MaxValue>
+          <EditType>0</EditType>
+          <Format>0</Format>
+          <Description>OV protection threshold for each cell</Description>
+          <Order>3</Order>
+          <Relations>
+            <Item>0x00022B04</Item>
+          </Relations>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022907">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>29</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Do not initiate protection on CHG when UV occurs</Item>
+        <Item>Initiate protection on CHG when UV occurs</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>UV_ON_CHGPAD</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies whether to initiate protection on CHG when UV occurs.</Description>
+          <Order>0A</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022A00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>15</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2A</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1200mV</Item>
+        <Item>1400mV</Item>
+        <Item>1600mV</Item>
+        <Item>1800mV</Item>
+        <Item>1900mV</Item>
+        <Item>2000mV</Item>
+        <Item>2100mV</Item>
+        <Item>2200mV</Item>
+        <Item>2300mV</Item>
+        <Item>2400mV</Item>
+        <Item>2500mV</Item>
+        <Item>2600mV</Item>
+        <Item>2700mV</Item>
+        <Item>2800mV</Item>
+        <Item>2900mV</Item>
+        <Item>3000mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>Vuvp</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>15</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>UV protection threshold for each cell</Description>
+          <Order>7</Order>
+          <Relations>
+            <Item>0x00022A04</Item>
+          </Relations>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022A04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2A</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>100mV</Item>
+        <Item>200mV</Item>
+        <Item>300mV</Item>
+        <Item>400mV</Item>
+        <Item>500mV</Item>
+        <Item>600mV</Item>
+        <Item>700mV</Item>
+        <Item>800mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>Vuvr-hys</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Hysteresis for UV release.</Description>
+          <Order>8</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022A07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2A</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>select OVP range 4.0V~4.5V for Li_ion Cobalt//Monganate type</Item>
+        <Item>select OVP range 3.5V~4.0V for Li_ion Phosphate type</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>BAT_TYPE</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Battery type</Description>
+          <Relations>
+            <Item>0x00022900</Item>
+            <Item>0x00022B04</Item>
+          </Relations>
+          <Order>2</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022B00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2B</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>4s</Item>
+        <Item>8s</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>Tovp</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>OV protection delay time. This setting is effective for VOVP1, VOVP2 and VOVP3.</Description>
+          <Order>5</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022B02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2B</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>4s</Item>
+        <Item>8s</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>Tuvp</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>UV protection delay time. </Description>
+          <Order>9</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00022B04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2B</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>50mV</Item>
+        <Item>100mV</Item>
+        <Item>150mV</Item>
+        <Item>200mV</Item>
+        <Item>250mV</Item>
+        <Item>300mV</Item>
+        <Item>350mV</Item>
+        <Item>400mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Register Config">
+          <NickName>Vovr-hys</NickName>
+          <Catalog>EFUSE Map Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Hysteresis for OV protection release. This setting is effective for VOVP1, VOVP2 and VOVP3.</Description>
+          <Order>4</Order>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name ="Operation" Guid ="0x00030000">
+    <Element Guid ="0x00030000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>0</SubSection>
+      <HexMin>0</HexMin>
+      <HexMax>FF</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>255</PhyMax>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>00</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>00</Index>
+          <BitStart>00</BitStart>
+          <Length>08</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>HWID1</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00030100">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <SubSection>0</SubSection>
+      <HexMin>0</HexMin>
+      <HexMax>FF</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>255</PhyMax>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>01</Address>
+          <StartBit>00</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>01</Index>
+          <BitStart>00</BitStart>
+          <Length>08</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>HWID2</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031700">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>17</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Open-drain output</Item>
+        <Item>Push-pull output</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>DSGPAD_TYPE</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies the output type of DSG. Only effective for the CMOS type IC.</Description>
+          <Order>10</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031701">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>17</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>DSG outputs Low when no events (i.e. outputs Hi-Z or High when events occur)</Item>
+        <Item>DSG outputs Hi-Z or High when no events (i.e. outputs Low when events occur)</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>DSGPAD_ACTIVE_O</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies the output state of DSG when protection events occur.</Description>
+          <Order>E</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031702">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>17</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Open-drain output</Item>
+        <Item>Push-pull output</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>CHGPAD_TYPE</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies the output type of CHG. Only effective for the CMOS type IC.</Description>
+          <Order>D</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031703">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>17</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>CHG outputs Low when no events (i.e. outputs Hi-Z or High when events occur)</Item>
+        <Item>CHG outputs Hi-Z or High when no events (i.e. outputs Low when events occur)</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>CHGPAD_ACTIVE_O</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies the output state of CHG when protection events occur.</Description>
+          <Order>C</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031704">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>17</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>                                                                                                                                                                  "
+        <Item>Enable</Item>
+        <Item>Disable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>UVP_DIS</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Disable or enable UV protection</Description>
+          <Order>6</Order>
+          <Relations>
+            <Item>0x00031a00</Item>
+            <Item>0x00031a04</Item>
+            <Item>0x00031b02</Item>
+            <Item>0x00031907</Item>
+          </Relations>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031707">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>17</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031805">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>18</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Do not need software to clear the event flags so as to release the protections</Item>
+        <Item>Need software to clear the event flags so as to release the protections</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>SW_RELEASE</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies how to release protection events. Only effective in I2C mode.</Description>
+          <Order>F</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031806">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>3</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>18</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>3 cells</Item>
+        <Item>4 cells</Item>
+        <Item>5 cells</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>Ncell</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>2</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Number of cells in series</Description>
+          <Order>1</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031900">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>10</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>2</SubType>
+      <Offset>3900</Offset>
+      <HexMin>a</HexMin>
+      <HexMax>3c</HexMax>
+      <PhyMin>3500</PhyMin>
+      <PhyMax>4500</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>19</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>Vovp1</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>4050</DefValue>
+          <MinValue>4000</MinValue>
+          <MaxValue>4500</MaxValue>
+          <EditType>0</EditType>
+          <Format>0</Format>
+          <Description>OV protection threshold for each cell</Description>
+          <Order>3</Order>
+          <Relations>
+            <Item>0x00031B04</Item>
+          </Relations>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031907">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>19</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Do not initiate protection on CHG when UV occurs</Item>
+        <Item>Initiate protection on CHG when UV occurs</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>UV_ON_CHGPAD</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>It specifies whether to initiate protection on CHG when UV occurs.</Description>
+          <Order>0A</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031A00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>15</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1A</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1200mV</Item>
+        <Item>1400mV</Item>
+        <Item>1600mV</Item>
+        <Item>1800mV</Item>
+        <Item>1900mV</Item>
+        <Item>2000mV</Item>
+        <Item>2100mV</Item>
+        <Item>2200mV</Item>
+        <Item>2300mV</Item>
+        <Item>2400mV</Item>
+        <Item>2500mV</Item>
+        <Item>2600mV</Item>
+        <Item>2700mV</Item>
+        <Item>2800mV</Item>
+        <Item>2900mV</Item>
+        <Item>3000mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>Vuvp</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>15</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>UV protection threshold for each cell</Description>
+          <Order>7</Order>
+          <Relations>
+            <Item>0x00031A04</Item>
+          </Relations>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031A04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1A</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>100mV</Item>
+        <Item>200mV</Item>
+        <Item>300mV</Item>
+        <Item>400mV</Item>
+        <Item>500mV</Item>
+        <Item>600mV</Item>
+        <Item>700mV</Item>
+        <Item>800mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>Vuvr-hys</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Hysteresis for UV release.</Description>
+          <Order>8</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031A07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1A</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>select OVP range 4.0V~4.5V for Li_ion Cobalt//Monganate type</Item>
+        <Item>select OVP range 3.5V~4.0V for Li_ion Phosphate type</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>BAT_TYPE</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Battery type</Description>
+          <Relations>
+            <Item>0x00031900</Item>
+            <Item>0x00031B04</Item>
+          </Relations>
+          <Order>2</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031B00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1B</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>4s</Item>
+        <Item>8s</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>Tovp</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>OV protection delay time. This setting is effective for VOVP1, VOVP2 and VOVP3.</Description>
+          <Order>5</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031B02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1B</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>4s</Item>
+        <Item>8s</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>Tuvp</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>UV protection delay time. </Description>
+          <Order>9</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031B04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1B</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>50mV</Item>
+        <Item>100mV</Item>
+        <Item>150mV</Item>
+        <Item>200mV</Item>
+        <Item>250mV</Item>
+        <Item>300mV</Item>
+        <Item>350mV</Item>
+        <Item>400mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="EFUSE Config">
+          <NickName>Vovr-hys</NickName>
+          <Catalog>EFUSE Data</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Hysteresis for OV protection release. This setting is effective for VOVP1, VOVP2 and VOVP3.</Description>
+          <Order>4</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031B07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1B</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031C05">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1C</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031C06">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1C</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>5 cells</Item>
+        <Item>6 cells</Item>
+        <Item>7 cells</Item>
+        <Item>8 cells</Item>
+      </ItemList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031D00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>10</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>63</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1D</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031D06">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1D</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>enable</Item>
+        <Item>disable</Item>
+      </ItemList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031D07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1D</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>don't output UV status on CHGPAD</Item>
+        <Item>output UV status on CHGPAD</Item>
+      </ItemList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031E00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>15</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1E</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1200mV</Item>
+        <Item>1400mV</Item>
+        <Item>1600mV</Item>
+        <Item>1800mV</Item>
+        <Item>1900mV</Item>
+        <Item>2000mV</Item>
+        <Item>2100mV</Item>
+        <Item>2200mV</Item>
+        <Item>2300mV</Item>
+        <Item>2400mV</Item>
+        <Item>2500mV</Item>
+        <Item>2600mV</Item>
+        <Item>2700mV</Item>
+        <Item>2800mV</Item>
+        <Item>2900mV</Item>
+        <Item>3000mV</Item>
+      </ItemList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031E04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1E</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>100mV</Item>
+        <Item>200mV</Item>
+        <Item>300mV</Item>
+        <Item>400mV</Item>
+        <Item>500mV</Item>
+        <Item>600mV</Item>
+        <Item>700mV</Item>
+        <Item>800mV</Item>
+      </ItemList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031E07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1E</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>select OVP range 4.0V~4.5V for Li_ion Cobalt type</Item>
+        <Item>select OVP range 3.5V~4.0V for Li_ion Phosphate type</Item>
+      </ItemList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031F00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1F</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>4s</Item>
+        <Item>8s</Item>
+      </ItemList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031F02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1F</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>4s</Item>
+        <Item>8s</Item>
+      </ItemList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031F04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1F</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>50mV</Item>
+        <Item>100mV</Item>
+        <Item>150mV</Item>
+        <Item>200mV</Item>
+        <Item>250mV</Item>
+        <Item>300mV</Item>
+        <Item>350mV</Item>
+        <Item>400mV</Item>
+      </ItemList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00031F07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1F</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x00032700">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>27</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Open-drain output</Item>
+        <Item>Push-pull output</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>27</Index>
+          <BitStart>0</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>DSGPAD_TYPE</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032701">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>27</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>DSG outputs Low when no events (i.e. outputs Hi-Z or High when events occur)</Item>
+        <Item>DSG outputs Hi-Z or High when no events (i.e. outputs Low when events occur)</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>27</Index>
+          <BitStart>1</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>DSGPAD_ACTIVE_O</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032702">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>27</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Open-drain output</Item>
+        <Item>Push-pull output</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>27</Index>
+          <BitStart>2</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>CHGPAD_TYPE</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032703">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>27</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>CHG outputs Low when no events (i.e. outputs Hi-Z or High when events occur)</Item>
+        <Item>CHG outputs Hi-Z or High when no events (i.e. outputs Low when events occur)</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>27</Index>
+          <BitStart>3</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>CHGPAD_ACTIVE_O</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032704">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>27</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Enable</Item>
+        <Item>Disable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>27</Index>
+          <BitStart>4</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>UVP_DIS</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032707">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>27</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>27</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>cfg_frozen</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032805">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>28</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Do not need software to clear the event flags so as to release the protections</Item>
+        <Item>Need software to clear the event flags so as to release the protections</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>28</Index>
+          <BitStart>5</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>SW_RELEASE</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032806">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>3</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>28</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>3 cells</Item>
+        <Item>4 cells</Item>
+        <Item>5 cells</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>28</Index>
+          <BitStart>6</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Ncell</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032900">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>10</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>4</SubType>
+      <Offset>3900</Offset>
+      <HexMin>a</HexMin>
+      <HexMax>3c</HexMax>
+      <PhyMin>3500</PhyMin>
+      <PhyMax>4500</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>29</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>29</Index>
+          <BitStart>0</BitStart>
+          <Length>6</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Vovp1</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032907">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>29</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Do not initiate protection on CHG when UV occurs</Item>
+        <Item>Initiate protection on CHG when UV occurs</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>29</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>UV_ON_CHGPAD</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032A00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>15</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2A</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1200mV</Item>
+        <Item>1400mV</Item>
+        <Item>1600mV</Item>
+        <Item>1800mV</Item>
+        <Item>1900mV</Item>
+        <Item>2000mV</Item>
+        <Item>2100mV</Item>
+        <Item>2200mV</Item>
+        <Item>2300mV</Item>
+        <Item>2400mV</Item>
+        <Item>2500mV</Item>
+        <Item>2600mV</Item>
+        <Item>2700mV</Item>
+        <Item>2800mV</Item>
+        <Item>2900mV</Item>
+        <Item>3000mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2A</Index>
+          <BitStart>0</BitStart>
+          <Length>4</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Vuvp</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032A04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2A</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>100mV</Item>
+        <Item>200mV</Item>
+        <Item>300mV</Item>
+        <Item>400mV</Item>
+        <Item>500mV</Item>
+        <Item>600mV</Item>
+        <Item>700mV</Item>
+        <Item>800mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2A</Index>
+          <BitStart>4</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Vuvr-hys</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032A07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2A</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>select OVP range 4.0V~4.5V for Li_ion Cobalt//Monganate type</Item>
+        <Item>select OVP range 3.5V~4.0V for Li_ion Phosphate type</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2A</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>BAT_TYPE</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032B00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2B</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>4s</Item>
+        <Item>8s</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2B</Index>
+          <BitStart>0</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Tovp</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032B02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2B</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>4s</Item>
+        <Item>8s</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2B</Index>
+          <BitStart>2</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Tuvp</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032B04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2B</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>50mV</Item>
+        <Item>100mV</Item>
+        <Item>150mV</Item>
+        <Item>200mV</Item>
+        <Item>250mV</Item>
+        <Item>300mV</Item>
+        <Item>350mV</Item>
+        <Item>400mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2B</Index>
+          <BitStart>4</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Vovr-hys</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032B07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2B</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2B</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>user_frozen_bank1</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032C05">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2C</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2C</Index>
+          <BitStart>5</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>SW_RELEASE</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032C06">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2C</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>5 cells</Item>
+        <Item>6 cells</Item>
+        <Item>7 cells</Item>
+        <Item>8 cells</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2C</Index>
+          <BitStart>6</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Ncell</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032D00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>10</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>4</SubType>
+      <Offset>3900</Offset>
+      <HexMin>0</HexMin>
+      <HexMax>3F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>63</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2D</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2D</Index>
+          <BitStart>0</BitStart>
+          <Length>6</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Vovp1</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032D07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2D</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>don't output UV status on CHGPAD</Item>
+        <Item>output UV status on CHGPAD</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2D</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>UV_ON_CHGPAD</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032E00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>15</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2E</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1200mV</Item>
+        <Item>1400mV</Item>
+        <Item>1600mV</Item>
+        <Item>1800mV</Item>
+        <Item>1900mV</Item>
+        <Item>2000mV</Item>
+        <Item>2100mV</Item>
+        <Item>2200mV</Item>
+        <Item>2300mV</Item>
+        <Item>2400mV</Item>
+        <Item>2500mV</Item>
+        <Item>2600mV</Item>
+        <Item>2700mV</Item>
+        <Item>2800mV</Item>
+        <Item>2900mV</Item>
+        <Item>3000mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2E</Index>
+          <BitStart>0</BitStart>
+          <Length>4</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Vuvp</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032E04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2E</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>100mV</Item>
+        <Item>200mV</Item>
+        <Item>300mV</Item>
+        <Item>400mV</Item>
+        <Item>500mV</Item>
+        <Item>600mV</Item>
+        <Item>700mV</Item>
+        <Item>800mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2E</Index>
+          <BitStart>4</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Vuvr-hys</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032E07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2E</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>select OVP range 4.0V~4.5V for Li_ion Cobalt type</Item>
+        <Item>select OVP range 3.5V~4.0V for Li_ion Phosphate type</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2E</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>BAT_TYPE</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032F00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2F</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>4s</Item>
+        <Item>8s</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2F</Index>
+          <BitStart>0</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Tovp</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032F02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2F</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>4s</Item>
+        <Item>8s</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2F</Index>
+          <BitStart>2</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Tuvp</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032F04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2F</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>50mV</Item>
+        <Item>100mV</Item>
+        <Item>150mV</Item>
+        <Item>200mV</Item>
+        <Item>250mV</Item>
+        <Item>300mV</Item>
+        <Item>350mV</Item>
+        <Item>400mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2F</Index>
+          <BitStart>4</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>Vovr-hys</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00032F07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2F</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2F</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Efuse Map Data</Group>
+          <Description>user_frozen_bank2</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>30</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>5</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>30</Index>
+          <BitStart>0</BitStart>
+          <Length>05</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>cell_sel</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033100">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>31</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>5</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>31</Index>
+          <BitStart>0</BitStart>
+          <Length>05</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>cto_sel</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033200">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>32</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>32</Index>
+          <BitStart>0</BitStart>
+          <Length>06</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>ov_th</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033300">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>33</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>5</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>33</Index>
+          <BitStart>0</BitStart>
+          <Length>05</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>uv_th</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033500">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>35</Address>
+          <StartBit>00</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>35</Index>
+          <BitStart>00</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>uvp_state</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033501">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>35</Address>
+          <StartBit>01</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>35</Index>
+          <BitStart>01</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>ovp_state</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033505">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>35</Address>
+          <StartBit>05</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>35</Index>
+          <BitStart>05</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>cto_state</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033506">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>35</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>35</Index>
+          <BitStart>06</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>t1_state</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033507">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>35</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>35</Index>
+          <BitStart>07</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>t2_state</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033800">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>38</Address>
+          <StartBit>00</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>38</Index>
+          <BitStart>00</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Operation</Group>
+          <Description>uvp_flag</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033801">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>38</Address>
+          <StartBit>01</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>38</Index>
+          <BitStart>01</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Operation</Group>
+          <Description>ovp_flag</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033805">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>38</Address>
+          <StartBit>05</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>38</Index>
+          <BitStart>05</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Operation</Group>
+          <Description>cto_flag</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033807">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>38</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>38</Index>
+          <BitStart>07</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Operation</Group>
+          <Description>i2c_timeout_flag</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033903">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>39</Address>
+          <StartBit>03</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>39</Index>
+          <BitStart>03</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Operation</Group>
+          <Description>sw_mapping_req</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033A02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3A</Address>
+          <StartBit>02</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>3A</Index>
+          <BitStart>02</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>chgpad_out</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033A03">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3A</Address>
+          <StartBit>03</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>3A</Index>
+          <BitStart>03</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>Operation</Group>
+          <Description>dsgpad_out</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00034000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>40</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>40</Index>
+          <BitStart>0</BitStart>
+          <Length>02</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Operation</Group>
+          <Description>efuse_mode</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00034004">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>40</Address>
+          <StartBit>04</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>40</Index>
+          <BitStart>04</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Operation</Group>
+          <Description>sw_speedup_enable</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00034005">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>40</Address>
+          <StartBit>05</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>40</Index>
+          <BitStart>05</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Operation</Group>
+          <Description>mapping_disable</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00034007">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>40</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>40</Index>
+          <BitStart>07</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>Operation</Group>
+          <Description>allow_wr</Description>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name="Virtual" Guid="0x000c0000">
+    <Element Guid="0x000c0001">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>2</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>2</PhyMax>
+      <ItemList>
+        <Item>Enable</Item>
+        <Item>Disable</Item>
+      </ItemList>
+      <Private>
+      </Private>
+    </Element>
+    <Element Guid="0x000c0002">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>2</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>2</PhyMax>
+      <ItemList>
+        <Item>Enable</Item>
+        <Item>Disable</Item>
+      </ItemList>
+      <Private>
+      </Private>
+    </Element>
+  </Section>
+</Root>
+

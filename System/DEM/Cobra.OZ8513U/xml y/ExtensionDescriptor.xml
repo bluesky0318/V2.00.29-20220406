@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ8513U" chiptype="D0" bustype ="I2C" libname ="Cobra.OZ8513U" ProjectCode="SFLPDUFP"  OCEVersion="0.0.2" AppVersion="2.00.03">
+  <Part Name="DBConfig">
+    <ChipName>OZ8513U</ChipName>
+    <ChipVersion>D0</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20180705</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "UFPSBS"  DBModuleName="UFPSBS" Name = "UFPSBS" PanelName ="Cobra.UFPSBSPanel"/>
+    <Button Label = "UFPPD"    DBModuleName="UFP" Name ="UFP"   PanelName ="Cobra.UFPPanel"/>
+  </Part>
+</Root>

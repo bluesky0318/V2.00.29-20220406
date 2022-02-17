@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Cobra.UFPSBSPanel.WaveControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:ds="http://research.microsoft.com/DynamicDataDisplay/1.0"
+             d:DesignHeight="300" d:DesignWidth="300" >
+
+    <ds:ChartPlotter x:Name ="plot">
+        <ds:ChartPlotter.HorizontalAxis>
+            <ds:HorizontalIntegerAxis/>
+        </ds:ChartPlotter.HorizontalAxis>
+        <ds:ChartPlotter.VerticalAxis>
+            <ds:VerticalAxis/>
+        </ds:ChartPlotter.VerticalAxis>
+        <ds:VerticalAxisTitle x:Name="vAxisTitle"  FontFamily="Georgia" FontSize="12"  Margin="1"  FontWeight="Bold" />
+        <ds:HorizontalAxisTitle x:Name="hAxisTitle" FontFamily="Georgia" FontSize="12" Content="Time(second)" Margin="1" FontWeight="Bold" /> 
+    </ds:ChartPlotter> 
+
+<!-- 
+    <ds:ChartPlotter x:Name ="plot" VerticalAlignment="Top" VerticalContentAlignment="Stretch" LegendVisible="False">
+        <ds:ChartPlotter.HorizontalAxis>
+            <ds:HorizontalDateTimeAxis Name="dateAxis" />
+        </ds:ChartPlotter.HorizontalAxis>
+        <ds:VerticalAxisTitle FontFamily="Georgia" x:Name="vAxisTitle"/>
+        <ds:HorizontalAxisTitle FontFamily="Georgia" /> 
+    </ds:ChartPlotter>-->
+</UserControl>

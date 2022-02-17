@@ -1,0 +1,149 @@
+﻿<UserControl x:Class="Cobra.Trim2Panel.MainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:src="clr-namespace:Cobra.Trim2Panel"
+	         xmlns:controls="clr-namespace:Cobra.ControlLibrary;assembly=Cobra.ControlLibrary"
+             mc:Ignorable="d" 
+             FontSize="12"
+             x:Name="UserControl" d:DesignHeight="480" d:DesignWidth="640" HorizontalContentAlignment="Stretch">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid x:Name ="WorkPanel">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.6*" ></ColumnDefinition>
+                        <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBox Grid.Row="0" Text="Input" FontSize="25" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" Foreground="#FF53749A" IsReadOnly="True" />
+                        <DataGrid Grid.Row="1" Margin="5" Name="inputDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell" SelectionMode="Single">
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="{x:Type DataGridColumnHeader}">
+                                    <Setter Property="FontSize" Value="15"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.RowHeaderStyle>
+                                <Style TargetType="{x:Type DataGridRowHeader}">
+                                    <Setter Property="FontSize" Value="15"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                    <Setter Property="MinWidth" Value="80"/>
+                                    <Setter Property="MinHeight" Value="31"/>
+                                </Style>
+                            </DataGrid.RowHeaderStyle>
+                            <DataGrid.CellStyle>
+                                <Style TargetType="{x:Type DataGridCell}">
+                                    <Setter Property="FontSize" Value="15"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                    <Setter Property="Height" Value="31"/>
+                                </Style>
+                            </DataGrid.CellStyle>
+                            <DataGrid.RowHeaderTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <CheckBox Margin="2" IsChecked ="{Binding  DataContext.bChecked,RelativeSource={RelativeSource AncestorType=DataGridRow}, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15"/>
+                                        <TextBlock Text="{Binding DataContext.nickname, RelativeSource={RelativeSource AncestorType=DataGridRow}}"></TextBlock>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGrid.RowHeaderTemplate>
+                        </DataGrid>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBox Grid.Row="0" Text="OutPut" FontSize="25" FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center" Foreground="#FF53749A" IsReadOnly="True" />
+                        <DataGrid Grid.Row="1" Margin="5" Name="outputDataGrid" ItemsSource="{Binding}" AutoGenerateColumns="False" CanUserAddRows="False" SelectionUnit="Cell" SelectionMode="Single">
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="{x:Type DataGridColumnHeader}">
+                                    <Setter Property="FontSize" Value="15"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.RowHeaderStyle>
+                                <Style TargetType="{x:Type DataGridRowHeader}">
+                                    <Setter Property="Content" Value="{Binding Path=nickname}" />
+                                    <Setter Property="FontSize" Value="15"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                    <Setter Property="MinWidth" Value="80"/>
+                                    <Setter Property="MinHeight" Value="31"/>
+                                </Style>
+                            </DataGrid.RowHeaderStyle>
+                            <DataGrid.CellStyle>
+                                <Style TargetType="{x:Type DataGridCell}">
+                                    <Setter Property="FontSize" Value="12"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                    <Setter Property="VerticalAlignment" Value="Center"/>
+                                    <Setter Property="Height" Value="31"/>
+                                </Style>
+                            </DataGrid.CellStyle>
+                            <DataGrid.Columns>
+                                <DataGridTemplateColumn Header="Slope" Width="0.3*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label Content="{Binding Path=sSlope, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" FontSize="15"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="Offset" Width="*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label Content="{Binding Path=sOffset, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" FontSize="15"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="Code" Width="0.3*">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Label Content="{Binding Path=sCode, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" FontSize="15"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Border Style="{DynamicResource border-group}">
+                    <UniformGrid Columns="3" Rows="2" >
+                        <Button x:Name="loadBtn" Content="Load File" Style="{DynamicResource btn-deviceConfiguration}" Width="100" Height="26" Click="loadBtn_Click" />
+                        <Button x:Name="SelectAllBtn"  Content="Select All" Style="{DynamicResource btn-deviceConfiguration}" Width="100" Height="26" Click="SelectAllBtn_Click" />
+                        <Button x:Name="resetBtn" Content="Reset" Style="{DynamicResource btn-deviceConfiguration}" Width="100" Height="26" Click="resetBtn_Click" IsEnabled="{Binding benable}"/>
+                        <Button x:Name="saveBtn"  Content="Save File" Style="{DynamicResource btn-deviceConfiguration}" Width="100" Height="26" Click="saveBtn_Click" />
+                        <Button x:Name="SelectNoneBtn"  Content="Select None" Style="{DynamicResource btn-deviceConfiguration}" Width="100" Height="26" Click="SelectNoneBtn_Click" />
+                    </UniformGrid>
+                </Border>
+                <Border Style="{DynamicResource border-group}">
+                    <UniformGrid Columns="2">
+                        <Button x:Name="startSlopeBtn" Content="Start Slope" Style="{DynamicResource btn-deviceConfiguration}" Width="100" Height="26" Click="startSlopeBtn_Click" IsEnabled="{Binding benable}"/>
+                        <Button x:Name="countSlopeBtn" Content="Count Slope" Style="{DynamicResource btn-deviceConfiguration}" Width="100" Height="26" Click="countSlopeBtn_Click" IsEnabled="{Binding benable}"/>
+                        <Button x:Name="writeSlopeBtn" Content="Write Slope" Style="{DynamicResource btn-deviceConfiguration}" Width="100" Height="26" Click="writeSlopeBtn_Click" IsEnabled="{Binding benable}"/>
+                    </UniformGrid>
+                </Border>
+                <Border Style="{DynamicResource border-group}">
+                    <UniformGrid Columns="2">
+                        <Button x:Name="startOffsetBtn" Content="Start Offset" Style="{DynamicResource btn-deviceConfiguration}" Width="100" Height="26" Click="startOffsetBtn_Click" IsEnabled="{Binding benable}"/>
+                        <Button x:Name="countOffsetBtn" Content="Count Offset" Style="{DynamicResource btn-deviceConfiguration}" Width="100" Height="26" Click="countOffsetBtn_Click" IsEnabled="{Binding benable}"/>
+                        <Button x:Name="writeOffsetBtn" Content="Write Offset" Style="{DynamicResource btn-deviceConfiguration}" Width="100" Height="26" Click="writeOffsetBtn_Click" IsEnabled="{Binding benable}"/>
+                    </UniformGrid>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <controls:WarningControl x:Name="WarningPopControl"/>
+    </Grid>
+</UserControl>

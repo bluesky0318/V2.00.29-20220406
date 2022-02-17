@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="FWSeaguIIPD" chiptype="0100" bustype ="RS232" libname ="Cobra.FWSeaguIIPD" OCEVersion ="2.00.00" ProjectCode ="OCEFWBIGSY" AppVersion="2.00.03">
+	<Part Name="DBConfig">
+    <ChipName>FWSeagullPD</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20200531</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+	  <Button Label = "HexEditor"      Name ="HexEditor"     PanelName ="Cobra.HexEditorPanel">
+		  <Layout Name="layout" bMask="false">
+			  <ComboBox Name ="selectCB">
+				  <ComboBoxItem>64K Ext flash</ComboBoxItem>
+				  <ComboBoxItem>63.5K EEPROM</ComboBoxItem>
+			  </ComboBox>
+		  </Layout>
+	  </Button>
+  </Part>
+</Root>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="93510" chiptype="0100" bustype ="I2C" libname ="Cobra.OZ935XXSBS" OCEVersion ="2.00.00" ProjectCode ="OCEFWBIGSY" AppVersion="2.00.03">
+  <Part Name="DBConfig">
+    <ChipName>93510SBS</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>X</UserType>
+    <Date>20181030</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Scan"      DBModuleName="Scan"        Name = "FSBS2"          PanelName ="Cobra.FSBS2Panel">
+      <IntervalTime>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>3s</Item>
+        <Item>4s</Item>
+      </IntervalTime>
+      <ScanMode/>
+      <DemoMode>false</DemoMode>
+    </Button>
+    <Button Label = "Parameter"     Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel">
+      <Layout Name ="layout">
+        <Button Name ="EraseBtn" IsEnable ="False"/>
+      </Layout>
+    </Button>
+  </Part>
+</Root>

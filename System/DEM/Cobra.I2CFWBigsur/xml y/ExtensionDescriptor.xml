@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ935XX" chiptype="0100" bustype ="I2C" libname ="Cobra.I2CFWBigsur" OCEVersion ="2.00.00" ProjectCode ="OCEFWBIGSY" AppVersion="2.00.03">
+	<Part Name="DBConfig">
+    <ChipName>OZ935XXI2CMCU</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20200325</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "HexEditor"      Name ="HexEditor"     PanelName ="Cobra.HexEditorPanel">
+      <Layout Name="layout">
+        <ComboBox Name ="selectCB">
+          <ComboBoxItem>FlashA</ComboBoxItem>
+          <ComboBoxItem>FlashB</ComboBoxItem>
+        </ComboBox>
+      </Layout>
+    </Button>
+  </Part>
+</Root>

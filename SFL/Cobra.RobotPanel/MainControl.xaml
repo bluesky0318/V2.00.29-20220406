@@ -1,0 +1,202 @@
+﻿<UserControl x:Class="Cobra.RobotPanel.MainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	         xmlns:local="clr-namespace:Cobra.RobotPanel"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	         xmlns:controls="clr-namespace:Cobra.ControlLibrary;assembly=Cobra.ControlLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <local:Execute2BrushConverter x:Key="Execute2BrushConverter"/>
+        <local:Int2BoolConverter x:Key="Int2BoolConverter" />
+        <local:UInt2StrConverter x:Key="UInt2StrConverter" />
+        <local:Bool2VisibilityConverter x:Key="Bool2VisibilityConverter" />
+    </UserControl.Resources>
+
+    <DockPanel LastChildFill="True">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" DockPanel.Dock="Bottom" Height="36" Margin="0,3,3,3">
+            <Button Padding="5" Width="80" Margin="2" ToolTip="Open file to load the command list" Click="LoadBtn_Click" Content="Load File" FontSize="14"/>
+            <Button Padding="5" Width="80" Margin="2" ToolTip="Save the command list to the file" Click="SaveBtn_Click" Content="Save File" FontSize="14"/>
+            <Button Padding="5" Width="80" Margin="2" ToolTip="Select all commands to execute" Click="SelectAllBtn_Click" Content="Select All" FontSize="14"/>
+            <Button Padding="5" Width="100" Margin="2" ToolTip="Unselect all commands to execute" Click="SelectNoneBtn_Click" Content="Select None" FontSize="14"/>
+            <Button Padding="5" Width="80" Margin="2" ToolTip="Add new row" Click="AddBtn_Click" Content="Add" FontSize="14"/>
+            <Button Padding="5" Width="80" Margin="2" ToolTip="Single step" Click="SingleBtn_Click" Content="Single" FontSize="14"/>
+            <ToggleButton Padding="5" Width="80" Margin="2" ToolTip="Sequential execution" Click="SequentialBtn_Click" Content="Start" FontSize="14"  Name="runBtn" />
+            <!--Button Padding="5" Width="80" Margin="2" ToolTip="Sequential execution" Click="SequentialBtn_Click" Content="Execute" FontSize="14"/>-->
+            <Button Padding="5" Width="80" Margin="2" ToolTip="Reset parameters" Click="ResetBtn_Click" Content="Reset" FontSize="14"/>
+        </StackPanel>
+        <Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="790"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <DataGrid x:Name="mDataGrid" ItemsSource="{Binding}" Style="{DynamicResource dataGrid-deviceConfiguration}" FontSize="14" VirtualizingStackPanel.IsVirtualizing="True" Margin="2" 
+                          AreRowDetailsFrozen="True" SelectionMode="Single" AllowDrop="False" EnableRowVirtualization="True" EnableColumnVirtualization="True" VirtualizingStackPanel.VirtualizationMode="Standard">
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="DetailsVisibility" Value="{Binding bDetail, Converter={StaticResource Bool2VisibilityConverter},Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" />
+                        </Style>
+                    </DataGrid.RowStyle>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Insert One" Click="InsertMenuItem_Click"/>
+                            <MenuItem Header="Delete One"  Click="DeleteMenuItem_Click"/>
+                            <MenuItem Header="Clear All"  Click="ClearMenuItem_Click"/>
+                            <MenuItem Header="Move To" Click="MoveMenuItem_Click" />
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                    <DataGrid.RowDetailsTemplate>
+                        <DataTemplate>
+                            <GroupBox Header="Detail" BorderThickness="1" BorderBrush="Gray" Margin="20,2,2,2">
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel Orientation="Horizontal" Height="40">
+                                        <Button Padding="5" Width="26" Height="26" Margin="5,2,0,2" Click="bitAddBtn_Click" >
+                                            <Image Source="Resource/add.ico"/>
+                                        </Button>
+                                        <Label Content="Bit Operation" VerticalContentAlignment="Center"/>
+                                        <Button Padding="5" Width="26" Height="26" Margin="5,2,0,2" Click="formulaAddBtn_Click" >
+                                            <Image Source="Resource/add.ico"/>
+                                        </Button>
+                                        <Label Content="Formula" VerticalContentAlignment="Center"/>
+                                        <CheckBox x:Name="commentCheckBox" Content="Comments" Margin="5,2" VerticalAlignment="Center" IsChecked="{Binding bComment,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                                    </StackPanel>
+                                    <ListBox x:Name="bitCommandList" ItemsSource="{Binding bitModel_List}">
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Label Content="Title:" Margin="0,2,5,2" VerticalContentAlignment="Center" />
+                                                    <TextBox Width="100" Height="26" VerticalContentAlignment="Center" HorizontalAlignment="Left" Text="{Binding title, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" />
+                                                    <Label Content="Bit:" VerticalContentAlignment="Center"/>
+                                                    <TextBox Width="32" Height="26" VerticalContentAlignment="Center" Text="{Binding bitLn, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" MaxLength="2"/>
+                                                    <Label Content= " -- " VerticalContentAlignment="Center"/>
+                                                    <Label Content="Bit:" VerticalContentAlignment="Center"/>
+                                                    <TextBox Width="32" Height="26" VerticalContentAlignment="Center" Text="{Binding bitHn, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"  MaxLength="2" />
+                                                    <Label Content="Value:" Margin="5,2,5,2" VerticalContentAlignment="Center" />
+                                                    <TextBox Width="100" Height="26" VerticalContentAlignment="Center" Text="{Binding suTarget, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" />
+                                                    <CheckBox Content="Hex(Dec):" Margin="5,2" VerticalAlignment="Center" IsChecked="{Binding bTargetHexDec,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Click="hexDecTargetCheckBox_Click"/>
+                                                    <Button Content="Update" Margin="2" Width="60" Height="30" Click="updateBtn_Click" IsEnabled="{Binding Path=type,Converter={StaticResource Int2BoolConverter},Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                                    <Button Margin="5,2" Click="bitCommandDeleteBtn_Click" Width="26" Height="26" >
+                                                        <Image Source="Resource/delete.ico"/>
+                                                    </Button>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                    <ListBox x:Name="formulaList" ItemsSource="{Binding formulaModel_List}">
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Label Content="Formula:" />
+                                                    <ComboBox Width="100" x:Name="formulaCombox" ItemsSource="{Binding formulaList}" DisplayMemberPath="formula" SelectedItem="{Binding curFormulaModel,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center"  Margin="0,2,2,2" 
+                                                              SelectedIndex="{Binding index,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                                    <Label Content="Parameters:" Margin="2" />
+                                                    <TextBox ToolTip="{Binding curFormulaModel.inTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Text="{Binding sIn,Mode=TwoWay,UpdateSourceTrigger=LostFocus}" Width="180" Height="26" VerticalAlignment="Center"/>
+                                                    <Button Content="Count" Width="56" Height="28" Margin="5,2,0,2" Click="countFormulaBtn_Click"/>
+                                                    <Label Content="Result:" Margin="2" />
+                                                    <TextBox ToolTip="{Binding curFormulaModel.outTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Text="{Binding sOut,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Width="120" Height="26" VerticalAlignment="Center" IsReadOnly="True"/>
+                                                    <Button Margin="5,2" Click="formulaDeleteBtn_Click" Width="26" Height="26">
+                                                        <Image Source="Resource/delete.ico"/>
+                                                    </Button>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                    <TextBox Text="{Binding comments, Mode=TwoWay,UpdateSourceTrigger=LostFocus}" TextWrapping="Wrap" AcceptsReturn="True" Height="60"  Visibility="{Binding IsChecked,ElementName=commentCheckBox,Converter={StaticResource Bool2VisibilityConverter},Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                </StackPanel>
+                            </GroupBox>
+                        </DataTemplate>
+                    </DataGrid.RowDetailsTemplate>
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Header="ID" IsReadOnly="True" CanUserResize="False" Width="40" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label Content="{Binding id,Mode=TwoWay,UpdateSourceTrigger=LostFocus}" Background="{Binding bResult, Converter={StaticResource Execute2BrushConverter},Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Select" IsReadOnly="True" CanUserResize="False" Width="60">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding bSelect,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Click="commmandCB_Click"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Type" CanUserResize="False" Width="80">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ComboBox SelectedIndex="{Binding type,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}">
+                                        <ComboBoxItem Content="Read" />
+                                        <ComboBoxItem Content="Write" />
+                                        <ComboBoxItem Content="RW" />
+                                    </ComboBox>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Address" CanUserResize="False" Width="120">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Path= address, Converter={StaticResource UInt2StrConverter},Mode=TwoWay,UpdateSourceTrigger=LostFocus}" BorderBrush="{x:Null}" BorderThickness="0" MaxLength="10" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn  Header="Value" CanUserResize="False" Width="120">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Path= sudata,Mode=TwoWay,UpdateSourceTrigger=LostFocus}" BorderBrush="{x:Null}" IsEnabled="{Binding Path=type,Converter={StaticResource Int2BoolConverter},Mode=OneWay,UpdateSourceTrigger=PropertyChanged}" BorderThickness="0" MaxLength="10" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Hex(Dec)" IsReadOnly="True" CanUserResize="False" Width="75">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding bHexDec,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Click="hexDecCheckBox_Click" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Op" CanUserResize="False" Width="58">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Retry" Click="retryBtn_Click"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Summary" CanUserResize="False" Width="152">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Path= summary,Mode=TwoWay,UpdateSourceTrigger=LostFocus}" HorizontalContentAlignment="Left" BorderBrush="{x:Null}" BorderThickness="0" VerticalAlignment="Center"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="Detail" CanUserResize="False" Width="60">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox IsChecked="{Binding bDetail,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <ListBox x:Name="DebugListBox" Grid.Column="1" BorderThickness="2" BorderBrush="#4F818D" Margin="2" FontFamily="Arial" FontSize="13">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation ="Horizontal">
+                                <TextBlock Text="{Binding Path= Record}"/>
+                                <TextBlock Text="{Binding Path=Timer}"  Margin="15,0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    <ListBox.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Clear Record" Click="ClearRecordMenuItem_Click"/>
+                        </ContextMenu>
+                    </ListBox.ContextMenu>
+                </ListBox>
+            </Grid>
+            <controls:WarningControl x:Name="WarningPopControl"/>
+            <controls:WaitControl x:Name="WaitPopControl"/>
+        </Grid>
+    </DockPanel>
+</UserControl>

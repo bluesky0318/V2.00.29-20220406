@@ -1,0 +1,20 @@
+﻿<Window x:Class="Cobra.FSBS2Panel.WaveControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:ds="http://research.microsoft.com/DynamicDataDisplay/1.0"
+            Height="600" Width="800" WindowStartupLocation="CenterScreen"  MouseDown="Window_MouseDown" >
+
+    <ds:ChartPlotter x:Name ="plot">
+        <ds:ChartPlotter.HorizontalAxis>
+            <ds:HorizontalIntegerAxis/>
+        </ds:ChartPlotter.HorizontalAxis>
+        <ds:ChartPlotter.VerticalAxis>
+            <ds:VerticalAxis/>
+        </ds:ChartPlotter.VerticalAxis>
+        <ds:VerticalAxisTitle x:Name="vAxisTitle"  FontFamily="Arial" FontSize="12"  Margin="1"  FontWeight="Bold" />
+        <ds:HorizontalAxisTitle x:Name="hAxisTitle" FontFamily="Arial" FontSize="12" Content="Time(second)" Margin="1" FontWeight="Bold" />
+    </ds:ChartPlotter>
+</Window>

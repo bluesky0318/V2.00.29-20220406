@@ -1,0 +1,4796 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root usage="DeviceDescriptor" chip="OZ93510" version ="1.1221">
+	<Section Name ="BusOptions" Guid ="0x00100000">
+		<Element Guid ="0x00100000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList></ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>Connect Port:</NickName>
+					<Catalog>Common Configuration</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>16</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100001">
+			<PhysicalData>100</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>I2C Bus Frequency(KHZ):</NickName>
+					<Catalog>Common Configuration</Catalog>
+					<DefValue>400</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>63</MinValue>
+					<MaxValue>400</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100002">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>0x30</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>I2C Address:</NickName>
+					<Catalog>SD77206</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>0</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100003">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>true</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>1</Order>
+					<NickName>PEC enable</NickName>
+					<Catalog>SD77206</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>0</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="ProjectInfo" Guid ="0x000f0000">
+		<Element Guid ="0x000f0001">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<Private>
+				<SFL Name ="Project">
+					<Index>0</Index>
+					<Format>1</Format>
+					<Folder>Firmware</Folder>
+					<StartAddress>0</StartAddress>
+					<xAxisPointsAddress>0</xAxisPointsAddress>
+					<Size>7000</Size>
+				</SFL>
+				<SFL Name ="HexEditor">
+					<SubType>1</SubType>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x000f0002">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>1</SubType>
+			<SubSection>0</SubSection>
+			<Private>
+				<SFL Name ="Project">
+					<Index>1</Index>
+					<Format>2</Format>
+					<Folder>Parameter</Folder>
+					<StartAddress>17E00</StartAddress>
+					<xAxisPointsAddress>0</xAxisPointsAddress>
+					<Size>201</Size>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="BlackBox" Guid ="0x00020000">
+		<Element Guid ="0x00020000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>00</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>LOG COUNTER</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>4294967295</MaxValue>
+					<Description>Log record update counter</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020004">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>7</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>00</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>TIME RECORD</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>9</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>4294967295</MaxValue>
+					<Description>RTC Time value at the record update</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020008">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>00</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>WDT RESET Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>Watchdog Timer Reset counter</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002000A">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>00</Address>
+					<StartBit>10</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>HARDFAULT COUNTER</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>Hardfault Event Reset counter</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002000C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>00</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MaxCellVolt_01</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Maximum cell voltage for cell channel 01</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002000E">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>00</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MaxCellVolt_02</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Maximum cell voltage for cell channel 02</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>01</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MaxCellVolt_03</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Maximum cell voltage for cell channel 03</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020102">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>01</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MaxCellVolt_04</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Maximum cell voltage for cell channel 04</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020104">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>01</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MaxCellVolt_05</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Maximum cell voltage for cell channel 03</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020106">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>01</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MaxCellVolt_06</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Maximum cell voltage for cell channel 06</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020108">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>01</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MaxCellVolt_07</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Maximum cell voltage for cell channel 07</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002010A">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>01</Address>
+					<StartBit>10</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MinCellVolt_01</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Minimum cell voltage for cell channel 01</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002010C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>01</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MinCellVolt_02</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Minimum cell voltage for cell channel 02</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002010E">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>01</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MinCellVolt_03</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Minimum cell voltage for cell channel 03</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020200">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>02</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MinCellVolt_04</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Minimum cell voltage for cell channel 04</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020202">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>02</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MinCellVolt_05</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Minimum cell voltage for cell channel 05</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020204">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>02</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MinCellVolt_06</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Minimum cell voltage for cell channel 06</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020206">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>02</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MinCellVolt_07</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-32768</MinValue>
+					<MaxValue>32767</MaxValue>
+					<Description>Minimum cell voltage for cell channel 07</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020208">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-128</PhyMin>
+			<PhyMax>127</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>02</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MinITHM</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-128</MinValue>
+					<MaxValue>127</MaxValue>
+					<Description>Minimum measured internal temperature</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020209">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-128</PhyMin>
+			<PhyMax>127</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>02</Address>
+					<StartBit>09</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MaxITHM</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-128</MinValue>
+					<MaxValue>127</MaxValue>
+					<Description>Maximum measured internal temperature </Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002020A">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-128</PhyMin>
+			<PhyMax>127</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>02</Address>
+					<StartBit>10</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MinETHM1</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-128</MinValue>
+					<MaxValue>127</MaxValue>
+					<Description>Minimum measured external temperature channel 01</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002020B">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-128</PhyMin>
+			<PhyMax>127</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>02</Address>
+					<StartBit>11</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MaxETHM1</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-128</MinValue>
+					<MaxValue>127</MaxValue>
+					<Description>Maximum measured external temperature channel 01</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002020C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-128</PhyMin>
+			<PhyMax>127</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>02</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MinETHM2</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-128</MinValue>
+					<MaxValue>127</MaxValue>
+					<Description>Minimum measured external temperature channel 02</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002020D">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>-128</PhyMin>
+			<PhyMax>127</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>02</Address>
+					<StartBit>13</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>MaxETHM2</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>-128</MinValue>
+					<MaxValue>127</MaxValue>
+					<Description>Maximum measured external temperature channel 02</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002020E">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>02</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Max CHG_IN</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>Maximum measured CHG_IN channel</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>03</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Max Delta Voltage</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>Maximum delta voltage between any cell</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020302">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>03</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Max FC PackVolt</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>Maximum full charge pack voltage</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020304">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>03</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Latest FC PackVolt</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>Latest full charge pack voltage</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020306">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>03</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Max CV Time</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>255</MaxValue>
+					<Description>Maximum time for Constant Voltage state in a charge cycle</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020307">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>03</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Latest CV Time</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>255</MaxValue>
+					<Description>The Constant Voltage state time in latest charge cycle</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020308">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>03</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Max CHG Time</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>Maximum time for a single charge cycle</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002030A">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>03</Address>
+					<StartBit>10</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Max DSG Time</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>Maximum time for a single discharge cycle</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002030C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>03</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Max Charge Current</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>Maximum measured charge current (un-signed)</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002030E">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>03</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Max Discharge Current</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>Minimum measured dischage current (un-signed)</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020400">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>04</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>CB Time Cell1</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>255</MaxValue>
+					<Description>Accumulated cell balance time for cell channel 01</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020401">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>04</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>CB Time Cell2</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>255</MaxValue>
+					<Description>Accumulated cell balance time for cell channel 02</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020402">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>04</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>CB Time Cell3</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>255</MaxValue>
+					<Description>Accumulated cell balance time for cell channel 03</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020403">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>04</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>CB Time Cell4</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>255</MaxValue>
+					<Description>Accumulated cell balance time for cell channel 04</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020404">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>04</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>CB Time Cell5</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>255</MaxValue>
+					<Description>Accumulated cell balance time for cell channel 05</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020405">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>04</Address>
+					<StartBit>05</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>CB Time Cell6</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>255</MaxValue>
+					<Description>Accumulated cell balance time for cell channel 06</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020406">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>04</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>CB Time Cell7</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>255</MaxValue>
+					<Description>Accumulated cell balance time for cell channel 07</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020408">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>04</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>UV1 Sleep Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>4294967295</MaxValue>
+					<Description>UV1 Sleep counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002040C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>04</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Deep Sleep Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>4294967295</MaxValue>
+					<Description>Deep Sleep Counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>05</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>OVP1 Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>OVP1 event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020502">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>05</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>OVP2 Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>OVP2 event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020504">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>05</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>UVP1 Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>UVP1 event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020506">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>05</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>UVP2 Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>UVP2 event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020508">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>05</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>UVP3 Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>UVP3 event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002050A">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>05</Address>
+					<StartBit>10</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>DOC1 Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>DOC1 event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002050C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>05</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>DOC2 Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>DOC2 event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002050E">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>05</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>SC Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>SC event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>06</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>COC1 Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>COC1 event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020602">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>06</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>COC2 Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>COC2 event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020604">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>06</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>COT Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>COT event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020606">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>06</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>DOT Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>DOT event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020608">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>06</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>CUT Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>CUT event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002060A">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>06</Address>
+					<StartBit>10</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>DUT Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>DUT event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002060C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>06</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>DOT_MOS Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>DOT_MOS event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002060E">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>06</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>ABCHGR Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>ABCHGR event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>07</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>CTO Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>CTO event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020702">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>07</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>FET_FAIL Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>FET_FAIL event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020704">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>07</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>CHGTO Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>CHGTO event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020706">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>07</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Shutdown Counter</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>65535</MaxValue>
+					<Description>Shutdown event counters</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020708">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>07</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Charge Accumulated</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>4294967295</MaxValue>
+					<Description>Accumulated charge capacity</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002070C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>07</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Discharge Accumulated</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>4294967295</MaxValue>
+					<Description>Accumulated discharge capacity</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>08</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>PC</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>4294967295</MaxValue>
+					<Description>Program Counter</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020804">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>08</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>LR</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>4294967295</MaxValue>
+					<Description>Link Register</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020808">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>08</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>SP</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>4294967295</MaxValue>
+					<Description>Stack Pointer</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0002080C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>FF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>255</PhyMax>
+			<LocationList>
+				<Location Position="Low">
+					<Address>08</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="BlackBox">
+					<NickName>Log Status</NickName>
+					<Catalog>Static Record</Catalog>
+					<Order>0</Order>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>0</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>255</MaxValue>
+					<Description>Log Status Flags</Description>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="SBS" Guid ="0x00030000">
+		<Element Guid ="0x00030000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>00</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>3</SubType>
+					<Catalog>Writable</Catalog>
+					<EditType>3</EditType>
+					<NickName>ManufacturerAccess</NickName>
+					<DefValue>0</DefValue>
+					<Format>6</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>01</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>3</SubType>
+					<Catalog>Writable</Catalog>
+					<EditType>3</EditType>
+					<NickName>RemainingCapacityAlarm</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030200">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>02</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>3</SubType>
+					<Catalog>Writable</Catalog>
+					<EditType>3</EditType>
+					<NickName>RemainingTimeAlarm</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030320">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>03</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<Catalog>Writable</Catalog>
+					<EditType>3</EditType>
+					<SubType>9</SubType>
+					<NickName>BatteryMode</NickName>
+					<DefValue>0</DefValue>
+					<Format>6</Format>
+					<Relations>
+						<Item>0x00030300</Item>
+						<Item>0x00030301</Item>
+						<Item>0x00030307</Item>
+						<Item>0x00030308</Item>
+						<Item>0x00030309</Item>
+						<Item>0x0003030D</Item>
+						<Item>0x0003030E</Item>
+						<Item>0x0003030F</Item>
+					</Relations>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>03</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>INTERNAL_CHARGE_CONTROLLER</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030301">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>03</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>PRIMARY_BATTERY_SUPPORT</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030307">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>03</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>CONDITION_FLAG</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030308">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>03</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>CHARGE_CONTROLLER_ENABLED</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030309">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>03</Address>
+					<StartBit>09</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>PRIMARY_BATTERY</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003030D">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>03</Address>
+					<StartBit>13</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>ALARM_MODE</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003030E">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>03</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>CHARGER_MODE</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003030F">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>03</Address>
+					<StartBit>15</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>CAPACITY_MODE</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030400">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>4</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>-32768</PhyMin>
+			<PhyMax>32767</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>04</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>3</SubType>
+					<Catalog>Writable</Catalog>
+					<EditType>0</EditType>
+					<NickName>AtRate</NickName>
+					<DefValue>0</DefValue>
+					<Format>6</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>05</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>AtRateTimeToFull</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>06</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>AtRateTimeToEmpty</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>AtRateOK</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>10</RegRef>
+			<SubType>16</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>08</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>7</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>Temperature</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030900">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>09</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>Voltage</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030A00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>4</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>-5000</PhyMin>
+			<PhyMax>5000</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0A</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<Catalog>Dynamic</Catalog>
+					<Index>0</Index>
+					<SubType>6</SubType>
+					<EditType>0</EditType>
+					<NickName>Current</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030B00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>4</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0B</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>AverageCurrent</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030C00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0C</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>MaxError</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+					<ShowMode>1</ShowMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030D00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>100</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>100</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0D</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>RelativeStateOfCharge</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+					<ShowMode>1</ShowMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030E00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0E</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>AbsoluteStateOfCharge</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030F00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>10000</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>10000</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0F</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>RemainingCapacity</NickName>
+					<DefValue>0</DefValue>
+					<ShowMode>1</ShowMode>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>10</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>FullChargeCapacity</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>11</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>RunTimeToEmpty</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031200">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>12</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>AverageTimeToEmpty</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>13</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>AverageTimeToFull</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031400">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>14</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>ChargingCurrent</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFFFFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>4294967295</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>15</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>ChargingVoltage</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031620">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<EditType>0</EditType>
+					<SubType>2</SubType>
+					<Catalog>Dynamic</Catalog>
+					<NickName>BatteryStatus</NickName>
+					<DefValue>0</DefValue>
+					<Format>7</Format>
+					<Relations>
+						<Item>0x00031600</Item>
+						<Item>0x00031604</Item>
+						<Item>0x00031605</Item>
+						<Item>0x00031606</Item>
+						<Item>0x00031607</Item>
+						<Item>0x00031608</Item>
+						<Item>0x00031609</Item>
+						<Item>0x0003160B</Item>
+						<Item>0x0003160C</Item>
+						<Item>0x0003160E</Item>
+						<Item>0x0003160F</Item>
+					</Relations>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>F</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>ErrorCode</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031604">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>FULLY DISCHARGED</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031605">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>05</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>FULLY CHARGED</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031606">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>DISCHARGING</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031607">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>INITIALIZED</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031608">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>REMAINING TIME ALARM</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031609">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>09</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>REMAINING CAPACITY ALARM</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003160B">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>11</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>TERMINATE DISCHARGE ALARM</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003160C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>OVER TEMP ALARM</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003160E">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>TERMINATE CHARGE ALARM</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003160F">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>16</Address>
+					<StartBit>15</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>OVER CHARGED ALARM</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>17</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>0</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>CycleCount</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>18</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>1</SubType>
+					<Catalog>Static</Catalog>
+					<EditType>0</EditType>
+					<NickName>DesignCap</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031900">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>19</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>1</SubType>
+					<Catalog>Static</Catalog>
+					<EditType>0</EditType>
+					<NickName>DesignVolt</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031A00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1a</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<Catalog>Static</Catalog>
+					<EditType>0</EditType>
+					<SubType>1</SubType>
+					<NickName>SpecificationInfo</NickName>
+					<DefValue>0</DefValue>
+					<Format>6</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031B00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>7</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1B</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>1</SubType>
+					<Catalog>Static</Catalog>
+					<EditType>9</EditType>
+					<NickName>ManufactureDate</NickName>
+					<DefValue>0</DefValue>
+					<Format>5</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031C00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1C</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>1</SubType>
+					<Catalog>Static</Catalog>
+					<EditType>0</EditType>
+					<NickName>SerialNumber</NickName>
+					<DefValue>0</DefValue>
+					<Format>7</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>9</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>20</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>1</SubType>
+					<Catalog>Static</Catalog>
+					<EditType>9</EditType>
+					<NickName>ManufacturerName</NickName>
+					<DefValue>0</DefValue>
+					<Format>5</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>9</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>21</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>1</SubType>
+					<Catalog>Static</Catalog>
+					<EditType>9</EditType>
+					<NickName>DeviceName</NickName>
+					<DefValue>0</DefValue>
+					<Format>5</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032200">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>9</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>22</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>1</SubType>
+					<Catalog>Static</Catalog>
+					<EditType>9</EditType>
+					<NickName>DeviceChemistry</NickName>
+					<DefValue>0</DefValue>
+					<Format>5</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>9</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>23</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>1</SubType>
+					<Catalog>Static</Catalog>
+					<EditType>9</EditType>
+					<NickName>ManufacturerData </NickName>
+					<DefValue>0</DefValue>
+					<Format>5</Format>
+				</SFL>
+			</Private>
+		</Element>		
+		<Element Guid ="0x00033500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>10</RegRef>
+			<SubType>16</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>35</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>7</SubType>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>Temperature2</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>5000</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>5000</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>36</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>5</SubType>
+					<Index>6</Index>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>Cell Voltage 7</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+					<ShowMode>2</ShowMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>5000</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>5000</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>37</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>5</SubType>
+					<Index>5</Index>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>Cell Voltage 6</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>5000</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>5000</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>38</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>5</SubType>
+					<Index>4</Index>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>Cell Voltage 5</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+					<ShowMode>2</ShowMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033900">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>5000</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>5000</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>39</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>5</SubType>
+					<Index>3</Index>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>Cell Voltage 4</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033A00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>5000</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>5000</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3A</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>5</SubType>
+					<Index>2</Index>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>Cell Voltage 3</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033B00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>5000</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>5000</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3B</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>5</SubType>
+					<Index>1</Index>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>Cell Voltage 2</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00033C00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>5000</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>5000</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3C</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>5</SubType>
+					<Index>0</Index>
+					<Catalog>Dynamic</Catalog>
+					<EditType>0</EditType>
+					<NickName>Cell Voltage 1</NickName>
+					<DefValue>0</DefValue>
+					<Format>1</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F901">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>9</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>F9</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>1</SubType>
+					<Catalog>Static</Catalog>
+					<EditType>0</EditType>
+					<NickName>Firmware Version</NickName>
+					<DefValue>0</DefValue>
+					<Format>7</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F902">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>9</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>F9</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>1</SubType>
+					<Catalog>Static</Catalog>
+					<EditType>0</EditType>
+					<NickName>Fuel Gauge Version</NickName>
+					<DefValue>0</DefValue>
+					<Format>7</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F907">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<EditType>0</EditType>
+					<SubType>2</SubType>
+					<Catalog>Dynamic</Catalog>
+					<NickName>SafetyEvent</NickName>
+					<DefValue>0</DefValue>
+					<Format>7</Format>
+					<Relations>
+						<Item>0x0003F970</Item>
+						<Item>0x0003F971</Item>
+						<Item>0x0003F972</Item>
+						<Item>0x0003F973</Item>
+						<Item>0x0003F974</Item>
+						<Item>0x0003F975</Item>
+						<Item>0x0003F976</Item>
+						<Item>0x0003F977</Item>
+						<Item>0x0003F978</Item>
+						<Item>0x0003F979</Item>
+						<Item>0x0003F97A</Item>
+						<Item>0x0003F97B</Item>
+						<Item>0x0003F97C</Item>
+						<Item>0x0003F97D</Item>
+						<Item>0x0003F97E</Item>
+						<Item>0x0003F97F</Item>
+						<Item>0x0003F980</Item>
+						<Item>0x0003F981</Item>
+						<Item>0x0003F982</Item>
+						<Item>0x0003F983</Item>
+						<Item>0x0003F984</Item>
+						<Item>0x0003F985</Item>
+						<Item>0x0003F986</Item>
+						<Item>0x0003F987</Item>
+						<Item>0x0003F988</Item>
+					</Relations>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F970">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWOV1</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F971">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWOV2</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F972">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWUV1</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F973">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWUV2</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F974">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWUV3</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F975">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>05</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWDOC1</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F976">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWCOC1</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F977">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>07</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWCOC2</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F978">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWDOT</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F979">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>09</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWDUT</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F97A">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>10</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWCOT</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F97B">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>11</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWCUT</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F97C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>SWDOT_MOS</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F97D">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>13</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>HWDOC2</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F97E">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>HWSC</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F97F">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>15</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>FET_FAIL</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F980">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>16</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>CELL_DIFF</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F981">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>17</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>CHG_OT</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F982">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>18</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>CTO_FAIL</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F983">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>19</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>CHGR_IN</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F984">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>20</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>CHGR_HIGH</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F985">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>21</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>CHGR_PTI</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F986">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>22</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>CHG_LOW_CURR</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F987">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>23</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>HWOV</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F988">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>24</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>HWUV</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F908">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>08</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>32</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<EditType>0</EditType>
+					<SubType>2</SubType>
+					<Catalog>Dynamic</Catalog>
+					<NickName>DataLogStatus</NickName>
+					<DefValue>0</DefValue>
+					<Format>7</Format>
+					<Relations>
+						<Item>0x0003F98C</Item>
+						<Item>0x0003F98D</Item>
+						<Item>0x0003F98E</Item>
+						<Item>0x0003F98F</Item>
+					</Relations>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F98C">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>08</Address>
+					<StartBit>00</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>Ready</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F98D">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>08</Address>
+					<StartBit>01</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>#1 Faule</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F98E">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>08</Address>
+					<StartBit>02</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>#2 Faule</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003F98F">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>08</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="SBS">
+					<SubType>4</SubType>
+					<NickName>#3 Faule</NickName>
+					<DefValue>0</DefValue>
+					<Format>0</Format>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+</Root>
+

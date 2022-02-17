@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ1C007" chiptype="0100" bustype ="I2C2" libname ="Cobra.OZ1C007" OCEVersion ="2.00.00" ProjectCode ="OCEFWBIGSY" AppVersion="2.00.03" chipMode="0">
+  <Part Name="DBConfig">
+    <ChipName>OZ1C007</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20191224</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Firmware Downlaod" DBModuleName="Firmware Downlaod"      Name ="HexEditor"     PanelName ="Cobra.HexEditorPanel">
+      <Layout Name="layout">
+        <Button Name = "DumpBtn" IsEnable="True"      SubTask ="0x10" />
+        <Button Name = "DownloadBtn" IsEnable="True"  SubTask ="0x20" />
+      </Layout>
+    </Button>
+    <Button Label = "Gasgauge Expert"       DBModuleName="Gasgauge Expert"    Name = "Exper"          PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "Gasgauge Info"         DBModuleName="Gasgauge Info"      Name ="DeviceConfig"    PanelName ="Cobra.DeviceConfigurationPanel" >
+      <Layout Name="layout">
+        <Button Name ="EraseBtn" IsEnable ="False" Visibility="Collapsed"/>
+      </Layout>
+    </Button>
+    <Button Label = "Gasgauge Config"       DBModuleName="Gasgauge Config"    Name ="DeviceConfig"    PanelName ="Cobra.DeviceConfigurationPanel" >
+      <Layout Name="layout">
+        <Button Name ="EraseBtn" IsEnable ="False" Visibility="Collapsed"/>
+      </Layout>
+    </Button>
+    <Button Label = "Gasgauge Scan"         DBModuleName="Gasgauge Scan"           Name = "FSBS2"          PanelName ="Cobra.FSBS2Panel">
+      <IntervalTime>
+        <Item>100ms</Item>
+        <Item>1s</Item>
+        <Item>2s</Item>
+        <Item>3s</Item>
+        <Item>4s</Item>
+        <Item>10s</Item>
+      </IntervalTime>
+      <ScanMode/>
+    </Button>
+    <Button Label = "Charger Config"  DBModuleName="Charger Config"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel">
+      <Layout Name="layout">
+        <Button Name ="EraseBtn" IsEnable ="False" Visibility="Collapsed"/>
+      </Layout>
+    </Button>
+    <Button Label = "Charger Expert"  DBModuleName="Charger Expert"         Name ="Exper"          PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "DBG"                   DBModuleName="DBG"      	    Name = "DBG2"            PanelName ="Cobra.DBG2Panel"/>
+  </Part>
+</Root>

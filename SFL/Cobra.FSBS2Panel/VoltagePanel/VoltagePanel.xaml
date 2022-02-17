@@ -1,0 +1,74 @@
+﻿<GroupBox x:Class="Cobra.FSBS2Panel.VoltagePanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" FontSize="12"
+             xmlns:src="clr-namespace:Cobra.FSBS2Panel"
+             xmlns:s="clr-namespace:System;assembly=mscorlib"
+             Name="vGroup" Header="Voltage Group(mV)">
+    <GroupBox.Resources>
+        <src:BarConverter x:Key="barConverter"></src:BarConverter>
+        <src:ColorConverter x:Key="colorConverter"></src:ColorConverter>
+        <src:WidthConverter2 x:Key="widthConverter2"></src:WidthConverter2>
+        <src:VolBarWidthConverter x:Key="volBarWidthConverter"></src:VolBarWidthConverter>
+        <src:PositionConverter x:Key="positionConverter"></src:PositionConverter>
+        <src:PositionConverter2 x:Key="positionConverter2"></src:PositionConverter2>
+    </GroupBox.Resources>
+
+    <Grid Name="vGrid">
+        <Canvas Name="cvsPanel" Width="{Binding ElementName=vGrid, Path=ActualWidth,Mode=OneWay}"  Height="{Binding ElementName=vGroup, Path=ActualHeight}" HorizontalAlignment="Left">
+            <!---设定基准宽度-->
+            <TextBlock Name="wbase" Visibility="Collapsed">
+                <TextBlock.Width>
+                        <MultiBinding Converter="{StaticResource volBarWidthConverter}">
+                            <Binding Path="Count" Mode="TwoWay"></Binding>
+                            <Binding ElementName="cvsPanel" Path="ActualWidth" Mode="TwoWay"></Binding>
+                        </MultiBinding>
+                    </TextBlock.Width>
+            </TextBlock>
+            <ItemsControl Name="vItmes" Canvas.Top="0" Height="{Binding ElementName=cvsPanel, Path=Height, Mode=TwoWay}" ItemsSource="{Binding}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"></StackPanel>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Canvas Name="listCanvas" Width="{Binding ElementName=wbase, Path=Width, Mode=TwoWay}" Height="{Binding ElementName=vItmes, Path=Height, Mode=TwoWay}" Margin="2,0" ToolTip="{Binding Path=pTip}">
+                            <StackPanel Orientation="Horizontal" Canvas.Top="10" Canvas.Left="{Binding ElementName=listCanvas, Path=Width, Mode=OneWay, Converter={StaticResource positionConverter2}}"  Panel.ZIndex="4" >
+                                <StackPanel.RenderTransform>
+                                    <TransformGroup>
+                                        <RotateTransform Angle="90"/>
+                                    </TransformGroup>
+                                </StackPanel.RenderTransform>
+                                <TextBlock Text="{Binding pTip, Mode=OneWay}" FontFamily="Arial" FontSize="14"  Foreground="Black" Margin="0,0,10,0"/>
+                                <TextBlock Text="{Binding pValue, Mode=OneWay,StringFormat={}{0:F1}}" FontFamily="Arial" FontSize="14"  Foreground="Blue" FontWeight="Bold"/>
+                            </StackPanel>
+                            <Rectangle Canvas.Bottom="20" Width="{Binding ElementName=listCanvas, Path=Width, Mode=TwoWay}" Fill="Gray">
+                                <Rectangle.Height>
+                                    <MultiBinding Converter="{StaticResource barConverter}">
+                                        <Binding Path="pMaxValue" Mode="TwoWay"></Binding>
+                                        <Binding Path="pMinValue" Mode="TwoWay"></Binding>
+                                        <Binding Path="pValue" Mode="TwoWay"></Binding>
+                                        <Binding ElementName="listCanvas" Path="Height" Mode="TwoWay"></Binding>
+                                    </MultiBinding>
+                                </Rectangle.Height>
+                            </Rectangle>
+                            <Rectangle Name="boder" Width="{Binding ElementName=listCanvas, Path=Width, Mode=TwoWay}" Height="{Binding ElementName=listCanvas, Path=Height, Mode=TwoWay,Converter={StaticResource widthConverter2}, ConverterParameter=20}" Panel.ZIndex="2" StrokeThickness="1" >
+                                <Rectangle.Stroke>
+                                    <MultiBinding Converter="{StaticResource colorConverter}">
+                                        <Binding Path="pMaxValue" Mode="TwoWay"></Binding>
+                                        <Binding Path="pMinValue" Mode="TwoWay"></Binding>
+                                        <Binding Path="pValue" Mode="TwoWay"></Binding>
+                                        <Binding Path="pUsability" Mode="TwoWay"></Binding>
+                                    </MultiBinding>
+                                </Rectangle.Stroke>
+                            </Rectangle>
+                        </Canvas>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Canvas>
+    </Grid>
+</GroupBox>

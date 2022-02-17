@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ1C105T" chiptype="0500" bustype ="I2C" libname ="Cobra.OZ1C105T" AppVersion="2.00.03" OCEVersion="1.00.01.00" ProjectCode="OCETB02X" AMTEnable = "false">
+  <Part Name="DBConfig">
+    <ChipName>OZ1C105T</ChipName>
+    <ChipVersion>B2</ChipVersion>
+    <UserType>X</UserType>
+    <Date>20210914</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name ="DeviceAddressList">
+    <DeviceAddress>
+      <Address Index = "0"   value = "32"  Info = "0x20"/>
+    </DeviceAddress>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "DeviceConfig" DBModuleName="DeviceConfig"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+    <Button Label = "Expert"  DBModuleName="Expert"   Name ="Exper"   PanelName ="Cobra.ExperPanel"/>
+  </Part>
+</Root>

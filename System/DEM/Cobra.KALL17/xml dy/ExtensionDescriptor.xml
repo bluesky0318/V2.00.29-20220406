@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="KALL17D" chiptype="7717" bustype ="SPI" libname ="Cobra.KALL17" AppVersion="2.00.03" OCEVersion="1.00.11.00" ProjectCode="OCEKL17Y">
+  <Part Name="DBConfig">
+    <ChipName>KALL17D|OZ7717D</ChipName>
+    <ChipVersion>MP</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20210426</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Board Config"  NoMapping="True"  Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel">
+      <Layout Name="layout" bOrder ="true">
+        <Button Name ="EraseBtn" IsEnable ="False" Visibility="Collapsed"/>
+      </Layout>
+    </Button>
+    <Button Label = "Expert"     Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+    <Button Label = "Trim"        Name = "Trim"         PanelName ="Cobra.TrimPanel">
+      <Layout Name="layout">
+        <Button Name ="TrimBtn" IsEnable ="True" SubTask ="0x05"/>
+      </Layout>
+    </Button>
+    <Button Label = "Scan"       DBModuleName="Scan"      Name = "ScanV2"         PanelName ="Cobra.ScanPanel">
+      <Section Name ="Configuration">
+        <Element Name ="Scan Rate">
+          <Catalog></Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="1000mS">1S</Item>
+            <Item Value ="2000mS">2S</Item>
+            <Item Value ="5000mS">5S</Item>
+          </ItemList>
+        </Element>
+        <Element Name ="SAR ADC Mode">
+          <Catalog></Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="Disable">Disable</Item>
+            <Item Value ="1_Time">1_Time</Item>
+            <Item Value ="8_Time_Average">8_Time_Average</Item>
+          </ItemList>
+        </Element>
+        <Element Name ="CADC Mode">
+          <Catalog></Catalog>
+          <DefValue>0</DefValue>
+          <EditorType>1</EditorType>
+          <ItemList>
+            <Item Value ="Disable">Disable</Item>
+            <Item Value ="Trigger">Trigger</Item>
+            <Item Value ="Consecutive">Consecutive</Item>
+          </ItemList>
+        </Element>
+      </Section>
+    </Button>
+    <Button Label = "CurrentScan"	DBModuleName="CurrentScan"         Name = "CurrentScan"         PanelName ="Cobra.CurrentScan"/>
+    <Button Label = "Register Config" NoMapping="True"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel">
+      <Layout Name="layout" bOrder ="true">
+        <Button Name ="EraseBtn" IsEnable ="False" Visibility="Collapsed"/>
+      </Layout>
+    </Button>
+    <Button Label = "PreCharge"   DBModuleName="PreCharge"        Name = "PreCHGDSG"         PanelName ="Cobra.PreCHGDSGPanel">
+    </Button>
+    <Button Label = "PreDischarge"   DBModuleName="PreDischarge"        Name = "PreCHGDSG"         PanelName ="Cobra.PreCHGDSGPanel">
+    </Button>
+    <Button Label = "CCControl" DBModuleName = "CCControl"       Name = "CCControl"         PanelName ="Cobra.CCControlPanel">
+    </Button>
+  </Part>
+</Root>

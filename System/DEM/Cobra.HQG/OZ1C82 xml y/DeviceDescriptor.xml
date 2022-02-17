@@ -1,0 +1,3288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root usage="DeviceDescriptor" chip="OZ1C82" version="1.00">
+  <Section Name ="BusOptions" Guid ="0x00100000">
+    <Element Guid ="0x00100000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList></ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>Connect Port:</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>16</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100001">
+      <PhysicalData>100</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>I2C Bus Frequency(KHZ):</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>400</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>63</MinValue>
+          <MaxValue>400</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100002">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>0xD6</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>I2C Address:</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>0</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100003">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>false</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>1</Order>
+          <NickName>PEC enable</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>0</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name="Operation" Guid="0x00030000">
+    <Element Guid="0x00030000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>50</PhyRef>
+      <RegRef>1</RegRef>
+      <Offset>100</Offset>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>63</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>0</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>0</Index>
+          <BitStart>0</BitStart>
+          <Length>6</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>IINLIM</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>IINLIM</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>500</DefValue>
+          <MinValue>100</MinValue>
+          <MaxValue>3250</MaxValue>
+          <EditType>0</EditType>
+          <Format>0</Format>
+          <Description>Input Current Limit</Description>
+          <Order>9</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030006">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>0</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>0</Index>
+          <BitStart>6</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>EN_ILIM</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>EN_ILIM</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Enable ILIM Pin</Description>
+          <Order>A</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030007">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>0</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>0</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>EN_HIZ</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>EN_HIZ</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Enable HIZ Mode</Description>
+          <Order>2</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030100">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>100</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3100</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>1</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>5</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>1</Index>
+          <BitStart>0</BitStart>
+          <Length>5</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>VINDPM_OS</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>VINDPM_OS</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>600</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3100</MaxValue>
+          <EditType>0</EditType>
+          <Format>0</Format>
+          <Description>Input Voltage Limit Offset</Description>
+          <Order>F</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030200">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable PS detection when VBUS is plugged-in </Item>
+        <Item>Enable PS detection when VBUS is plugged-in </Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2</Index>
+          <BitStart>0</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>AUTO_DPDM_EN</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>AUTO_DPDM_EN</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Automatic PS Detection Enable</Description>
+          <Order>7</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030201">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable force detection</Item>
+        <Item>Force to do input source type detection again, and return to 0 after input source type detection</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2</Index>
+          <BitStart>1</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>FORCE_DPDM</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>FORCE_DPDM</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Force Input source type detection</Description>
+          <Order>?</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030204">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2</Index>
+          <BitStart>4</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>ICO_EN</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>ICO_EN</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Input Current Optimizer (ICO) Enable</Description>
+          <Order>B</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030206">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>One shot ADC conversion</Item>
+        <Item>Start 1s Continuous Conversion</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2</Index>
+          <BitStart>6</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>CONV_RATE</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>CONV_RATE</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>ADC Conversion Rate Selection</Description>
+          <Order>2C</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030207">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>2</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>ADC conversion not active</Item>
+        <Item>Start ADC Conversion</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>2</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>CONV_START</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>CONV_START</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>ADC Conversion Start Control</Description>
+          <Order>2B</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030301">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>3</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>3000mV</Item>
+        <Item>3100mV</Item>
+        <Item>3200mV</Item>
+        <Item>3300mV</Item>
+        <Item>3400mV</Item>
+        <Item>3500mV</Item>
+        <Item>3600mV</Item>
+        <Item>3700mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>3</Index>
+          <BitStart>1</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>SYS_MIN</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>SYS_MIN</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>5</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Minimum System Voltage Limit</Description>
+          <Order>E</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030304">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>3</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>3</Index>
+          <BitStart>4</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>CHG_CONFIG</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>CHG_CONFIG</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Charge Enable Configuration</Description>
+          <Order>11</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030306">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>3</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Normal</Item>
+        <Item>Reset</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>3</Index>
+          <BitStart>6</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>WD_RST</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>WD_RST</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>I2C Watchdog Timer Reset</Description>
+          <Order>0</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030307">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>3</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>3</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>BAT_LOADEN</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>BAT_LOADEN</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Battery Load (IBATLOAD) Enable</Description>
+          <Order>27</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030400">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>64</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>5056</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>4</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>7</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>4</Index>
+          <BitStart>0</BitStart>
+          <Length>7</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>ICHG</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>ICHG</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>2048</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>5056</MaxValue>
+          <EditType>0</EditType>
+          <Format>0</Format>
+          <Description>Fast Charge Current Limit</Description>
+          <Order>10</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030407">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>4</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>4</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>EN_PUMPX</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>EN_PUMPX</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Current Pulse Control Enable</Description>
+          <Order>5</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030500">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>64</PhyRef>
+      <RegRef>1</RegRef>
+      <Offset>64</Offset>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>F</HexMax>
+      <PhyMin>64</PhyMin>
+      <PhyMax>1024</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>5</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>5</Index>
+          <BitStart>0</BitStart>
+          <Length>4</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>ITERM</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>ITERM</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>256</DefValue>
+          <MinValue>64</MinValue>
+          <MaxValue>1024</MaxValue>
+          <EditType>0</EditType>
+          <Format>0</Format>
+          <Description>Termination Current Limit</Description>
+          <Order>12</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030504">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>64</PhyRef>
+      <RegRef>1</RegRef>
+      <Offset>64</Offset>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>F</HexMax>
+      <PhyMin>64</PhyMin>
+      <PhyMax>1024</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>5</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>5</Index>
+          <BitStart>4</BitStart>
+          <Length>4</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>IPRECHG</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>IPRECHG</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>128</DefValue>
+          <MinValue>64</MinValue>
+          <MaxValue>1024</MaxValue>
+          <EditType>0</EditType>
+          <Format>0</Format>
+          <Description>Pre-charge Current Limit</Description>
+          <Order>13</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030600">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>6</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>100mV</Item>
+        <Item>200mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>6</Index>
+          <BitStart>0</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>VRECHG</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>VRECHG</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Battery Recharge Threshold Offset</Description>
+          <Order>15</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030601">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>6</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>2800mV</Item>
+        <Item>3000mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>6</Index>
+          <BitStart>1</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>BATLOWV</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>BATLOWV</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Battery Pre-charge to Fast Charge Threshold</Description>
+          <Order>16</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030602">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>16</PhyRef>
+      <RegRef>1</RegRef>
+      <Offset>3840</Offset>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3F</HexMax>
+      <PhyMin>3840</PhyMin>
+      <PhyMax>4608</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>6</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>6</Index>
+          <BitStart>2</BitStart>
+          <Length>6</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>VREG</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>CV</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>4208</DefValue>
+          <MinValue>3840</MinValue>
+          <MaxValue>4608</MaxValue>
+          <EditType>0</EditType>
+          <Format>0</Format>
+          <Description>Charge Voltage Limit</Description>
+          <Order>14</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030700">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>7</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>50% of ICHG </Item>
+        <Item>20% of ICHG </Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>7</Index>
+          <BitStart>0</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>JEITA_ISET</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>JEITA_ISET</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>JEITA Low Temperature Current Setting</Description>
+          <Order>20</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030701">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>7</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>5 hrs</Item>
+        <Item>8 hrs</Item>
+        <Item>12 hrs</Item>
+        <Item>20 hrs</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>7</Index>
+          <BitStart>1</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>CHG_TIMER</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>CHG_TIMER</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>2</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Fast Charge Timer Setting</Description>
+          <Order>1B</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030703">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>7</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>7</Index>
+          <BitStart>3</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>EN_TIMER</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>EN_TIMER</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Charging Safety Timer Enable</Description>
+          <Order>1D</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030704">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>7</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>40s</Item>
+        <Item>80s</Item>
+        <Item>160s</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>7</Index>
+          <BitStart>4</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>WATCHGOD</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>WATCHGOD</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>I2C Watchdog Timer Setting</Description>
+          <Order>1</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030706">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>7</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Enable</Item>
+        <Item>Disable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>7</Index>
+          <BitStart>6</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>STAT_DIS</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>STAT_DIS</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>ST PIN Disable</Description>
+          <Order>19</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030707">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>7</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>7</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>EN_TERM</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>EN_TERM</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Charging Termination Enable</Description>
+          <Order>1A</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030800">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>8</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>60 Celsius</Item>
+        <Item>80 Celsius</Item>
+        <Item>100 Celsius</Item>
+        <Item>120 Celsius</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>8</Index>
+          <BitStart>0</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TREG</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>TREG</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>3</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Thermal Regulation Threshold</Description>
+          <Order>1E</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030802">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>8</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>0mV</Item>
+        <Item>32mV</Item>
+        <Item>64mV</Item>
+        <Item>96mV</Item>
+        <Item>128mV</Item>
+        <Item>160mV</Item>
+        <Item>192mV</Item>
+        <Item>224mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>8</Index>
+          <BitStart>2</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>VCLAMP</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>VCLAMP</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>IR Compensation Voltage Clamp</Description>
+          <Order>17</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030805">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>8</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>0mOhm</Item>
+        <Item>20mOhm</Item>
+        <Item>40mOhm</Item>
+        <Item>60mOhm</Item>
+        <Item>80mOhm</Item>
+        <Item>100mOhm</Item>
+        <Item>120mOhm</Item>
+        <Item>140mOhm</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>8</Index>
+          <BitStart>5</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>BAT_COMP</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>BAT_COMP</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>IR Compensation Resistor Setting</Description>
+          <Order>18</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030900">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>9</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>9</Index>
+          <BitStart>0</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>PUMPX_DN</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>PUMPX_DN</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Current Pulse Control Voltage Down enable</Description>
+          <Order>3</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030901">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>9</Address>
+          <StartBit>1</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>9</Index>
+          <BitStart>1</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>PUMPX_UP</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>PUMPX_UP</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Current Pulse Control Voltage UP enable</Description>
+          <Order>4</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030902">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>9</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>9</Index>
+          <BitStart>2</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>BATFET_RST_EN</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>BATFET_RST_EN</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>BATFET full system reset enable</Description>
+          <Order>24</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030903">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>9</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>BATFET turn off immediately when BATET_DIS bit is set</Item>
+        <Item>BATFET turn off delay tSM_DLY when BATFET_DIS bit is set</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>9</Index>
+          <BitStart>3</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>BATFET_DLY</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>BATFET_DLY</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>BATFET Turn Off Control</Description>
+          <Order>25</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030904">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>9</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Setting charging voltage to VREG-200mV during JEITA high temperature</Item>
+        <Item>Setting charging voltage to VREG during JEITA high temperature</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>9</Index>
+          <BitStart>4</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>JEITA_VSET</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>JEITA_VSET</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>JEITA High Temperature Voltage Setting</Description>
+          <Order>1F</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030905">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>9</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Allow BATFET turn on</Item>
+        <Item>Force BATAFET off</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>9</Index>
+          <BitStart>5</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>BATFET_DIS</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>BATFET_DIS</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Force BATFET off to enable ship mode</Description>
+          <Order>26</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030906">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>9</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Safety time not slowed by 2X during DPM or thermal regulation</Item>
+        <Item>Safety time slowed by 2X during DPM or thermal regulation</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>9</Index>
+          <BitStart>6</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TMR2X_EN</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>TMR2X_EN</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Safety Timer Setting During DPM or Thermal Regulation</Description>
+          <Order>1C</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030907">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>9</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Do not force ICO</Item>
+        <Item>Force ICO</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>9</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>FORCE_ICO</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>FORCE_ICO</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>Force Start Input Current Optimizer</Description>
+          <Order>8</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030B00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>B</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>B</Index>
+          <BitStart>0</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>VSYS_STAT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>0</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>False</Usability>
+          <Description>VSYS Regulation Status</Description>
+          <LogName>VSYS_STAT</LogName>
+          <NickName>VSYS_STAT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030B02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>B</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>B</Index>
+          <BitStart>2</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>PG_STAT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>1</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>False</Usability>
+          <Description>Power Good Status</Description>
+          <LogName>PG_STAT</LogName>
+          <NickName>PG_STAT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030B03">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>B</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>B</Index>
+          <BitStart>3</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>CHRG_STAT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>6</Group>
+          <SubGroup>0</SubGroup>
+          <Order>1</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <Usability>False</Usability>
+          <Description>Charging Status</Description>
+          <LogName>CHRG_STAT</LogName>
+          <NickName>CHRG_STAT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030B05">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>B</Address>
+          <StartBit>5</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>B</Index>
+          <BitStart>5</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>VBUS_STAT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>6</Group>
+          <SubGroup>0</SubGroup>
+          <Order>0</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <Usability>False</Usability>
+          <Description>VBUS Status register</Description>
+          <LogName>VBUS_STAT</LogName>
+          <NickName>VBUS_STAT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030C00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>C</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>C</Index>
+          <BitStart>0</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>NTC_FAULT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>6</Group>
+          <SubGroup>0</SubGroup>
+          <Order>2</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <Usability>False</Usability>
+          <Description>NTC Fault Status</Description>
+          <LogName>NTC_FAULT</LogName>
+          <NickName>NTC_FAULT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030C03">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>C</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>C</Index>
+          <BitStart>3</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>BAT_FAULT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>2</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>False</Usability>
+          <Description>Battery Fault Status</Description>
+          <LogName>BAT_FAULT</LogName>
+          <NickName>BAT_FAULT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030C04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>C</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>C</Index>
+          <BitStart>4</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>CHRG_FAULT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>6</Group>
+          <SubGroup>0</SubGroup>
+          <Order>3</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <Usability>False</Usability>
+          <Description>Charge Fault Status</Description>
+          <LogName>CHRG_FAULT</LogName>
+          <NickName>CHRG_FAULT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030C07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>C</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>C</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>WATCHDOG_FAULT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>3</Order>
+          <DefValue>1</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>False</Usability>
+          <Description>Watchdog Fault Status</Description>
+          <LogName>WATCHDOG_FAULT</LogName>
+          <NickName>WATCHDOG_FAULT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030D00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>100</PhyRef>
+      <RegRef>1</RegRef>
+      <Offset>2600</Offset>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>127</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>D</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>7</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>D</Index>
+          <BitStart>0</BitStart>
+          <Length>7</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>VINDPM</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>VINDPM</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>4400</DefValue>
+          <MinValue>3900</MinValue>
+          <MaxValue>15300</MaxValue>
+          <EditType>0</EditType>
+          <Format>0</Format>
+          <Description>Absolute VINDPM threshold</Description>
+          <Order>C</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030D07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>D</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Run relative VINDPM threshold</Item>
+        <Item>Run absolute VINDPM threshold</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>D</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>FORCE_VINDPM</Description>
+        </SFL>
+        <SFL Name="Config">
+          <NickName>FORCE_VINDPM</NickName>
+          <Catalog>OZ1C82</Catalog>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <Description>VINDPM Threshold Setting Method</Description>
+          <Order>D</Order>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030E00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>20</PhyRef>
+      <RegRef>1</RegRef>
+      <Offset>2304</Offset>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7F</HexMax>
+      <PhyMin>2304</PhyMin>
+      <PhyMax>4848</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>E</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>7</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>E</Index>
+          <BitStart>0</BitStart>
+          <Length>7</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>BATV</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>0</Group>
+          <SubGroup>0</SubGroup>
+          <Order>0</Order>
+          <DefValue>2304</DefValue>
+          <MinValue>2304</MinValue>
+          <MaxValue>4848</MaxValue>
+          <Usability>False</Usability>
+          <Description>ADC Conversion of Battery Voltage(VBAT)</Description>
+          <LogName>BATV</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030E07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>E</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>E</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>THERM_STAT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>4</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>False</Usability>
+          <Description>Thermal Regulation Status</Description>
+          <LogName>THERM_STAT</LogName>
+          <NickName>THERM_STAT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00030F00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>20</PhyRef>
+      <RegRef>1</RegRef>
+      <Offset>2304</Offset>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7F</HexMax>
+      <PhyMin>2304</PhyMin>
+      <PhyMax>4848</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>7</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F</Index>
+          <BitStart>0</BitStart>
+          <Length>7</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>SYSV</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>0</Group>
+          <SubGroup>0</SubGroup>
+          <Order>1</Order>
+          <DefValue>2304</DefValue>
+          <MinValue>2304</MinValue>
+          <MaxValue>4848</MaxValue>
+          <Usability>False</Usability>
+          <Description>ADC Conversion of System Voltage(VSYS)</Description>
+          <LogName>SYSV</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>0.465</PhyRef>
+      <RegRef>1</RegRef>
+      <Offset>21</Offset>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7F</HexMax>
+      <PhyMin>21</PhyMin>
+      <PhyMax>80</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>10</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>7</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>10</Index>
+          <BitStart>0</BitStart>
+          <Length>7</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>TSPCT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>6</Group>
+          <SubGroup>0</SubGroup>
+          <Order>5</Order>
+          <DefValue>21</DefValue>
+          <MinValue>21</MinValue>
+          <MaxValue>80</MaxValue>
+          <Usability>False</Usability>
+          <Description>ADC Conversion of THM Voltage (VTHM) as Percentage of VLDO</Description>
+          <LogName>TSPCT</LogName>
+          <NickName>TSPCT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031100">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>100</PhyRef>
+      <RegRef>1</RegRef>
+      <Offset>2600</Offset>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7F</HexMax>
+      <PhyMin>2600</PhyMin>
+      <PhyMax>15300</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>11</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>7</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>11</Index>
+          <BitStart>0</BitStart>
+          <Length>7</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>VBUSV</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>0</Group>
+          <SubGroup>0</SubGroup>
+          <Order>2</Order>
+          <DefValue>6000</DefValue>
+          <MinValue>2600</MinValue>
+          <MaxValue>15300</MaxValue>
+          <Usability>False</Usability>
+          <Description>ADC conversion of VBUS Voltage</Description>
+          <LogName>VBUSV</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031107">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>11</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>11</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>VBUS_GD</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>5</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>False</Usability>
+          <Description>VBUS Good Status</Description>
+          <LogName>VBUS_GD</LogName>
+          <NickName>VBUS_GD</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031200">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>50</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>6350</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>12</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>7</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>12</Index>
+          <BitStart>0</BitStart>
+          <Length>7</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>ICHGR</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>2</Group>
+          <SubGroup>0</SubGroup>
+          <Order>0</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>6350</MaxValue>
+          <Usability>False</Usability>
+          <Description>ADC Conversion of Charge Current (IBAT) when VBAT&gt;VBATSHORT</Description>
+          <LogName>ICHGR</LogName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031300">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>50</PhyRef>
+      <RegRef>1</RegRef>
+      <Offset>100</Offset>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>63</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>13</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>13</Index>
+          <BitStart>0</BitStart>
+          <Length>6</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>IDPM_LIM</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>6</Group>
+          <SubGroup>0</SubGroup>
+          <Order>4</Order>
+          <DefValue>100</DefValue>
+          <MinValue>100</MinValue>
+          <MaxValue>3250</MaxValue>
+          <Usability>False</Usability>
+          <Description>Input Current Limit in Effect while Input Current Optimizer</Description>
+          <LogName>IDPM_LIM</LogName>
+          <NickName>IDPM_LIM</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031306">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>13</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>13</Index>
+          <BitStart>6</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>IDPM_STAT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>6</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>False</Usability>
+          <Description>IINDPM Status</Description>
+          <LogName>IDPM_STAT</LogName>
+          <NickName>IDPM_STAT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031307">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>13</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>13</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>VDPM_STAT</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>7</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>False</Usability>
+          <Description>VINDPM Status</Description>
+          <LogName>VDPM_STAT</LogName>
+          <NickName>VDPM_STAT</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031400">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>14</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>14</Index>
+          <BitStart>0</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>DEV_REV</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031402">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>14</Address>
+          <StartBit>2</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>14</Index>
+          <BitStart>2</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>THM_PROFILE</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031403">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>14</Address>
+          <StartBit>3</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>14</Index>
+          <BitStart>3</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>PN</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031406">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>14</Address>
+          <StartBit>6</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>14</Index>
+          <BitStart>6</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>ICO_OPTIMIZED</Description>
+        </SFL>
+        <SFL Name="Scan">
+          <Group>3</Group>
+          <SubGroup>0</SubGroup>
+          <Order>8</Order>
+          <DefValue>0</DefValue>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Usability>False</Usability>
+          <Description>Input Current Optimizer (ICO) Status</Description>
+          <LogName>ICO_OPTIMIZED</LogName>
+          <NickName>ICO_OPTIMIZED</NickName>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x00031407">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>14</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>14</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>REG_RST</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003E000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>E0</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>E0</Index>
+          <BitStart>0</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>PSWD</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003E100">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>FF</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>255</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>E1</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>E1</Index>
+          <BitStart>0</BitStart>
+          <Length>8</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TEST</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003E200">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>FF</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>255</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>E2</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>E2</Index>
+          <BitStart>0</BitStart>
+          <Length>8</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>PROBE</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F0</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F0</Index>
+          <BitStart>0</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TR_BG</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F100">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F1</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F1</Index>
+          <BitStart>0</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TR_CLK</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F200">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>15</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F2</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F2</Index>
+          <BitStart>0</BitStart>
+          <Length>4</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TR_REF</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F300">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F3</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F3</Index>
+          <BitStart>0</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TR_TON</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F400">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>FF</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>255</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F4</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>8</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F4</Index>
+          <BitStart>0</BitStart>
+          <Length>8</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TR_ILMT</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F500">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>F</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>15</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F5</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F5</Index>
+          <BitStart>0</BitStart>
+          <Length>4</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TR_ICHG</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F600">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F6</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F6</Index>
+          <BitStart>0</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TR_BOCP</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F700">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>31</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>31</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F7</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>5</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F7</Index>
+          <BitStart>0</BitStart>
+          <Length>5</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TR_CSA</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F800">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>15</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>15</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F8</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>4</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F8</Index>
+          <BitStart>0</BitStart>
+          <Length>4</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TR_ILDO </Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F804">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>7</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>7</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F8</Address>
+          <StartBit>4</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F8</Index>
+          <BitStart>4</BitStart>
+          <Length>3</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TR_OS </Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F900">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>3</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>3</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F9</Address>
+          <StartBit>0</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F9</Index>
+          <BitStart>0</BitStart>
+          <Length>2</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ1C82</Group>
+          <Description>TRIM_CMD</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid="0x0003F907">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <HexMin>0</HexMin>
+      <HexMax>1</HexMax>
+      <PhyMin>0</PhyMin>
+      <PhyMax>1</PhyMax>
+      <LocationList>
+        <Location Position="Low">
+          <Address>F9</Address>
+          <StartBit>7</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>8</BitTotal>
+          <Index>F9</Index>
+          <BitStart>7</BitStart>
+          <Length>1</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>false</Write>
+          <Group>OZ1C82</Group>
+          <Description>FRZBIT</Description>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+</Root>

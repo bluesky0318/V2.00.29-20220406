@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="SD77316" chiptype="0002" bustype ="I2C" libname ="Cobra.SD77316" ProjectCode="OCPKAC5Y" AppVersion="2.00.03" OCEVersion="1.0.7.0">
+	<Part Name="DBConfig">
+		<ChipName>SD77316</ChipName>
+		<ChipVersion>A0</ChipVersion>
+		<UserType>Y</UserType>
+		<Date>20201209</Date>
+		<HasCom>true</HasCom>
+		<HasAMT>true</HasAMT>
+	</Part>
+	<Part Name = "MainBtnList">
+		<Button Label = "Expert"	Name = "Exper"         PanelName ="Cobra.ExperPanel"/>
+		<Button Label = "DBG"                   DBModuleName="DBG"      	    Name = "DBG2"            PanelName ="Cobra.DBG2Panel"/>
+	</Part>
+</Root>

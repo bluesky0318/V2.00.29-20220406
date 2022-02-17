@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="SD77030" chiptype="5702" bustype ="I2C" libname ="Cobra.SD77030" ProjectCode="OCEWARRY" AppVersion="2.00.03" OCEVersion="1.0.0.0">
+  <Part Name="DBConfig">
+    <ChipName>SD77030</ChipName>
+    <ChipVersion>A0</ChipVersion>
+    <UserType>Y</UserType>
+    <Date>20200922</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Expert"     DBModuleName="Expert"       Name = "Exper"         PanelName ="Cobra.ExperPanel">
+      <Configure>
+        <HidePro>True</HidePro>
+      </Configure>
+    </Button>
+    <Button Label = "EFUSE Config"   Name ="DeviceConfig"   PanelName ="Cobra.DeviceConfigurationPanel"/>
+    <Button Label = "Mass Production" DBModuleName="Production"  Name = "Production" ShowVerify="True" ShowConfig="True" ShowHEX="True"  PanelName ="Cobra.ProductionPanel">
+      <Process>
+        <Item SubTaskID="9">Chip Frozen Check</Item>
+        <Item SubTaskID="10">Chip Dirty Check</Item>
+        <Item SubTaskID="11" RadioOption="0">Download With Power Control</Item>
+        <Item SubTaskID="12" RadioOption="1">Download</Item>
+        <Item SubTaskID="13">Read Back Check</Item>
+      </Process>
+      <GetEfuseHexDataCommand>15</GetEfuseHexDataCommand>
+    </Button>
+  </Part>
+</Root>

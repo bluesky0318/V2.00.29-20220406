@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Cobra.BlackBoxPanel.StatisticLog.StatisticLogUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Cobra.BlackBoxPanel.StatisticLog"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type DataGridCell}" x:Key="dataGridCell">
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="counterDataGrid" Style="{DynamicResource dataGrid-deviceConfiguration}" VirtualizingStackPanel.IsVirtualizing="True" 
+                                      Height="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type Grid},AncestorLevel=1},Path=Height}" Grid.Row="0" Margin="5">
+            <DataGrid.GroupStyle>
+                <GroupStyle ContainerStyle="{StaticResource GroupHeaderStyle}" />
+            </DataGrid.GroupStyle>
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Height" Value="28" />
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" IsReadOnly="True" CanUserResize="False" Binding="{Binding nickname}" Width="0.6*"/>
+                <DataGridTextColumn Header="Counter" IsReadOnly="True" CanUserResize="False" Binding="{Binding sphydata}" Width="0.4*" CellStyle="{StaticResource dataGridCell}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="maxminDataGrid" Style="{DynamicResource dataGrid-deviceConfiguration}" VirtualizingStackPanel.IsVirtualizing="True" 
+                                      Height="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type Grid},AncestorLevel=1},Path=Height}" Grid.Row="1" Margin="5" >
+            <DataGrid.RowStyle>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Height" Value="28" />
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" IsReadOnly="True" CanUserResize="False" Binding="{Binding nickname}" Width="0.4*"/>
+                <DataGridTextColumn Header="Mininum" IsReadOnly="True" CanUserResize="False" Binding="{Binding minData}" Width="0.3*" CellStyle="{StaticResource dataGridCell}"/>
+                <DataGridTextColumn Header="Maxinum" IsReadOnly="True" CanUserResize="False" Binding="{Binding maxData}" Width="0.3*" CellStyle="{StaticResource dataGridCell}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

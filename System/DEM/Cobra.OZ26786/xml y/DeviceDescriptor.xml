@@ -1,0 +1,3135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root usage="DeviceDescriptor" chip="OZ26786" version ="1.1221">
+  <Section Name ="BusOptions" Guid ="0x00100000">
+    <Element Guid ="0x00100000">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList></ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>Connect Port:</NickName>
+          <Catalog>Common Configuration</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>16</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100001">
+      <PhysicalData>100</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>SMBus Frequency(KHZ):</NickName>
+          <Catalog>Common Configuration</Catalog>
+          <DefValue>100</DefValue>
+          <EditType>0</EditType>
+          <Format>1</Format>
+          <MinValue>10</MinValue>
+          <MaxValue>100</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100002">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>0x12</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>0</Order>
+          <NickName>SMBus Address:</NickName>
+          <Catalog>OZ26786</Catalog>
+          <DefValue>20</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>8</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00100003">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <ItemList>
+        <Item>true</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="BusOptions">
+          <Order>1</Order>
+          <NickName>PEC enable</NickName>
+          <Catalog>OZ26786</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>1</Format>
+          <MinValue>0</MinValue>
+          <MaxValue>0</MaxValue>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name ="Config" Guid ="0x00020000">
+    <Element Guid ="0x00021406">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>14</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of charger current</Item>
+        <Item>Adds 64mA of charger current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CC_DAC_I0</NickName>
+          <Catalog>Charge Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge current,DAC_I0</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021407">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>14</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of charger current</Item>
+        <Item>Adds 128mA of charger current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CC_DAC_I1</NickName>
+          <Catalog>Charge Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge current, DAC_I1</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021408">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>14</Address>
+          <StartBit>08</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of charger current</Item>
+        <Item>Adds 256mA of charger current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CC_DAC_I2</NickName>
+          <Catalog>Charge Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge current, DAC_I2</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021409">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>14</Address>
+          <StartBit>09</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of charger current</Item>
+        <Item>Adds 512mA of charger current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CC_DAC_I3</NickName>
+          <Catalog>Charge Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge current, DAC_I3</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002140A">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>14</Address>
+          <StartBit>10</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of charger current</Item>
+        <Item>Adds 1024mA of charger current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CC_DAC_I4</NickName>
+          <Catalog>Charge Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge current, DAC_I4</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002140B">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>14</Address>
+          <StartBit>11</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of charger current</Item>
+        <Item>Adds 2048mA of charger current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CC_DAC_I5</NickName>
+          <Catalog>Charge Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge current, DAC_I5</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002140C">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>14</Address>
+          <StartBit>12</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of charger current</Item>
+        <Item>Adds 4096mA of charger current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CC_DAC_I6</NickName>
+          <Catalog>Charge Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge current, DAC_I6</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021504">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>04</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mV of charge voltage,1024mV min</Item>
+        <Item>Adds 16mV of charge voltage</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CV_DAC_V0</NickName>
+          <Catalog>Charge Voltage</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge Voltage, DAC_V0</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021505">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>05</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mV of charge voltage,1024mV min</Item>
+        <Item>Adds 32mV of charge voltage</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CV_DAC_V1</NickName>
+          <Catalog>Charge Voltage</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge Voltage, DAC_V1</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021506">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mV of charge voltage,1024mV min</Item>
+        <Item>Adds 64mV of charge voltage</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CV_DAC_V2</NickName>
+          <Catalog>Charge Voltage</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge Voltage, DAC_V2</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021507">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mV of charge voltage,1024mV min</Item>
+        <Item>Adds 128mV of charge voltage</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CV_DAC_V3</NickName>
+          <Catalog>Charge Voltage</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge Voltage, DAC_V3</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021508">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>08</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mV of charge voltage,1024mV min</Item>
+        <Item>Adds 256mV of charge voltage</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CV_DAC_V4</NickName>
+          <Catalog>Charge Voltage</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge Voltage, DAC_V4</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021509">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>09</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mV of charge voltage,1024mV min</Item>
+        <Item>Adds 512mV of charge voltage</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CV_DAC_V5</NickName>
+          <Catalog>Charge Voltage</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge Voltage,DAC_V5</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002150A">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>10</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mV of charge voltage</Item>
+        <Item>Adds 1024mV of charge voltage</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CV_DAC_V6</NickName>
+          <Catalog>Charge Voltage</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge Voltage, DAC_V6</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002150B">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>11</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mV of charge voltage</Item>
+        <Item>Adds 2048mV of charge voltage</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CV_DAC_V7</NickName>
+          <Catalog>Charge Voltage</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge Voltage, DAC_V7</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002150C">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>12</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mV of charge voltage</Item>
+        <Item>Adds 4096mV of charge voltage</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CV_DAC_V8</NickName>
+          <Catalog>Charge Voltage</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge Voltage, DAC_V8</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002150D">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>13</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mV of charge voltage</Item>
+        <Item>Adds 8192mV of charge voltage</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CV_DAC_V9</NickName>
+          <Catalog>Charge Voltage</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge Voltage, DAC_V9</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002150E">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>14</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mV of charge voltage</Item>
+        <Item>Adds 16384mV of charge voltage</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>CV_DAC_V10</NickName>
+          <Catalog>Charge Voltage</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Charge Voltage, DAC_V10</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021607">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>16</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 512mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO1_DAC_I0</NickName>
+          <Catalog>Adapter OCP Level1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I0</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021608">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>16</Address>
+          <StartBit>08</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 1024mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO1_DAC_I1</NickName>
+          <Catalog>Adapter OCP Level1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I1</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021609">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>16</Address>
+          <StartBit>09</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 2048mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO1_DAC_I2</NickName>
+          <Catalog>Adapter OCP Level1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I2</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002160A">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>16</Address>
+          <StartBit>10</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 4096mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO1_DAC_I3</NickName>
+          <Catalog>Adapter OCP Level1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I3</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002160B">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>16</Address>
+          <StartBit>11</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 8192mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO1_DAC_I4</NickName>
+          <Catalog>Adapter OCP Level1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I4</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002160C">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>16</Address>
+          <StartBit>12</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 16384mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO1_DAC_I5</NickName>
+          <Catalog>Adapter OCP Level1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I5</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021707">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>17</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 640mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO2_DAC_I0</NickName>
+          <Catalog>Adapter OCP Level2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I0</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021708">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>17</Address>
+          <StartBit>08</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 1280mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO2_DAC_I1</NickName>
+          <Catalog>Adapter OCP Level2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I1</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00021709">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>17</Address>
+          <StartBit>09</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 2560mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO2_DAC_I2</NickName>
+          <Catalog>Adapter OCP Level2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I2</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002170A">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>17</Address>
+          <StartBit>10</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 5120mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO2_DAC_I3</NickName>
+          <Catalog>Adapter OCP Level2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I3</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002170B">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>17</Address>
+          <StartBit>11</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 10240mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO2_DAC_I4</NickName>
+          <Catalog>Adapter OCP Level2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I4</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x0002170C">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>17</Address>
+          <StartBit>12</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 20480mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AO2_DAC_I5</NickName>
+          <Catalog>Adapter OCP Level2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I5</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023B00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>00</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Prochot# triggered at Over-temperature heating</NickName>
+          <Catalog>ChargeOption_2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Prochot# triggered at Over-temperature heating</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023B01">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>01</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>40mV on charging current sense resistor for (R4=10mΩ) equivalent with 4A</Item>
+        <Item>50mV on R4=10mΩ, equivalent with 5A</Item>
+        <Item>60mV on R4=10mΩ, equivalent with 6A</Item>
+        <Item>70mV on R4=10mΩ, equivalent with 7A</Item>
+        <Item>80mV on R4=10mΩ, equivalent with 8A</Item>
+        <Item>100mV on R4=10mΩ, equivalent with 10A</Item>
+        <Item>120mV on R4=10mΩ, equivalent with 12A</Item>
+        <Item>140mV on R4=10mΩ, equivalent with 14A</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Maximum battery current in boost mode</NickName>
+          <Catalog>ChargeOption_2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <Description>Maximum battery current in boost mode</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023B04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>04</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Prochot# triggered in non-Boost Mode for high adapter current</NickName>
+          <Catalog>ChargeOption_2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Prochot# triggered in non-Boost Mode for high adapter current</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023B06">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Learning Mode Enable</NickName>
+          <Catalog>ChargeOption_2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Learning Mode Enable</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023B07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>IBATT Enable in Battery Mode</NickName>
+          <Catalog>ChargeOption_2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>IBATT Enable in Battery Mode</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023B08">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>08</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>k=1µA/W(default)</Item>
+        <Item>k=0.5µA/W</Item>
+        <Item>k=0.25µA/W</Item>
+        <Item>k=2µA/W</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>PSYS current gain KPSYS</NickName>
+          <Catalog>ChargeOption_2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <Description>PSYS current gain KPSYS</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023B0B">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>11</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>PSYS Enable in Battery Mode</NickName>
+          <Catalog>ChargeOption_2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>PSYS Enable in Battery Mode</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023B0C">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>12</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>5.6V</Item>
+        <Item>6V</Item>
+        <Item>6.4V</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>MBVTIBDMTP</NickName>
+          <Catalog>ChargeOption_2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <Description>Minimum Battery voltage threshold in Battery Discharge Mode triggering Prochot#</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023B0E">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>14</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>60/57.5%(default)</Item>
+        <Item>65/62.5%</Item>
+        <Item>70/67.5%</Item>
+        <Item>75/72.5%</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Battery voltage  threshold in Boost Mode for triggering Prochot# / STOP BOOST </NickName>
+          <Catalog>ChargeOption_2</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <Description>Battery voltage  threshold in Boost Mode for triggering Prochot# / STOP BOOST </Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023C00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3C</Address>
+          <StartBit>00</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>0.1ms</Item>
+        <Item>0.5ms</Item>
+        <Item>1ms</Item>
+        <Item>5ms</Item>
+        <Item>10ms</Item>
+        <Item>15ms</Item>
+        <Item>20ms</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Deglitch time 1 for level 1 adapter OCP prochot#</NickName>
+          <Catalog>Deglitch time and duration for prochot#</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <Description>Deglitch time 1 for level 1 adapter OCP prochot#</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023C03">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3C</Address>
+          <StartBit>03</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>0us</Item>
+        <Item>10us</Item>
+        <Item>100us</Item>
+        <Item>300us</Item>
+        <Item>500us</Item>
+        <Item>750us</Item>
+        <Item>1ms</Item>
+        <Item>3ms</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Deglitch time2 for level2 adapter OCP prochot#</NickName>
+          <Catalog>Deglitch time and duration for prochot#</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <Description>Deglitch time2 for level adapter OCP prochot#</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023C06">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3C</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>50us(default)</Item>
+        <Item>100us</Item>
+        <Item>500us</Item>
+        <Item>1ms</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Normal deglitch time for other prochot# condition</NickName>
+          <Catalog>Deglitch time and duration for prochot#</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <Description>Normal deglitch time for other prochot# condition</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023C08">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3C</Address>
+          <StartBit>08</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>50us</Item>
+        <Item>100us</Item>
+        <Item>500us</Item>
+        <Item>1ms</Item>
+        <Item>5ms</Item>
+        <Item>10ms</Item>
+        <Item>15ms</Item>
+        <Item>20ms</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Duration time for prochot#</NickName>
+          <Catalog>Deglitch time and duration for prochot#</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>7</MaxValue>
+          <Description>Duration time for prochot#</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>00</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>10mΩ adapter sense resistor (default)</Item>
+        <Item>20mΩ adapter sense resistor</Item>
+        <Item>5mΩ adapter sense resistor</Item>
+        <Item>5mΩ adapter sense resistor</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Adapter sense resistor value</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>3</MaxValue>
+          <Description>Adapter sense resistor value</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>02</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Prochot# triggered in Boost Mode at low battery voltage</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Prochot# triggered in Boost Mode at low battery voltage</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D03">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>03</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Prochot# triggered in Boost Mode for higher adapter current</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Prochot# triggered in Boost Mode for higher adapter current</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>04</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>192mA</Item>
+        <Item>128mA</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Precharge Current</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Pre-charge current selection</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D05">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>05</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Prochot# triggered in Boost Mode at high battery current</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Prochot# triggered in Boost Mode at high battery current</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D06">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Prochot# triggered in Discharge Mode at low battery voltage</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Prochot# triggered in Discharge Mode at low battery voltage</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Prochot# triggered in Discharge Mode at high battery current</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Prochot# triggered in Discharge Mode at high battery current</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D08">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>08</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>10mΩ battery sense resistor (default)</Item>
+        <Item>20mΩ battery sense resistor</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Battery sense resistor</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Battery sense resistor value</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D09">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>09</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>10</Item>
+        <Item>20</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>IBATT output voltage gain over battery current sense resistor in charging and discharging</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>IBATT output voltage gain over battery current sense resistor in charging and discharging</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D0A">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>10</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Boost Mode enabling</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Boost Mode enabling</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D0B">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>11</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>900K</Item>
+        <Item>600K</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Converter frequency</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Converter frequency selection</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D0C">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>12</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Switching MOSFET current protection enabling</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Switching MOSFET current protection enabling</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D0D">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>13</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Prochot# function enabling</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Prochot# function enabling</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D0E">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>14</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>20</Item>
+        <Item>10</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>IAD output voltage gain over adapter current sense resistor</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>IAD output voltage gain over adapter current sense resistor</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023D0F">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>15</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>19v</Item>
+        <Item>12v</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>Adapter voltage</NickName>
+          <Catalog>ChargeOption_1</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter voltage selection</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023F07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3F</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 256mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AC_DAC_I0</NickName>
+          <Catalog>Adapter Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I0</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023F08">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3F</Address>
+          <StartBit>08</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 512mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AC_DAC_I1</NickName>
+          <Catalog>Adapter Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I1</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023F09">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3F</Address>
+          <StartBit>09</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 1024mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AC_DAC_I2</NickName>
+          <Catalog>Adapter Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I2</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023F0A">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3F</Address>
+          <StartBit>10</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 2048mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AC_DAC_I3</NickName>
+          <Catalog>Adapter Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I3</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00023F0B">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3F</Address>
+          <StartBit>11</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Adds 0mA of adapter current</Item>
+        <Item>Adds 4096mA of adapter current</Item>
+      </ItemList>
+      <Private>
+        <SFL Name ="DeviceConfig">
+          <Order>0</Order>
+          <NickName>AC_DAC_I4</NickName>
+          <Catalog>Adapter Current</Catalog>
+          <DefValue>0</DefValue>
+          <EditType>1</EditType>
+          <Format>0</Format>
+          <EventMode>0</EventMode>
+          <MinValue>0</MinValue>
+          <MaxValue>1</MaxValue>
+          <Description>Adapter current, DAC_I4</Description>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+  <Section Name ="Operation" Guid ="0x00030000">
+    <Element Guid ="0x00031406">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>10</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>14</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>7</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>14</Index>
+          <BitStart>06</BitStart>
+          <Length>07</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Description>Charging Current(mA)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031504">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>11</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>15</Address>
+          <StartBit>04</StartBit>
+          <BitsNumber>11</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>15</Index>
+          <BitStart>04</BitStart>
+          <Length>0B</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Description>Charging voltage(mV)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031607">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>12</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>16</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>16</Index>
+          <BitStart>07</BitStart>
+          <Length>06</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Description>Adapter OCP Level1(mA)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00031707">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>13</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>17</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>6</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>17</Index>
+          <BitStart>07</BitStart>
+          <Length>06</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Description>Adapter OCE Level2(mA)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033B00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>00</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3B</Index>
+          <BitStart>00</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Description>P_OTP</Description>
+          <Tips>Prochot# triggered at Over-temperature heating</Tips>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033B01">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>14</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>01</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>40mV</Item>
+        <Item>50mV</Item>
+        <Item>60mV</Item>
+        <Item>70mV</Item>
+        <Item>80mV</Item>
+        <Item>100mVA</Item>
+        <Item>120mV</Item>
+        <Item>140mV</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3B</Index>
+          <BitStart>01</BitStart>
+          <Length>03</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Description>Boost Current LMT(mV)</Description>
+          <Tips>Maximum battery current in boost mode</Tips>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033B04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>04</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3B</Index>
+          <BitStart>04</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Prochot# triggered in non-Boost Mode for high adapter current</Tips>
+          <Description>P_AOCP</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033B06">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3B</Index>
+          <BitStart>06</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Learning Mode Enable</Tips>
+          <Description>LM_EN</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033B07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3B</Index>
+          <BitStart>07</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>IBATT Enable in Battery Mode</Tips>
+          <Description>IBATT_EN</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033B08">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>15</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>08</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>1µA/W</Item>
+        <Item>0.5µA/W</Item>
+        <Item>0.25µA/W</Item>
+        <Item>2µA/W</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3B</Index>
+          <BitStart>08</BitStart>
+          <Length>02</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>PSYS current gain KPSYS</Tips>
+          <Description>PSYS Gain(uA/W)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033B0B">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>11</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3B</Index>
+          <BitStart>0B</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>PSYS Enable in Battery Mode</Tips>
+          <Description>PSYS_EN</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033B0C">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>16</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>12</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>5.6V</Item>
+        <Item>6V</Item>
+        <Item>6.4V</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3B</Index>
+          <BitStart>0C</BitStart>
+          <Length>02</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Minimum Battery voltage threshold in Battery Discharge Mode triggering Prochot#</Tips>
+          <Description>BATMIN_TH(V)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033B0E">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>17</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3B</Address>
+          <StartBit>14</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>60/57.5%(default)</Item>
+        <Item>65/62.5%</Item>
+        <Item>70/67.5%</Item>
+        <Item>75/72.5%</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3B</Index>
+          <BitStart>0E</BitStart>
+          <Length>02</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Battery voltage  threshold in Boost Mode for triggering Prochot# / STOP BOOST </Tips>
+          <Description>BATLOW_TH(%)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033C00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>18</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3C</Address>
+          <StartBit>00</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>0.1ms</Item>
+        <Item>0.5ms</Item>
+        <Item>1ms</Item>
+        <Item>5ms</Item>
+        <Item>10ms</Item>
+        <Item>15ms</Item>
+        <Item>20ms</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3C</Index>
+          <BitStart>00</BitStart>
+          <Length>03</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Deglitch time 1 for level 1 adapter OCP prochot#</Tips>
+          <Description>Deglitch for OCP1(ms)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033C03">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>19</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3C</Address>
+          <StartBit>03</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>0us</Item>
+        <Item>10us</Item>
+        <Item>100us</Item>
+        <Item>300us</Item>
+        <Item>500us</Item>
+        <Item>750us</Item>
+        <Item>1ms</Item>
+        <Item>3ms</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3C</Index>
+          <BitStart>03</BitStart>
+          <Length>03</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Deglitch time2 for level adapter OCP prochot#</Tips>
+          <Description>Deglitch for OCP2(us)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033C06">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>20</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3C</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>50us(default)</Item>
+        <Item>100us</Item>
+        <Item>500us</Item>
+        <Item>1ms</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3C</Index>
+          <BitStart>06</BitStart>
+          <Length>02</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Normal deglitch time for other prochot# condition</Tips>
+          <Description>Normal deglitch(us)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033C08">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>21</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3C</Address>
+          <StartBit>08</StartBit>
+          <BitsNumber>3</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>50us</Item>
+        <Item>100us</Item>
+        <Item>500us</Item>
+        <Item>1ms</Item>
+        <Item>5ms</Item>
+        <Item>10ms</Item>
+        <Item>15ms</Item>
+        <Item>20ms</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3C</Index>
+          <BitStart>08</BitStart>
+          <Length>03</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Duration time for prochot#</Tips>
+          <Description>Duration time(us)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D00">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>22</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>00</StartBit>
+          <BitsNumber>2</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>10mΩ</Item>
+        <Item>20mΩ</Item>
+        <Item>5mΩ</Item>
+        <Item>5mΩ</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>00</BitStart>
+          <Length>02</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Adapter sense resistor value</Tips>
+          <Description>RAD(mΩ)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D02">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>02</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>02</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Prochot# triggered in Boost Mode at low battery voltage</Tips>
+          <Description>P_BUVPB</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D03">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>03</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>03</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Prochot# triggered in Boost Mode for higher adapter current</Tips>
+          <Description>P_AOCPB</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D04">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>23</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>04</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>192mA</Item>
+        <Item>128mA</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>04</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Pre-charge current selection</Tips>
+          <Description>Pre-CHG(mA)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D05">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>05</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>05</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Prochot# triggered in Boost Mode at high battery current</Tips>
+          <Description>P-BOCPB</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D06">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>06</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>06</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Prochot# triggered in Discharge Mode at low battery voltage</Tips>
+          <Description>P-BUVP</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>07</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Prochot# triggered in Discharge Mode at high battery current</Tips>
+          <Description>P-BOCP</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D08">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>24</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>08</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>10mΩ battery sense resistor (default)</Item>
+        <Item>20mΩ battery sense resistor</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>08</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Battery sense resistor value</Tips>
+          <Description>RCH(mΩ)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D09">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>09</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>10</Item>
+        <Item>20</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>09</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>IBATT output voltage gain over battery current sense resistor in charging and discharging</Tips>
+          <Description>IBATT gain</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D0A">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>10</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>0A</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Boost Mode enabling</Tips>
+          <Description>BST_EN</Description>        
+      </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D0B">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>25</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>11</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>900K</Item>
+        <Item>600K</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>0B</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Converter frequency</Tips>
+          <Description>Fpwm(K)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D0C">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>12</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disabled</Item>
+        <Item>Enabled</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>0C</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Switching MOSFET current protection enabling</Tips>
+          <Description>MOSP</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D0D">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>0</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>13</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>Disable</Item>
+        <Item>Enable</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>0D</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Prochot# function enabling</Tips>
+          <Description>P_EN</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D0E">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>26</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>14</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>20</Item>
+        <Item>10</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>0E</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>IAD output voltage gain over adapter current sense resistor</Tips>
+          <Description>IAD gain</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033D0F">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>27</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3D</Address>
+          <StartBit>15</StartBit>
+          <BitsNumber>1</BitsNumber>
+        </Location>
+      </LocationList>
+      <ItemList>
+        <Item>19v</Item>
+        <Item>12v</Item>
+      </ItemList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3D</Index>
+          <BitStart>0F</BitStart>
+          <Length>01</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Tips>Adapter voltage selection</Tips>
+          <Description>VAD(v)</Description>
+        </SFL>
+      </Private>
+    </Element>
+    <Element Guid ="0x00033F07">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>28</SubType>
+      <LocationList>
+        <Location Position ="Low">
+          <Address>3F</Address>
+          <StartBit>07</StartBit>
+          <BitsNumber>5</BitsNumber>
+        </Location>
+      </LocationList>
+      <Private>
+        <SFL Name="Expert">
+          <CustomerMode>true</CustomerMode>
+          <BitTotal>10</BitTotal>
+          <Index>3F</Index>
+          <BitStart>07</BitStart>
+          <Length>05</Length>
+          <Value>0</Value>
+          <Read>true</Read>
+          <Write>true</Write>
+          <Group>OZ26786</Group>
+          <Description>Adapter Current</Description>
+        </SFL>
+      </Private>
+    </Element>
+  </Section>
+</Root>
+

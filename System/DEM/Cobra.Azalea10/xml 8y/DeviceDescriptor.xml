@@ -1,0 +1,6121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root usage="DeviceDescriptor" chip="OZ3708" version ="1.1225">
+	<Section Name ="BusOptions" Guid ="0x00100000">
+		<Element Guid ="0x00100000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList></ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>Connect Port:</NickName>
+					<Catalog>Common Configuration</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>16</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100001">
+			<PhysicalData>100</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>I2C Bus Frequency(KHZ):</NickName>
+					<Catalog>Common Configuration</Catalog>
+					<DefValue>400</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>63</MinValue>
+					<MaxValue>400</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100002">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>0x54</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>I2C Address:</NickName>
+					<Catalog>OZ3708</Catalog>
+					<DefValue>20</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>8</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100003">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>true</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>1</Order>
+					<NickName>PEC enable</NickName>
+					<Catalog>OZ3708</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>0</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="AutomationTestElement" Guid ="0x00200000">
+		<Element Guid="0x00200001">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>False</Item>
+				<Item>True</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="ATTestSelection">
+					<Order>0</Order>
+					<NickName>Automation Enable </NickName>
+					<Catalog>Common Setting</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00200002">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<Private>
+				<SFL Name ="ATTestSelection">
+					<Order>1</Order>
+					<NickName>Repeat Times </NickName>
+					<Catalog>Common Setting</Catalog>
+					<DefValue>1000</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00200101">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>False</Item>
+				<Item>True</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="ATTestSelection">
+					<Order>1</Order>
+					<NickName>Simulation Enable</NickName>
+					<Catalog>Data Configure</Catalog>
+					<DefValue>1</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00200102">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<Private>
+				<SFL Name ="ATTestSelection">
+					<Order>1</Order>
+					<NickName>Test Sensitive </NickName>
+					<Catalog>Data Configure</Catalog>
+					<DefValue>10</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>99</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00200201">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>False</Item>
+				<Item>True</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="ATTestSelection">
+					<Order>3</Order>
+					<NickName>Out of Maximum Error </NickName>
+					<Catalog>Data Configure</Catalog>
+					<DefValue>1</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00200202">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>False</Item>
+				<Item>True</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="ATTestSelection">
+					<Order>4</Order>
+					<NickName>Out of Minumum Error </NickName>
+					<Catalog>Data Configure</Catalog>
+					<DefValue>1</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00200203">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>False</Item>
+				<Item>True</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="ATTestSelection">
+					<Order>5</Order>
+					<NickName>PEC Error </NickName>
+					<Catalog>Data Configure</Catalog>
+					<DefValue>1</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid="0x00200204">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>False</Item>
+				<Item>True</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="ATTestSelection">
+					<Order>6</Order>
+					<NickName>CRC Error </NickName>
+					<Catalog>Data Configure</Catalog>
+					<DefValue>1</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="BoardSettings" Guid ="0x00010000">
+		<Element Guid ="0x00010000">
+			<PhysicalData>2.5</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>41</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>0</Order>
+					<NickName>Rsense(mohm)</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>2.5</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0.1</MinValue>
+					<MaxValue>25.5</MaxValue>
+					<Description>The value of the sensor resistor</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00010002">
+			<PhysicalData>111300</PhysicalData>
+			<Key>-30</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>1</Order>
+					<NickName>-30℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>111300</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010003">
+			<PhysicalData>86430</PhysicalData>
+			<Key>-25</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>2</Order>
+					<NickName>-25℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>86430</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010004">
+			<PhysicalData>67770</PhysicalData>
+			<Key>-20</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>3</Order>
+					<NickName>-20℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>67770</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010005">
+			<PhysicalData>53410</PhysicalData>
+			<Key>-15</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>4</Order>
+					<NickName>-15℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>53410</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010006">
+			<PhysicalData>42470</PhysicalData>
+			<Key>-10</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>5</Order>
+					<NickName>-10℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>42470</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010007">
+			<PhysicalData>33900</PhysicalData>
+			<Key>-5</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>6</Order>
+					<NickName>-5℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>33900</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010008">
+			<PhysicalData>27280</PhysicalData>
+			<Key>0</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>7</Order>
+					<NickName>0℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>27280</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010009">
+			<PhysicalData>22050</PhysicalData>
+			<Key>5</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>8</Order>
+					<NickName>5℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>22050</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x0001000A">
+			<PhysicalData>17960</PhysicalData>
+			<Key>10</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>9</Order>
+					<NickName>10℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>17960</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x0001000B">
+			<PhysicalData>14690</PhysicalData>
+			<Key>15</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>0a</Order>
+					<NickName>15℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>14690</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x0001000C">
+			<PhysicalData>12090</PhysicalData>
+			<Key>20</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>0b</Order>
+					<NickName>20℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>12090</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x0001000D">
+			<PhysicalData>10000</PhysicalData>
+			<Key>25</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>0c</Order>
+					<NickName>25℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>10000</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x0001000E">
+			<PhysicalData>8313</PhysicalData>
+			<Key>30</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>0d</Order>
+					<NickName>30℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>8313</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x0001000F">
+			<PhysicalData>6940</PhysicalData>
+			<Key>35</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>0e</Order>
+					<NickName>35℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>6940</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010010">
+			<PhysicalData>5827</PhysicalData>
+			<Key>40</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>0f</Order>
+					<NickName>40℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>5827</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010011">
+			<PhysicalData>4911</PhysicalData>
+			<Key>45</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>10</Order>
+					<NickName>45℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>4911</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010012">
+			<PhysicalData>4160</PhysicalData>
+			<Key>50</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>11</Order>
+					<NickName>50℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>4160</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010013">
+			<PhysicalData>3800</PhysicalData>
+			<Key>55</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>12</Order>
+					<NickName>55℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>3800</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010014">
+			<PhysicalData>3020</PhysicalData>
+			<Key>60</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>13</Order>
+					<NickName>60℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>3020</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010015">
+			<PhysicalData>2588</PhysicalData>
+			<Key>65</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>14</Order>
+					<NickName>65℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>2588</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010016">
+			<PhysicalData>2228</PhysicalData>
+			<Key>70</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>15</Order>
+					<NickName>70℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>2228</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010017">
+			<PhysicalData>1924</PhysicalData>
+			<Key>75</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>16</Order>
+					<NickName>75℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>1924</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010018">
+			<PhysicalData>1668</PhysicalData>
+			<Key>80</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>17</Order>
+					<NickName>80℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>1668</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x00010019">
+			<PhysicalData>1451</PhysicalData>
+			<Key>85</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>18</Order>
+					<NickName>85℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>1451</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+		<Element Guid ="0x0001001A">
+			<PhysicalData>1266</PhysicalData>
+			<Key>90</Key>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>40</SubType>
+			<Private>
+				<SFL Name ="Board Config">
+					<Order>19</Order>
+					<NickName>90℃</NickName>
+					<Catalog>Temperature Configuration</Catalog>
+					<DefValue>1266</DefValue>
+					<EditType>0</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>1000000</MaxValue>
+					<Description>External temperature R-T item</Description>
+				</SFL>
+
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="YFLASH" Guid ="0x00020000">
+		<Element Guid ="0x00020f03">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>3</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>0</Order>
+					<NickName>LS01 Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<Description>Level Shifter 1 to 15 slope trimming data for cell1</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020e00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0E</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>1</Order>
+					<NickName>LS02 Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<Description>Level Shifter 1 to 15 slope trimming data for cell2</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020e03">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0E</Address>
+					<StartBit>03</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>2</Order>
+					<NickName>LS03 Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<Description>Level Shifter 1 to 15 slope trimming data for cell3</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020e06">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0E</Address>
+					<StartBit>06</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>3</Order>
+					<NickName>LS04 Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<Description>Level Shifter 1 to 15 slope trimming data for cell4</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020c00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0c</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>4</Order>
+					<NickName>LS05 Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<Description>Level Shifter 1 to 15 slope trimming data for cell5</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020c03">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0c</Address>
+					<StartBit>3</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>5</Order>
+					<NickName>LS06 Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<Description>Level Shifter 1 to 15 slope trimming data for cell6</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020c06">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0c</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>6</Order>
+					<NickName>LS07 Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<Description>Level Shifter 1 to 15 slope trimming data for cell7</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020b00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0b</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>9</Order>
+					<NickName>LS08 Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<Description>Level Shifter 1 to 15 slope trimming data for cell08</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020f00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>7</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>7</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>10</Order>
+					<NickName>Packc Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>7</MaxValue>
+					<Description>Level Shifter 1 to 15 slope trimming data for package</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>06</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>11</Order>
+					<NickName>INT Temp Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<Description>Internal temperature offset trimming data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>08</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>12</Order>
+					<NickName>BG TC Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<Description>VREF TC(temperature) trimming</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020808">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>63</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>63</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>08</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>13</Order>
+					<NickName>BG V Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>63</MaxValue>
+					<Description>VREF Voltage trimming</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>1</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>1</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>07</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>14</Order>
+					<NickName>OSC150K Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>1</MaxValue>
+					<Description>Oscillator 150kHz trimming data (step: ±15%)</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020900">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>3</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>3</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>09</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>15</Order>
+					<NickName>DOC Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+					<Description>Doc trimming data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020a00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>31</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>31</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0a</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>5</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>16</Order>
+					<NickName>THM3K Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>31</MaxValue>
+					<Description>THM3K trimming data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020a08">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>31</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>31</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0a</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>5</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>17</Order>
+					<NickName>THM60K Trim</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>31</MaxValue>
+					<Description>THM60K trimming data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00020608">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>15</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>15</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>06</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="EfuseConfig">
+					<Order>18</Order>
+					<NickName>CRC Sum</NickName>
+					<Catalog>YFLASH</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>0</EditType>
+					<Format>5</Format>
+					<EventMode>0</EventMode>
+					<MinValue>0</MinValue>
+					<MaxValue>15</MaxValue>
+					<Description>CRC check sum</Description>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="Operation" Guid ="0x00030000">
+		<Element Guid ="0x00030000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>00</Index>
+					<BitStart>0</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>chip subver</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030004">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>00</Index>
+					<BitStart>4</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>chip ver</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030008">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>8</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>00</Index>
+					<BitStart>8</BitStart>
+					<Length>08</Length>
+					<Value>10</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>chip id</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030101">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1</Address>
+					<StartBit>1</StartBit>
+					<BitsNumber>10</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>01</Index>
+					<BitStart>1</BitStart>
+					<Length>0a</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>final bld sel</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003010b">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1</Address>
+					<StartBit>11</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>01</Index>
+					<BitStart>b</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>fuse status</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003010c">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>01</Index>
+					<BitStart>c</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>vpp fuse blow</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003010d">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1</Address>
+					<StartBit>13</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Group>3</Group>
+					<SubGroup>0</SubGroup>
+					<Order>0</Order>
+					<NickName>INT#</NickName>
+					<LogName>INT#</LogName>
+					<DefValue>0</DefValue>
+					<Description>Indicate INT pin status.</Description>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>01</Index>
+					<BitStart>d</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>int out</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003010e">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>01</Index>
+					<BitStart>0e</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>reset out</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030200">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>0</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>normal mode</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030201">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>1</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>1</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld yes</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030202">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Group>3</Group>
+					<SubGroup>0</SubGroup>
+					<Order>1</Order>
+					<NickName>BLD OHTP</NickName>
+					<LogName>BLD OHTP</LogName>
+					<DefValue>0</DefValue>
+					<Description>active high to indicate the bleeding overheating is detected when the bleeding OHTP block is enable</Description>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>2</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ohtp </Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030203">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>3</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>3</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ohtp enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030204">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>4</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>osc150k wdt flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030205">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>5</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>5</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>osc150k wdt</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030206">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>6</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>osc150k wdt test</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030207">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Group>3</Group>
+					<SubGroup>0</SubGroup>
+					<Order>2</Order>
+					<NickName>OSC150K enable</NickName>
+					<LogName>OSC150K enable</LogName>
+					<DefValue>0</DefValue>
+					<Description>read back for confirmation, active high to enable the 150kHz oscillator.</Description>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>7</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>osc150k enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030208">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Group>4</Group>
+					<Order>0</Order>
+					<NickName>BLD OHTP</NickName>
+					<LogName>BLD OHTP flag</LogName>
+					<DefValue>0</DefValue>
+					<BClearable>true</BClearable>
+					<Description>default=0, set to 1 when cell bleeding overheating occurs (i.e. bld_ohtp goes from 0 to 1), clear to 0 by writing 1 to this bit.</Description>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>8</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ohtp flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030209">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>9</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>9</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>i2c timeout flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003020a">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>10</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Group>4</Group>
+					<Order>1</Order>
+					<NickName>WDT timeout</NickName>
+					<LogName>WDT timeout flag</LogName>
+					<DefValue>0</DefValue>
+					<BClearable>true</BClearable>
+					<Description>default=0, set to1 when watchdog timer times out, clear to 0 by writing 1 to this bit.</Description>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>a</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>watchdog timeout flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003020b">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>11</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Group>4</Group>
+					<Order>2</Order>
+					<NickName>DOC</NickName>
+					<LogName>DOC flag</LogName>
+					<DefValue>0</DefValue>
+					<BClearable>true</BClearable>
+					<Description>default=0, set to1 when watchdog timer times out, clear to 0 by writing 1 to this bit.</Description>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>0b</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>doc flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003020c">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Group>3</Group>
+					<SubGroup>0</SubGroup>
+					<Order>3</Order>
+					<NickName>DOC</NickName>
+					<LogName>DOC status</LogName>
+					<DefValue>0</DefValue>
+					<Description>set to 1 when discharge over current is there, otherwise it is 0.</Description>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>0c</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>doc event</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003020d">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>13</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>0d</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>adc timeout flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003020f">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>15</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>0f</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>porn flag</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Group>7</Group>
+					<SubGroup>2</SubGroup>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>03</Index>
+					<BitStart>0</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>thm pullup resistor</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030304">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>5</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3</Address>
+					<StartBit>04</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Group>2</Group>
+					<SubGroup>2</SubGroup>
+					<DefValue>-5000</DefValue>
+					<Description>Discharge over current threshold</Description>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>03</Index>
+					<BitStart>4</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>doc threshold</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030308">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>03</Index>
+					<BitStart>8</BitStart>
+					<Length>01</Length>
+					<Value>1</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ohtp mask</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030309">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3</Address>
+					<StartBit>09</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>03</Index>
+					<BitStart>9</BitStart>
+					<Length>01</Length>
+					<Value>1</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>i2c timeout mask</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003030a">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3</Address>
+					<StartBit>10</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>03</Index>
+					<BitStart>a</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>watchdog timeout mask</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0003030b">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3</Address>
+					<StartBit>11</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>03</Index>
+					<BitStart>b</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>doc mask</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030408">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>8</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>test ctrl</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>05</Index>
+					<BitStart>0</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>work mode</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030504">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>05</Index>
+					<BitStart>4</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>do mapping req</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030505">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>5</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030507">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>05</Index>
+					<BitStart>7</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>adcbuf az enable</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>6</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>06</Index>
+					<BitStart>0</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>int tmp trim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030608">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>6</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>06</Index>
+					<BitStart>8</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>crc sum</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>7</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>07</Index>
+					<BitStart>0</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>osc150k trim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>8</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>08</Index>
+					<BitStart>0</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>bg tc trim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030808">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>8</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>08</Index>
+					<BitStart>8</BitStart>
+					<Length>06</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>bg v trim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030900">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>9</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>09</Index>
+					<BitStart>0</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>doc trim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030a00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0a</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>5</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0a</Index>
+					<BitStart>0</BitStart>
+					<Length>05</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>thm3k trim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030a08">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0a</Address>
+					<StartBit>08</StartBit>
+					<BitsNumber>5</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0a</Index>
+					<BitStart>8</BitStart>
+					<Length>05</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>thm60k trim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030b00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0b</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0b</Index>
+					<BitStart>0</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>ls trim</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030c00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0c</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0c</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030c0c">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0c</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0c</Index>
+					<BitStart>0c</BitStart>
+					<Length>4</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>which adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030d00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0d</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0d</Index>
+					<BitStart>0</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>watchdog timeout</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030d06">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0d</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0d</Index>
+					<BitStart>06</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>rst length</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030e01">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>1</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>01</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ch1</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030e02">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>02</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ch2</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030e03">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>3</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>03</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ch3</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030e04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>04</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ch4</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030e05">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>5</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>05</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ch5</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030e06">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>06</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ch6</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030e07">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>07</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ch7</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030e0a">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>10</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>0a</BitStart>
+					<Length>1</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>bld ch8</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030f00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>8</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0f</Index>
+					<BitStart>0</BitStart>
+					<Length>08</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>offset test value</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030f08">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0f</Index>
+					<BitStart>08</BitStart>
+					<Length>06</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>which channel</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030f0e">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0f</Index>
+					<BitStart>0e</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>offset valid</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00030f0f">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>15</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0f</Index>
+					<BitStart>0f</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>adc valid</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031e00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>3</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1e</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>8</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>1e</Index>
+					<BitStart>0</BitStart>
+					<Length>08</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>offset test value</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00031f00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>2</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1f</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Order>0</Order>
+					<NickName>IT</NickName>
+					<LogName>IT</LogName>
+					<Usability>false</Usability>
+					<DefValue>25</DefValue>
+					<Group>1</Group>
+					<SubGroup>0</SubGroup>
+					<MinValue>-50</MinValue>
+					<MaxValue>100</MaxValue>
+					<Description>Internal Temperature(℃)</Description>
+				</SFL>
+				<SFL Name="SCS">
+					<Group>0</Group>
+					<LogName>IT</LogName>
+					<Order>0</Order>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>1f</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>int adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032100">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>32760</RegRef>
+			<SubType>3</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>21</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Order>0</Order>
+					<NickName>ET1</NickName>
+					<LogName>ET1</LogName>
+					<Usability>false</Usability>
+					<DefValue>25</DefValue>
+					<ItemList></ItemList>
+					<Group>1</Group>
+					<GPIO>0</GPIO>
+					<SubGroup>1</SubGroup>
+					<MinValue>-50</MinValue>
+					<MaxValue>100</MaxValue>
+					<Description>External Temperature1(℃)</Description>
+				</SFL>
+				<SFL Name="SCS">
+					<Group>0</Group>
+					<LogName>ET1</LogName>
+					<Order>2</Order>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>21</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>thm1 adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>23</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Order>0</Order>
+					<NickName>Cell1(mv)</NickName>
+					<LogName>Cell1(mv)</LogName>
+					<Usability>false</Usability>
+					<DefValue>2000</DefValue>
+					<ItemList></ItemList>
+					<Group>0</Group>
+					<SubGroup>0</SubGroup>
+					<MinValue>0</MinValue>
+					<MaxValue>5000</MaxValue>
+					<Description>Cell1 voltage</Description>
+				</SFL>
+				<SFL Name="SCS">
+					<Group>0</Group>
+					<LogName>Cell1 voltage</LogName>
+					<Order>4</Order>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>23</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell1 adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032400">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>24</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Order>1</Order>
+					<NickName>Cell2(mv)</NickName>
+					<LogName>Cell2(mv)</LogName>
+					<Usability>false</Usability>
+					<DefValue>2000</DefValue>
+					<ItemList></ItemList>
+					<Group>0</Group>
+					<SubGroup>0</SubGroup>
+					<MinValue>0</MinValue>
+					<MaxValue>5000</MaxValue>
+					<Description>Cell2 voltage</Description>
+				</SFL>
+				<SFL Name="SCS">
+					<Group>0</Group>
+					<LogName>Cell2 voltage</LogName>
+					<Order>5</Order>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>24</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell2 adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>25</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Order>2</Order>
+					<NickName>Cell3(mv)</NickName>
+					<LogName>Cell3(mv)</LogName>
+					<Usability>false</Usability>
+					<DefValue>2000</DefValue>
+					<ItemList></ItemList>
+					<Group>0</Group>
+					<SubGroup>0</SubGroup>
+					<MinValue>0</MinValue>
+					<MaxValue>5000</MaxValue>
+					<Description>Cell3 voltage</Description>
+				</SFL>
+				<SFL Name="SCS">
+					<Group>0</Group>
+					<LogName>Cell3 voltage</LogName>
+					<Order>6</Order>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>25</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell3 adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>26</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Order>3</Order>
+					<NickName>Cell4(mv)</NickName>
+					<LogName>Cell4(mv)</LogName>
+					<Usability>false</Usability>
+					<DefValue>2000</DefValue>
+					<ItemList></ItemList>
+					<Group>0</Group>
+					<SubGroup>0</SubGroup>
+					<MinValue>0</MinValue>
+					<MaxValue>5000</MaxValue>
+					<Description>Cell4 voltage</Description>
+				</SFL>
+				<SFL Name="SCS">
+					<Group>0</Group>
+					<LogName>Cell4 voltage</LogName>
+					<Order>7</Order>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>26</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell4 adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>27</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Order>4</Order>
+					<NickName>Cell5(mv)</NickName>
+					<LogName>Cell5(mv)</LogName>
+					<Usability>false</Usability>
+					<DefValue>2000</DefValue>
+					<ItemList></ItemList>
+					<Group>0</Group>
+					<SubGroup>0</SubGroup>
+					<MinValue>0</MinValue>
+					<MaxValue>5000</MaxValue>
+					<Description>Cell5 voltage</Description>
+				</SFL>
+				<SFL Name="SCS">
+					<Group>0</Group>
+					<LogName>Cell5 voltage</LogName>
+					<Order>8</Order>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>27</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell5 adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>28</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Order>5</Order>
+					<NickName>Cell6(mv)</NickName>
+					<LogName>Cell6(mv)</LogName>
+					<Usability>false</Usability>
+					<DefValue>2000</DefValue>
+					<ItemList></ItemList>
+					<Group>0</Group>
+					<SubGroup>0</SubGroup>
+					<MinValue>0</MinValue>
+					<MaxValue>5000</MaxValue>
+					<Description>Cell6 voltage</Description>
+				</SFL>
+				<SFL Name="SCS">
+					<Group>0</Group>
+					<LogName>Cell6 voltage</LogName>
+					<Order>9</Order>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>28</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell6 adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032900">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>29</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Order>6</Order>
+					<NickName>Cell7(mv)</NickName>
+					<LogName>Cell7(mv)</LogName>
+					<Usability>false</Usability>
+					<DefValue>2000</DefValue>
+					<ItemList></ItemList>
+					<Group>0</Group>
+					<SubGroup>0</SubGroup>
+					<MinValue>0</MinValue>
+					<MaxValue>5000</MaxValue>
+					<Description>Cell7 voltage</Description>
+				</SFL>
+				<SFL Name="SCS">
+					<Group>0</Group>
+					<LogName>Cell7 voltage</LogName>
+					<Order>a</Order>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>29</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell7 adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032c00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2c</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Order>7</Order>
+					<NickName>Cell08(mv)</NickName>
+					<LogName>Cell08(mv)</LogName>
+					<Usability>false</Usability>
+					<DefValue>2000</DefValue>
+					<ItemList></ItemList>
+					<Group>0</Group>
+					<SubGroup>0</SubGroup>
+					<MinValue>0</MinValue>
+					<MaxValue>5000</MaxValue>
+					<Description>Cell08 voltage</Description>
+				</SFL>
+				<SFL Name="SCS">
+					<Group>0</Group>
+					<LogName>Cell08 voltage</LogName>
+					<Order>d</Order>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>2c</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell08 adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00032d00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>32760</RegRef>
+			<SubType>4</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2d</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Scan">
+					<Group>2</Group>
+					<SubGroup>0</SubGroup>
+					<DefValue>0</DefValue>
+					<MinValue>-5000</MinValue>
+					<MaxValue>5000</MaxValue>
+					<Usability>false</Usability>
+					<Description>Cell current</Description>
+					<LogName>Cell current</LogName>
+				</SFL>
+				<SFL Name="SCS">
+					<Group>0</Group>
+					<LogName>Cell current</LogName>
+					<Order>e</Order>
+				</SFL>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>2d</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>packc adc data</Description>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="TestModeDefintion" Guid ="0x00040000">
+		<Element Guid ="0x00040000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>Normal Mode</TestMode>
+					<SubValue>00</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Enable>false</Enable>
+					<Group>0x05000400</Group>
+					<Order>10</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00040503">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>Reference(BG) Trimming</TestMode>
+					<SubValue>03</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Group>0x05000400</Group>
+					<Order>11</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00040504">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>OSC Trimming</TestMode>
+					<SubValue>04</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Group>0x05000400</Group>
+					<Order>12</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00040505">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>DOC Trimming</TestMode>
+					<SubValue>05</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Group>0x05000400</Group>
+					<Order>13</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00040506">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>THM resistor Trimming</TestMode>
+					<SubValue>06</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Group>0x05000400</Group>
+					<Order>14</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00040507">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>ADC test Trimming</TestMode>
+					<SubValue>07</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Group>0x05000400</Group>
+					<Order>15</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00040508">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>Internal Temp Offset Trimming</TestMode>
+					<SubValue>08</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Group>0x05000400</Group>
+					<Order>16</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00040509">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>ADC Slope Trimming</TestMode>
+					<SubValue>09</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Group>0x05000400</Group>
+					<Order>17</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0004050A">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>Yflash data preparation</TestMode>
+					<SubValue>0a</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Group>0x0500040c</Group>
+					<Order>01</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0004050b">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>Yflash Erase</TestMode>
+					<SubValue>0b</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<ReadBack>false</ReadBack>
+					<Group>0x0500040c</Group>
+					<Order>03</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0004050c">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>Yflash programming</TestMode>
+					<SubValue>0c</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Enable>false</Enable>
+					<ReadBack>false</ReadBack>
+					<Group>0x0500040c</Group>
+					<Order>02</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0004050d">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>VPP fuse Blow</TestMode>
+					<SubValue>0d</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<ReadBack>true</ReadBack>
+					<Group>0x05000400</Group>
+					<Order>04</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0004050e">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>Cell balance and Watchdog test</TestMode>
+					<SubValue>0e</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Group>0x05000400</Group>
+					<Order>18</Order>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0004050f">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>5</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<TestMode>Observe Internal Key signal</TestMode>
+					<SubValue>0f</SubValue>
+					<CustomerMode>true</CustomerMode>
+					<Group>0x05000400</Group>
+					<Order>19</Order>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="TestOperation" Guid ="0x00050000">
+		<Element Guid ="0x00050300">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>8</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>08</Index>
+					<BitStart>0</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>bg tc trim</Description>
+					<TestMode>Reference(BG) Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050301">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>8</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>08</Index>
+					<BitStart>8</BitStart>
+					<Length>06</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>bg v trim</Description>
+					<TestMode>Reference(BG) Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050400">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>4</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>4</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>osc150k wdt flag</Description>
+					<TestMode>OSC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050401">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>5</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>5</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Description>osc150k wdt</Description>
+					<TestMode>OSC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050402">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>6</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Description>osc150k wdt test</Description>
+					<TestMode>OSC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050403">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>7</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>7</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Description>osc150k enable</Description>
+					<TestMode>OSC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050404">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>0</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>osc150k enable sim</Description>
+					<TestMode>OSC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050405">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>1</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>1</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>osc150k wdt test sim</Description>
+					<TestMode>OSC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050406">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>2</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>observe sel</Description>
+					<TestMode>OSC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050407">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>7</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>07</Index>
+					<BitStart>0</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>osc150k trim</Description>
+					<TestMode>OSC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050500">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>11</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>0b</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>doc flag</Description>
+					<TestMode>DOC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050501">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>02</Index>
+					<BitStart>0c</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>doc event</Description>
+					<TestMode>DOC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050502">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>0</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>doc enable sim</Description>
+					<TestMode>DOC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050503">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>2</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>observe sel</Description>
+					<TestMode>DOC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050504">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>9</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>09</Index>
+					<BitStart>0</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>doc trim</Description>
+					<TestMode>DOC Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050600">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>3</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>03</Index>
+					<BitStart>0</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>thm pullup resistor</Description>
+					<TestMode>THM resistor Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050601">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>2</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>observe sel</Description>
+					<TestMode>THM resistor Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050602">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0a</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>5</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0a</Index>
+					<BitStart>0</BitStart>
+					<Length>05</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>thm3k trim</Description>
+					<TestMode>THM resistor Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050603">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0a</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>5</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0a</Index>
+					<BitStart>8</BitStart>
+					<Length>05</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>thm60k trim</Description>
+					<TestMode>THM resistor Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050604">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>21</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>21</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>thm1 adc data</Description>
+					<TestMode>THM resistor Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050605">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>22</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>22</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>thm2 adc data</Description>
+					<TestMode>THM resistor Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050700">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>0</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>adc test sim</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050701">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>2</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>observe sel</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050702">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0c</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0c</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050703">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0c</Address>
+					<StartBit>12</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0c</Index>
+					<BitStart>0c</BitStart>
+					<Length>4</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>which adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050704">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>8</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0f</Index>
+					<BitStart>0</BitStart>
+					<Length>08</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>offset test value</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050705">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0f</Index>
+					<BitStart>08</BitStart>
+					<Length>06</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>which channel</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050706">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>14</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0f</Index>
+					<BitStart>0e</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>offset valid</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050707">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>15</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0f</Index>
+					<BitStart>0f</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>adc valid</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050708">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>3</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1e</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>8</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>1e</Index>
+					<BitStart>0</BitStart>
+					<Length>08</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>offset test value</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050709">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>2</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1f</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>1f</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>int adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0005070a">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>5</PhyRef>
+			<RegRef>4</RegRef>
+			<SubType>3</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>20</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>20</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>aux adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0005070b">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>21</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>21</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>thm1 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0005070c">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>22</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>22</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>thm2 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0005070d">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>23</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>23</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell1 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0005070e">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>24</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>24</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell2 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0005070f">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>25</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>25</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell3 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050710">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>26</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>26</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell4 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050711">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>27</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>27</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell5 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050712">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>28</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>28</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell6 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050713">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>29</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>29</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell7 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050714">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2a</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>2a</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell8 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050715">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2b</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>2b</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell9 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050716">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2c</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>2c</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell08 adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050717">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2d</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>2d</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>packc adc data</Description>
+					<TestMode>ADC test Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050800">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>2</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>observe sel</Description>
+					<TestMode>Internal Temp Offset Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050801">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>6</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>06</Index>
+					<BitStart>0</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>int tmp trim</Description>
+					<TestMode>Internal Temp Offset Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050802">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>2</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>1f</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>1f</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>int adc data</Description>
+					<TestMode>Internal Temp Offset Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050900">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>2</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>observe sel</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050901">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0b</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0b</Index>
+					<BitStart>0</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Group>Azalea 8</Group>
+					<Description>ls trim</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050902">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>23</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>23</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell1 adc data</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050903">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>24</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>24</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell2 adc data</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050904">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>25</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>25</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell3 adc data</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050905">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>26</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>26</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell4 adc data</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050906">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>27</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>27</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell5 adc data</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050907">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>28</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>28</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell6 adc data</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050908">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>29</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>29</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell7 adc data</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050909">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2a</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>2a</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell8 adc data</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0005090a">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2b</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>2b</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell9 adc data</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0005090b">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2c</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>2c</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>cell8 adc data</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x0005090c">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>20475</PhyRef>
+			<RegRef>16380</RegRef>
+			<SubType>1</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>2d</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>12</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>2d</Index>
+					<BitStart>0</BitStart>
+					<Length>0c</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>false</Write>
+					<Group>Azalea 8</Group>
+					<Description>packc adc data</Description>
+					<TestMode>ADC Slope Trimming</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>6</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>06</Index>
+					<BitStart>0</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>int tmp trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a01">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>6</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>06</Index>
+					<BitStart>8</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>crc sum</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a02">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>7</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>07</Index>
+					<BitStart>0</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>osc150k trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a03">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>8</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>08</Index>
+					<BitStart>0</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>bg tc trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a04">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>8</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>6</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>08</Index>
+					<BitStart>8</BitStart>
+					<Length>06</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>bg v trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a05">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>9</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>09</Index>
+					<BitStart>0</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>doc trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a06">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0a</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>5</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0a</Index>
+					<BitStart>0</BitStart>
+					<Length>05</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>thm3k trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a07">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0a</Address>
+					<StartBit>8</StartBit>
+					<BitsNumber>5</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0a</Index>
+					<BitStart>8</BitStart>
+					<Length>05</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>thm60k trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a08">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0b</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0b</Index>
+					<BitStart>0</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>ls trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a09">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0c</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0c</Index>
+					<BitStart>0</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>ls05 trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a0a">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0c</Address>
+					<StartBit>3</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0c</Index>
+					<BitStart>3</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>ls06 trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a0b">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0c</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0c</Index>
+					<BitStart>6</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>ls07 trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a0e">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>0</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>ls02 trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a0f">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>3</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>3</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>ls03 trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a10">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>6</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>6</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>ls04 trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a11">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0f</Index>
+					<BitStart>0</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>packc trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050a12">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0f</Address>
+					<StartBit>3</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0f</Index>
+					<BitStart>3</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>ls01 trim</Description>
+					<TestMode>Yflash data preparation</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050d00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>2</StartBit>
+					<BitsNumber>2</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>2</BitStart>
+					<Length>02</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>observe sel</Description>
+					<TestMode>VPP fuse Blow</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050e00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>1</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>0</BitStart>
+					<Length>01</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>speedup enable sim</Description>
+					<TestMode>Cell balance and Watchdog test</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050e01">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>1</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>1</BitStart>
+					<Length>03</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>bld wdt observe sel</Description>
+					<TestMode>Cell balance and Watchdog test</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050e02">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>0e</Address>
+					<StartBit>1</StartBit>
+					<BitsNumber>10</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>0e</Index>
+					<BitStart>01</BitStart>
+					<Length>a</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>bld sel sw</Description>
+					<TestMode>Cell balance and Watchdog test</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00050f00">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>4</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>4</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name="Expert">
+					<CustomerMode>true</CustomerMode>
+					<BitTotal>10</BitTotal>
+					<Index>04</Index>
+					<BitStart>0</BitStart>
+					<Length>04</Length>
+					<Value>0</Value>
+					<Read>true</Read>
+					<Write>true</Write>
+					<Description>normal observe sel</Description>
+					<TestMode>Observe Internal Key signal</TestMode>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+</Root>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="Uart" chiptype="0100" bustype ="RS232" libname ="Cobra.Uart" OCEVersion ="2.00.00" ProjectCode ="OCEFWBIGSY" AppVersion="2.00.03" chipMode="1">
+	<Part Name="DBConfig">
+    <ChipName>Uart</ChipName>
+    <ChipVersion>B0</ChipVersion>
+    <UserType>X</UserType>
+    <Date>20210122</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "HexEditor"      Name ="HexEditor"     PanelName ="Cobra.HexEditorPanel">
+      <Layout Name="layout">
+        <ComboBox Name ="selectCB">
+          <ComboBoxItem>Main Block</ComboBoxItem>
+        </ComboBox>
+      </Layout>
+    </Button>
+  </Part>
+</Root>

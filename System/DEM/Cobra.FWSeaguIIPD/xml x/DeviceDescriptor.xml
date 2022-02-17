@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root usage="DeviceDescriptor" chip="FWSeagullPD" version ="1.1221">
+	<Section Name ="BusOptions" Guid ="0x00100000">
+		<Element Guid ="0x00100000">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList></ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>Connect Port:</NickName>
+					<Catalog>Common Configuration</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>16</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100041">
+			<PhysicalData>5</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>300</Item>
+				<Item>1200</Item>
+				<Item>2400</Item>
+				<Item>9600</Item>
+				<Item>19200</Item>
+				<Item>38400</Item>
+				<Item>115200</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>BaudRate(BPS):</NickName>
+					<Catalog>Common Configuration</Catalog>
+					<DefValue>6</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>12</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100042">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>8</Item>
+				<Item>7</Item>
+				<Item>6</Item>
+				<Item>5</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>0</Order>
+					<NickName>DataBits:</NickName>
+					<Catalog>Common Configuration</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>5</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100043">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>1</Item>
+				<Item>1.5</Item>
+				<Item>2</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>1</Order>
+					<NickName>StopBit:</NickName>
+					<Catalog>Common Configuration</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+		<Element Guid ="0x00100044">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<ItemList>
+				<Item>NONE</Item>
+				<Item>ODD</Item>
+				<Item>EVEN</Item>
+			</ItemList>
+			<Private>
+				<SFL Name ="BusOptions">
+					<Order>1</Order>
+					<NickName>ParityBit:</NickName>
+					<Catalog>Common Configuration</Catalog>
+					<DefValue>0</DefValue>
+					<EditType>1</EditType>
+					<Format>1</Format>
+					<MinValue>0</MinValue>
+					<MaxValue>3</MaxValue>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+	<Section Name ="ProjectInfo" Guid ="0x000f0000">
+		<Element Guid ="0x000f0001">
+			<PhysicalData>0</PhysicalData>
+			<PhyRef>1</PhyRef>
+			<RegRef>1</RegRef>
+			<SubType>0</SubType>
+			<SubSection>0</SubSection>
+			<HexMin>0</HexMin>
+			<HexMax>FFFF</HexMax>
+			<PhyMin>0</PhyMin>
+			<PhyMax>65535</PhyMax>
+			<LocationList>
+				<Location Position ="Low">
+					<Address>00</Address>
+					<StartBit>0</StartBit>
+					<BitsNumber>3</BitsNumber>
+				</Location>
+			</LocationList>
+			<Private>
+				<SFL Name ="HexEditor">
+					<SubType>1</SubType>
+				</SFL>
+			</Private>
+		</Element>
+	</Section>
+</Root>
+

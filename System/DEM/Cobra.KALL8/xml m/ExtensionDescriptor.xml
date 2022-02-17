@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root usage="ExtensionDescriptor" chip="OZ7708" chiptype="7708" bustype ="I2C" libname ="Cobra.KALL08" AppVersion="2.00.03" OCEVersion="1.00.07.00" ProjectCode="OCEKLL8M" AMTEnable="false" >
+  <Part Name="DBConfig">
+    <ChipName>KALL08|OZ7708</ChipName>
+    <ChipVersion>A0</ChipVersion>
+    <UserType>M</UserType>
+    <Date>20201125</Date>
+    <HasCom>true</HasCom>
+    <HasAMT>true</HasAMT>
+  </Part>
+  <Part Name = "MainBtnList">
+    <Button Label = "Mass Production"    DBModuleName="Production"        Name = "Production" ShowConfig="False" PanelName ="Cobra.ProductionPanel">
+      <Password>111111</Password>
+      <Verification SubTaskID="20">Read Back Check</Verification>
+    </Button>
+  </Part>
+</Root>
