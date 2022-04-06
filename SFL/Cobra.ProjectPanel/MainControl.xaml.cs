@@ -55,7 +55,7 @@ namespace Cobra.ProjectPanel
 
         public ControlMessage cmg = new ControlMessage();
         public GeneralMessage gm = new GeneralMessage("Project SFL", "", 0);
-        private Dictionary<string, string> subTask_Dic = new Dictionary<string, string>();
+        public Dictionary<string, string> subTask_Dic = new Dictionary<string, string>();
         #endregion
 
         public MainControl(object pParent, string name)
@@ -217,8 +217,13 @@ namespace Cobra.ProjectPanel
                         case FILE_TYPE.FILE_FD_TABLE:
                             pfl.userCtrl = new TableUserControl(this, ref pfl);
                             break;
+                        case FILE_TYPE.FILE_FGLITE_TABLE:
+                            pfl.name = Path.GetFileNameWithoutExtension(fil.DirectoryName);
+                            pfl.userCtrl = new FGTableUserControl(this, ref pfl);
+                            break;
                     }
                     viewmode.m_load_prj.projFiles.Add(pfl);
+                    if (dir.GetFiles().Length != 1) break;
                 }
             }
             viewmode.m_load_prj.projFiles = new ObservableCollection<ProjFile>(viewmode.m_load_prj.projFiles.OrderBy(i => i.index));
@@ -287,6 +292,8 @@ namespace Cobra.ProjectPanel
             CallWaitControl(cmg);
 
             Button cl = sender as Button;
+            subTask_Dic.Clear();
+            subTask_Dic.Add("Button", (cl.CommandParameter as string));
             ProjFile pf = ((Button)sender).Tag as ProjFile;
             switch (cl.CommandParameter as string)
             {
@@ -313,6 +320,7 @@ namespace Cobra.ProjectPanel
             string filter = string.Empty;
             string title = string.Empty;
             string fileName = string.Empty;
+            ProjFile pfl = null;
             switch ((FILE_TYPE)pf.type)
             {
                 case FILE_TYPE.FILE_HEX:
@@ -334,36 +342,79 @@ namespace Cobra.ProjectPanel
                     title = "Open Table File";
                     filter = "Table files (*.txt)|*.txt||";
                     break;
+                case FILE_TYPE.FILE_FGLITE_TABLE:
+                    title = "Please select the table folder";
+                    break;
             }
 
-            Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
-            openFileDialog.Title = title;
-            openFileDialog.Filter = filter;
-            openFileDialog.FileName = fileName;
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.RestoreDirectory = true;
-            openFileDialog.DefaultExt = "hex";
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            if (openFileDialog.ShowDialog() == false) return;
+            switch ((FILE_TYPE)pf.type)
+            {
+                case FILE_TYPE.FILE_HEX:
+                case FILE_TYPE.FILE_PARAM:
+                case FILE_TYPE.FILE_THERMAL_TABLE:
+                case FILE_TYPE.FILE_OCV_TABLE:
+                case FILE_TYPE.FILE_RC_TABLE:
+                case FILE_TYPE.FILE_SELF_DISCH_TABLE:
+                case FILE_TYPE.FILE_FD_TABLE:
+                    {
+                        Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
+                        openFileDialog.Title = title;
+                        openFileDialog.Filter = filter;
+                        openFileDialog.FileName = fileName;
+                        openFileDialog.FilterIndex = 1;
+                        openFileDialog.RestoreDirectory = true;
+                        openFileDialog.DefaultExt = "hex";
+                        openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                        if (openFileDialog.ShowDialog() == false) return;
 
-            #region 将打开文件复制到工程目录下
-            string path = System.IO.Path.Combine(FolderMap.m_sm_work_folder + pf.folder);
-            if (Directory.Exists(path))
-                Directory.Delete(path, true);
-            Directory.CreateDirectory(path);
-            string targetpathfile = System.IO.Path.Combine(path, openFileDialog.SafeFileName);
+                        #region 将打开文件复制到工程目录下
+                        string path = System.IO.Path.Combine(FolderMap.m_sm_work_folder + pf.folder);
+                        if (Directory.Exists(path))
+                            Directory.Delete(path, true);
+                        Directory.CreateDirectory(path);
+                        string targetpathfile = System.IO.Path.Combine(path, openFileDialog.SafeFileName);
 
-            File.Copy(openFileDialog.FileName, targetpathfile, true);
-            #endregion
+                        File.Copy(openFileDialog.FileName, targetpathfile, true);
+                        #endregion
 
-            FileInfo fil = new FileInfo(openFileDialog.FileName);
-            ProjFile pfl = pf.DeepCopy();
-            pfl.bExist = true;
-            pfl.name = fil.Name;
-            pfl.folderPath = fil.DirectoryName;
-            pfl.toolTip = string.Empty;
-            //pfl.info = string.Format("Size:{0}KB\nLastWriteTime:{1:d}", fil.Length, fil.LastWriteTime);
-            pfl.info = string.Format("Size:{0}Bytes", fil.Length);
+                        FileInfo fil = new FileInfo(openFileDialog.FileName);
+                        pfl = pf.DeepCopy();
+                        pfl.bExist = true;
+                        pfl.name = fil.Name;
+                        pfl.folderPath = fil.DirectoryName;
+                        pfl.toolTip = string.Empty;
+                        //pfl.info = string.Format("Size:{0}KB\nLastWriteTime:{1:d}", fil.Length, fil.LastWriteTime);
+                        pfl.info = string.Format("Size:{0}Bytes", fil.Length);
+                    }
+                    break;
+                case FILE_TYPE.FILE_FGLITE_TABLE:
+                    {
+                        System.Windows.Forms.FolderBrowserDialog openFolderDialog = new System.Windows.Forms.FolderBrowserDialog();
+                        openFolderDialog.Description = title;
+                        if (openFolderDialog.ShowDialog() != System.Windows.Forms.DialogResult.OK) return;
+
+                        string path = System.IO.Path.Combine(FolderMap.m_sm_work_folder + pf.folder);
+                        if (Directory.Exists(path))
+                            Directory.Delete(path, true);
+                        Directory.CreateDirectory(path);
+
+                        foreach (string file in System.IO.Directory.GetFiles(openFolderDialog.SelectedPath))
+                        {
+                            string name = System.IO.Path.GetFileName(file);
+                            string dest = System.IO.Path.Combine(path, name);
+                            File.Copy(file, dest);//复制文件
+                        }
+
+                        pfl = pf.DeepCopy();
+                        pfl.bExist = true;
+                        pfl.name = Path.GetFileNameWithoutExtension(openFolderDialog.SelectedPath);
+                        pfl.folderPath = openFolderDialog.SelectedPath;
+                        pfl.toolTip = string.Empty;
+                        pfl.info = string.Empty;
+                    }
+                    break;
+            }
+
             viewmode.m_load_prj.Remove(pf);
             switch ((FILE_TYPE)pfl.type)
             {
@@ -379,6 +430,9 @@ namespace Cobra.ProjectPanel
                 case FILE_TYPE.FILE_SELF_DISCH_TABLE:
                 case FILE_TYPE.FILE_FD_TABLE:
                     pfl.userCtrl = new TableUserControl(this, ref pfl);
+                    break;
+                case FILE_TYPE.FILE_FGLITE_TABLE:
+                    pfl.userCtrl = new FGTableUserControl(this, ref pfl);
                     break;
             }
             workPanel.Children.Clear();
@@ -561,6 +615,7 @@ namespace Cobra.ProjectPanel
 
             msg.percent = 40;
             msg.task = TM.TM_READ;
+            msg.sub_task_json = BuildJsonTask();
             parent.AccessDevice(ref m_Msg);
             while (msg.bgworker.IsBusy)
                 System.Windows.Forms.Application.DoEvents();
@@ -680,6 +735,7 @@ namespace Cobra.ProjectPanel
 
             msg.percent = 50;
             msg.task = TM.TM_WRITE;
+            msg.sub_task_json = BuildJsonTask();
             parent.AccessDevice(ref m_Msg);
             while (msg.bgworker.IsBusy)
                 System.Windows.Forms.Application.DoEvents();
@@ -710,7 +766,7 @@ namespace Cobra.ProjectPanel
             msg.task = TM.TM_CONVERT_HEXTOPHYSICAL;
             parent.AccessDevice(ref m_Msg);
             while (msg.bgworker.IsBusy)
-                System.Windows.Forms.Application.DoEvents(); 
+                System.Windows.Forms.Application.DoEvents();
             if (msg.errorcode != LibErrorCode.IDS_ERR_SUCCESSFUL)
             {
                 gm.level = 2;
@@ -787,6 +843,38 @@ namespace Cobra.ProjectPanel
             using (FileStream fs = file.OpenWrite())
                 fs.Write(bdata, 0, bdata.Length);// from load hex
         }
+
+        /// <summary>
+        /// 复制文件夹及文件
+        /// </summary>
+        /// <param name="sourceFolder">原文件路径</param>
+        /// <param name="destFolder">目标文件路径</param>
+        /// <returns></returns>
+        public int CopyFolder(string sourceFolder, string destFolder)
+        {
+            try
+            {
+                //如果目标路径不存在,则创建目标路径
+                if (!System.IO.Directory.Exists(destFolder))
+                {
+                    System.IO.Directory.CreateDirectory(destFolder);
+                }
+                //得到原文件根目录下的所有文件
+                string[] files = System.IO.Directory.GetFiles(sourceFolder);
+                foreach (string file in files)
+                {
+                    string name = System.IO.Path.GetFileName(file);
+                    string dest = System.IO.Path.Combine(destFolder, name);
+                    System.IO.File.Copy(file, dest);//复制文件
+                }
+                return 1;
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+        }
         #endregion
 
         private void UploadFile(ProjFile pf)
@@ -801,8 +889,22 @@ namespace Cobra.ProjectPanel
                     msg.gm.controls = "Read all parameters";
                     msg.task_parameterlist.parameterlist = viewmode.parameterlist;
                     break;
+                case FILE_TYPE.FILE_FGLITE_TABLE:
+                    msg.gm.controls = "Upload FGLite table";
+                    msg.task_parameterlist.parameterlist.Clear();
+                    msg.sub_task = pf.type;
+                    (pf.userCtrl as Table.FGTableUserControl).WriteDevice();
+                    break;
             }
             Read();
+            switch ((FILE_TYPE)pf.type)
+            {
+                case FILE_TYPE.FILE_PARAM:
+                    break;
+                case FILE_TYPE.FILE_FGLITE_TABLE:
+                    UpdateLUT(pf, msg.sub_task_json);
+                    break;
+            }
             cmg.bshow = false;
             CallWaitControl(cmg);
         }
@@ -817,12 +919,22 @@ namespace Cobra.ProjectPanel
             {
                 case FILE_TYPE.FILE_PARAM:
                     msg.gm.controls = "Write all parameters";
+                    msg.sub_task = pf.type;
                     msg.task_parameterlist.parameterlist = viewmode.parameterlist;
+                    break;
+                case FILE_TYPE.FILE_FGLITE_TABLE:
+                    msg.gm.controls = "Download FGLite table";
+                    msg.sub_task = pf.type;
                     break;
             }
             write();
             cmg.bshow = false;
             CallWaitControl(cmg);
+        }
+
+        private void UpdateLUT(ProjFile pf, string subJson)
+        {
+            (pf.userCtrl as FGTableUserControl).UpdateTable(subJson);
         }
     }
 }

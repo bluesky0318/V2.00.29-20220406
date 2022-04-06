@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using Cobra.Communication;
 using Cobra.Common;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Cobra.Blueway
 {
@@ -23,6 +24,14 @@ namespace Cobra.Blueway
         private object m_lock = new object();
         private Dictionary<string, string> m_Json_Options = null;
         private CCommunicateManager m_Interface = new CCommunicateManager();
+        private readonly string[] csvHeader = { "voltage", "temperature" };
+        private readonly string[] lutHeader = { "ocv_cof", "y_data", "dcap_cof", "keod_cof" };
+        private List<byte> m_NTC_List = new List<byte>();
+        private List<byte> m_OCV_List = new List<byte>();
+        private List<byte> m_YAXIS_List = new List<byte>();
+        private List<byte> m_DCAP_List = new List<byte>();
+        private List<byte> m_KEOD_List = new List<byte>();
+
         public void Init(object pParent)
         {
             parent = (DEMDeviceManage)pParent;
@@ -110,6 +119,7 @@ namespace Cobra.Blueway
             wBuffer.bdata = bdata;
             ret = BlockWrite(0x16, 0xF9, wBuffer);
             if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+            Thread.Sleep(10);
             ret = BlockRead(0x16, 0xF9, ref pval);
             if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
             return ret;
@@ -576,15 +586,18 @@ namespace Cobra.Blueway
         public UInt32 Read(ref TASKMessage msg)
         {
             byte bcmd = 0, sbcmd = 0;
-            UInt16 uadd = 0;
+            UInt16 uadd = 0, ulen = 0;
             Reg regLow = null;
+            byte[] b4data = new byte[4];
             TSMBbuffer tsmBuffer = new TSMBbuffer();
             List<byte> SBSReglist = new List<byte>();
             List<byte> F9Cmd_list = new List<byte>();
+            List<byte> tableData = new List<byte>();
             List<Parameter> ProjParamlist = new List<Parameter>();
             List<Parameter> LogParamList = new List<Parameter>();
             UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
 
+            m_Json_Options = SharedAPI.DeserializeStringToDictionary<string, string>(msg.sub_task_json);
             ParamContainer demparameterlist = msg.task_parameterlist;
             if (demparameterlist == null) return ret;
             F9Cmd_list.Clear();
@@ -657,18 +670,41 @@ namespace Cobra.Blueway
                     p.tsmbBuffer.length = tsmBuffer.length;
                 }
             }
+            switch ((ElementDefine.FILE_TYPE)msg.sub_task)
+            {
+                case ElementDefine.FILE_TYPE.FILE_FGLITE_TABLE:
+                    tsmBuffer.length = 5;
+                    ret = ParameterRead(ElementDefine.LUTTableArea_StartAddress + ElementDefine.Project_StartAddress + 4, ref tsmBuffer);
+                    if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) break;
+                    Array.Copy(tsmBuffer.bdata, 1, b4data, 0, b4data.Length);
+                    ulen = (ushort)(BitConverter.ToUInt32(b4data, 0) + 8);
+                    for (UInt32 i = 0; i < ulen; i = (i + 4))
+                    {
+                        tsmBuffer.length = 5;
+                        ret = ParameterRead(i + ElementDefine.LUTTableArea_StartAddress + ElementDefine.Project_StartAddress, ref tsmBuffer);
+                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) continue;
+                        Array.Copy(tsmBuffer.bdata, 1, b4data, 0, b4data.Length);
+                        tableData.AddRange(b4data);
+                    }
+                    BuildLUTJson(ref msg, tableData);
+                    break;
+            }
             return ret;
         }
+
         public UInt32 Write(ref TASKMessage msg)
         {
             byte len = 0;
             byte bcmd = 0;
             UInt16 ucmd = 0;
+            UInt32 ulen = 0;
             byte[] bdata = null;
+            byte[] b4data = new byte[4];
             TSMBbuffer tsmBuffer = new TSMBbuffer();
             List<byte> SBSReglist = new List<byte>();
             List<UInt16> ProjParamlist = new List<UInt16>();
             UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
+            m_Json_Options = SharedAPI.DeserializeStringToDictionary<string, string>(msg.sub_task_json);
 
             ParamContainer demparameterlist = msg.task_parameterlist;
             if (demparameterlist == null) return ret;
@@ -710,6 +746,20 @@ namespace Cobra.Blueway
                 tsmBuffer = parent.m_SBSMode_Dic[badd];
                 ret = BlockWrite(0x16, badd, tsmBuffer);
                 if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) continue;
+            }
+
+            switch ((ElementDefine.FILE_TYPE)msg.sub_task)
+            {
+                case ElementDefine.FILE_TYPE.FILE_FGLITE_TABLE:
+                    byte[] m_tables = GetBytesFromLUT().ToArray();
+                    for (UInt32 i = 0; i < m_tables.Length; i = (i + 4))
+                    {
+                        Array.Clear(b4data, 0, b4data.Length);
+                        Array.Copy(m_tables, i, b4data, 0, 4);
+                        ret = ParameterWrite(i + ElementDefine.Project_StartAddress + ElementDefine.LUTTableArea_StartAddress, b4data);
+                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) break;
+                    }
+                    break;
             }
             return ret;
         }
@@ -908,6 +958,10 @@ namespace Cobra.Blueway
                     case "FullDownloadPrj":
                         msg.controlmsg.message = "Begin to handshake...";
                         msg.controlreq = COMMON_CONTROL.COMMON_CONTROL_WAITTING;
+                        byte[] m_tables = GetBytesFromLUT().ToArray();
+                        if (msg.flashData != null)
+                            Array.Copy(m_tables, 0, msg.flashData, ElementDefine.LUTTableArea_StartAddress, m_tables.Length);
+                        UploadHex2Bin(ref msg);
                         ret = Handshake(ref msg);
                         if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL)
                         {
@@ -1225,6 +1279,7 @@ namespace Cobra.Blueway
           0x89b8fd09, 0x8d79e0be, 0x803ac667, 0x84fbdbd0, 0x9abc8bd5, 0x9e7d9662, 0x933eb0bb, 0x97ffad0c,
           0xafb010b1, 0xab710d06, 0xa6322bdf, 0xa2f33668, 0xbcb4666d, 0xb8757bda, 0xb5365d03, 0xb1f740b4
         };
+
         public uint crc32_calc(byte[] bytes)
         {
             uint iCount = (uint)bytes.Length;
@@ -1237,6 +1292,7 @@ namespace Cobra.Blueway
 
             return crc;
         }
+
         public Parameter GetParameterByGuid(UInt32 guid, AsyncObservableCollection<Parameter> parameterlist)
         {
             foreach (Parameter param in parameterlist)
@@ -1246,6 +1302,7 @@ namespace Cobra.Blueway
             }
             return null;
         }
+
         private void UpdataProjecInformation(TASKMessage msg)
         {
             Parameter param = null;
@@ -1253,6 +1310,7 @@ namespace Cobra.Blueway
             if (param != null) parent.Proj_Rsense = param.phydata * 1000;
             else parent.Proj_Rsense = 2500;
         }
+
         private void CountCheckSum(ref TASKMessage msg)
         {
             uint parameterCheckSum = 0;
@@ -1268,6 +1326,72 @@ namespace Cobra.Blueway
             parent.m_ProjParamImg[(ElementDefine.Parameter_CheckSumAddress - ElementDefine.ParameterArea_StartAddress) + 1] = (byte)(parameterCheckSum >> 8);
             parent.m_ProjParamImg[(ElementDefine.Parameter_CheckSumAddress - ElementDefine.ParameterArea_StartAddress) + 2] = (byte)(parameterCheckSum >> 16);
             parent.m_ProjParamImg[(ElementDefine.Parameter_CheckSumAddress - ElementDefine.ParameterArea_StartAddress) + 3] = (byte)(parameterCheckSum >> 24);
+        }
+
+        /// <summary>
+        /// 获得字符串中开始和结束字符串中间得值
+        /// </summary>
+        /// <param name="str">字符串</param>
+        /// <param name="s">开始</param>
+        /// <param name="e">结束</param>
+        /// <returns></returns> 
+        public string GetValue(string str, string s, string e)
+        {
+            Regex rg = new Regex("(?<=(" + s + "))[.\\s\\S]*?(?=(" + e + "))", RegexOptions.Multiline | RegexOptions.Singleline);
+            return rg.Match(str).Value;
+        }
+
+        /// <summary>
+        /// 获取两个字符串中间的字符串
+        /// </summary>
+        /// <param name="str">要处理的字符串,例ABCD</param>
+        /// <param name="str1">第1个字符串,例AB</param>
+        /// <param name="str2">第2个字符串,例D</param>
+        /// <returns>例返回C</returns>
+        private string GetBetweenStr(string str, string str1, string str2)
+        {
+            int i1 = str.IndexOf(str1);
+            if (i1 < 0) //找不到返回空
+            {
+                return "";
+            }
+
+            int i2 = str.LastIndexOf(str2); //从后面找
+            if (i2 < 0) //找不到返回空
+            {
+                return "";
+            }
+            return str.Substring(i1 + str1.Length, i2 - i1 - str2.Length);
+        }
+
+        public byte[] IEEE754ForFloatPoint(string fstr, int size)
+        {
+            byte[] nbyte = null;
+            float dval = 0;
+            UInt32 wval = 0;
+            switch (size)
+            {
+                case 3:
+                    if (!UInt32.TryParse(fstr, out wval))
+                    {
+                        wval = 0;
+                        nbyte = new byte[4] { 0, 0, 0, 0 };
+                    }
+                    else
+                        nbyte = BitConverter.GetBytes(wval);
+                    break;
+                case 4:
+                    if (!float.TryParse(fstr, out dval))
+                    {
+                        dval = 0;
+                        nbyte = new byte[4] { 0, 0, 0, 0 };
+                    }
+                    else
+                        nbyte = BitConverter.GetBytes(dval);
+                    break;
+            }
+            if (!BitConverter.IsLittleEndian) Array.Reverse(nbyte);
+            return nbyte;
         }
         #endregion
 
@@ -1532,6 +1656,335 @@ namespace Cobra.Blueway
             if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
             hMAC = tsmBuffer.bdata;
             return ret;
+        }
+        #endregion
+
+        #region FG LIT解析
+        private List<byte> GetBytesFromLUT()
+        {
+            foreach (KeyValuePair<string, string> kvp in m_Json_Options)
+            {
+                switch (Path.GetExtension(kvp.Key))
+                {
+                    case ".c":
+                        BuildLUTTable(kvp.Value);
+                        break;
+                    case ".csv":
+                        BuildNTCTable(kvp.Value);
+                        break;
+                }
+            }
+            return BuildTableMemory();
+        }
+
+        private void BuildLUTTable(string content)
+        {
+            string sPart = string.Empty;
+            string[] sdata = null;
+            byte[] byteArray = null;
+
+            m_OCV_List.Clear();
+            m_YAXIS_List.Clear();
+            m_DCAP_List.Clear();
+            m_KEOD_List.Clear();
+
+            foreach (string source in lutHeader)
+            {
+                sPart = GetValue(content, source, ";");
+                sPart = sPart.Replace("\n", "").Replace(" ", "").Replace("\t", "").Replace("\r", "");
+                switch (source)
+                {
+                    case "ocv_cof":
+                        sdata = GetBetweenStr(sPart, "{", "}").Split(',');
+                        foreach (string sd in sdata)
+                        {
+                            byteArray = IEEE754ForFloatPoint(sd, 4);
+                            m_OCV_List.AddRange(byteArray);
+                        }
+                        break;
+                    case "y_data":
+                        sdata = GetBetweenStr(sPart, "{", "}").Split(',');
+                        foreach (string sd in sdata)
+                        {
+                            byteArray = IEEE754ForFloatPoint(sd, 3);
+                            m_YAXIS_List.AddRange(byteArray);
+                        }
+                        break;
+                    case "dcap_cof":
+                        string ssPart = GetBetweenStr(sPart, "{", "}");
+                        sdata = ssPart.Split(new char[3] { '{', '}', ',' });
+                        foreach (string sd in sdata)
+                        {
+                            if (string.IsNullOrEmpty(sd)) continue;
+                            byteArray = IEEE754ForFloatPoint(sd, 4);
+                            m_DCAP_List.AddRange(byteArray);
+                        }
+                        break;
+                    case "keod_cof":
+                        ssPart = GetBetweenStr(sPart, "{", "}");
+                        sdata = ssPart.Split(new char[3] { '{', '}', ',' });
+                        foreach (string sd in sdata)
+                        {
+                            if (string.IsNullOrEmpty(sd)) continue;
+                            byteArray = IEEE754ForFloatPoint(sd, 4);
+                            m_KEOD_List.AddRange(byteArray);
+                        }
+                        break;
+
+                }
+            }
+        }
+
+        private void BuildNTCTable(string content)
+        {
+            byte[] nbyte;
+            short sval = 0;
+            string[] sdata = content.Split(new char[2] { '\r', '\n' });
+            m_NTC_List.Clear();
+            foreach (string ss in sdata)
+            {
+                string[] spart = ss.Split(',');
+                if (spart.Length != 2) continue;
+                if (!short.TryParse(spart[0], out sval)) continue;
+                nbyte = BitConverter.GetBytes(sval);
+                m_NTC_List.AddRange(nbyte);
+                if (!short.TryParse(spart[1], out sval)) continue;
+                nbyte = BitConverter.GetBytes(sval);
+                m_NTC_List.AddRange(nbyte);
+            }
+        }
+
+        private List<byte> BuildTableMemory()
+        {
+            UInt32 NTCAddr = 0, NTCSize = 0;
+            UInt32 OCVAddr = 0, OCVSize = 0;
+            UInt32 YAXISAddr = 0, YAXISSize = 0;
+            UInt32 DCAPAddr = 0, DCAPSize = 0;
+            UInt32 KEODAddr = 0, KEODSize = 0;
+            UInt32 LUTCheckSum = 0, LUTSize = 0, LUTVer = 1;
+            List<byte> m_tableData = new List<byte>();
+
+            NTCAddr = 52;
+            NTCSize = (UInt32)m_NTC_List.Count;
+            OCVAddr = (NTCAddr + NTCSize);
+            OCVSize = (UInt32)m_OCV_List.Count;
+            YAXISAddr = (NTCAddr + NTCSize + OCVSize);
+            YAXISSize = (UInt32)m_YAXIS_List.Count;
+            DCAPAddr = (NTCAddr + NTCSize + OCVSize + YAXISSize);
+            DCAPSize = (UInt32)m_DCAP_List.Count;
+            KEODAddr = (NTCAddr + NTCSize + OCVSize + YAXISSize + DCAPSize);
+            KEODSize = (UInt32)m_KEOD_List.Count;
+            LUTSize = (NTCAddr + NTCSize + OCVSize + YAXISSize + DCAPSize + KEODSize - 8);
+
+            m_tableData.AddRange(BitConverter.GetBytes(LUTSize));
+            m_tableData.AddRange(BitConverter.GetBytes(LUTVer));
+            m_tableData.AddRange(BitConverter.GetBytes(NTCAddr));
+            m_tableData.AddRange(BitConverter.GetBytes(NTCSize));
+            m_tableData.AddRange(BitConverter.GetBytes(OCVAddr));
+            m_tableData.AddRange(BitConverter.GetBytes(OCVSize));
+            m_tableData.AddRange(BitConverter.GetBytes(YAXISAddr));
+            m_tableData.AddRange(BitConverter.GetBytes(YAXISSize));
+            m_tableData.AddRange(BitConverter.GetBytes(DCAPAddr));
+            m_tableData.AddRange(BitConverter.GetBytes(DCAPSize));
+            m_tableData.AddRange(BitConverter.GetBytes(KEODAddr));
+            m_tableData.AddRange(BitConverter.GetBytes(KEODSize));
+            m_tableData.AddRange(m_NTC_List);
+            m_tableData.AddRange(m_OCV_List);
+            m_tableData.AddRange(m_YAXIS_List);
+            m_tableData.AddRange(m_DCAP_List);
+            m_tableData.AddRange(m_KEOD_List);
+            LUTCheckSum = crc32_calc(m_tableData.ToArray());
+            m_tableData.InsertRange(0, BitConverter.GetBytes(LUTCheckSum));
+            return m_tableData;
+        }
+
+        private void BuildLUTJson(ref TASKMessage msg, List<byte> tableData)
+        {
+            int dicCount = m_Json_Options.Count;
+            string[] strKey = new string[dicCount];
+            string cContent = string.Empty, csvContent = string.Empty;
+            RestoreTables(tableData);
+
+            m_Json_Options.Keys.CopyTo(strKey, 0);
+            for (int i = 0; i < strKey.Length; i++)
+            {
+                if (m_Json_Options.ContainsKey(strKey[i]))
+                {
+                    switch (Path.GetExtension(strKey[i]))
+                    {
+                        case ".c":
+                            m_Json_Options[strKey[i]] = RestoreLUTTable(m_Json_Options[strKey[i]]);
+                            break;
+                        case ".csv":
+                            m_Json_Options[strKey[i]] = RestoreNTCTable(m_Json_Options[strKey[i]]); 
+                            break;
+                    }
+                }
+            }
+            msg.sub_task_json = SharedAPI.SerializeDictionaryToJsonString(m_Json_Options);
+        }
+
+        private void RestoreTables(List<byte> tableData)
+        {
+            UInt32 NTCAddr = 0, NTCSize = 0;
+            UInt32 OCVAddr = 0, OCVSize = 0;
+            UInt32 YAXISAddr = 0, YAXISSize = 0;
+            UInt32 DCAPAddr = 0, DCAPSize = 0;
+            UInt32 KEODAddr = 0, KEODSize = 0;
+            UInt32 LUTCheckSum = 0, LUTSize = 0, LUTVer = 1;
+            byte[] b4Array = new byte[4];
+            byte[] tableBytes = tableData.ToArray();
+
+            LUTCheckSum = BitConverter.ToUInt32(tableBytes, 0);
+            LUTSize = BitConverter.ToUInt32(tableBytes, 4);
+            LUTVer = BitConverter.ToUInt32(tableBytes, 8);
+            NTCAddr = BitConverter.ToUInt32(tableBytes, 12);
+            NTCSize = BitConverter.ToUInt32(tableBytes, 16);
+            OCVAddr = BitConverter.ToUInt32(tableBytes, 20);
+            OCVSize = BitConverter.ToUInt32(tableBytes, 24);
+            YAXISAddr = BitConverter.ToUInt32(tableBytes, 28);
+            YAXISSize = BitConverter.ToUInt32(tableBytes, 32);
+            DCAPAddr = BitConverter.ToUInt32(tableBytes, 36);
+            DCAPSize = BitConverter.ToUInt32(tableBytes, 40);
+            KEODAddr = BitConverter.ToUInt32(tableBytes, 44);
+            KEODSize = BitConverter.ToUInt32(tableBytes, 48);
+
+            m_NTC_List = tableData.GetRange((int)NTCAddr, (int)NTCSize);
+            m_OCV_List = tableData.GetRange((int)OCVAddr, (int)OCVSize);
+            m_YAXIS_List = tableData.GetRange((int)YAXISAddr, (int)YAXISSize);
+            m_DCAP_List = tableData.GetRange((int)DCAPAddr, (int)DCAPSize);
+            m_KEOD_List = tableData.GetRange((int)KEODAddr, (int)KEODSize);
+        }
+
+        private string RestoreLUTTable(string content)
+        {
+            UInt32 wval = 0;
+            float fval = 0;
+            string[] sdata = null;
+            string sPart = string.Empty;
+            byte[] b4Array = new byte[4];
+            int sindex = 0, eoffset = 0, soffset = 0;
+            StringBuilder strB = new StringBuilder();
+            foreach (string source in lutHeader)
+            {
+                strB.Clear();
+                switch (source)
+                {
+                    case "ocv_cof":
+                        sindex = content.IndexOf(source);
+                        sPart = GetValue(content, source, ";");
+                        eoffset = sPart.IndexOf('}');
+                        soffset = sPart.IndexOf('{');
+                        sPart = content.Substring(sindex + soffset + source.Length + 1, eoffset - soffset - 1);
+                        strB.Append("\r\n ");
+                        for (int i = 0; i < m_OCV_List.Count; i = (i + 4))
+                        {
+                            strB.Append("\t");
+                            Array.Copy(m_OCV_List.ToArray(), i, b4Array, 0, 4);
+                            fval = BitConverter.ToSingle(b4Array, 0);
+                            strB.Append(fval.ToString("f10"));
+                            strB.Append(",");
+                        }
+                        strB.Remove(strB.Length - 1, 1);
+                        strB.Append("\r\n ");
+                        content = content.Replace(sPart, strB.ToString());
+                        break;
+                    case "y_data":
+                        sindex = content.IndexOf(source);
+                        sPart = GetValue(content, source, ";");
+                        eoffset = sPart.IndexOf('}');
+                        soffset = sPart.IndexOf('{');
+                        sPart = content.Substring(sindex + soffset + source.Length + 1, eoffset - soffset - 1);
+                        for (int i = 0; i < m_YAXIS_List.Count; i = (i + 4))
+                        {
+                            strB.Append("\t");
+                            Array.Copy(m_YAXIS_List.ToArray(), i, b4Array, 0, 4);
+                            wval = BitConverter.ToUInt32(b4Array, 0);
+                            strB.Append(String.Format("{0:d4}", wval));
+                            strB.Append(",");
+                        }
+                        strB.Remove(strB.Length - 1, 1);
+                        content = content.Replace(sPart, strB.ToString());
+                        break;
+                    case "dcap_cof":
+                        sindex = content.IndexOf(source);
+                        sPart = GetValue(content, source, ";");
+                        eoffset = sPart.LastIndexOf('}');
+                        soffset = sPart.IndexOf('{');
+                        sPart = content.Substring(sindex + soffset + source.Length + 1, eoffset - soffset - 1);
+                        strB.Append("\r\n ");
+                        for (int i = 0; i < 6; i++)
+                        {
+                            strB.Append("\t\t{");
+                            for(int n = 0; n < 16; n = (n + 4))
+                            {
+                                Array.Copy(m_DCAP_List.ToArray(), n+i*16, b4Array, 0, 4);
+                                fval = BitConverter.ToSingle(b4Array, 0);
+                                strB.Append(fval.ToString("f10"));
+                                strB.Append(",");
+                            }
+                            strB.Remove(strB.Length - 1, 1);
+                            strB.Append("},\r\n ");
+                        }
+                        content = content.Replace(sPart, strB.ToString());
+                        break;
+                    case "keod_cof":
+                        sindex = content.IndexOf(source);
+                        sPart = GetValue(content, source, ";");
+                        eoffset = sPart.LastIndexOf('}');
+                        soffset = sPart.IndexOf('{');
+                        sPart = content.Substring(sindex + soffset + source.Length + 1, eoffset - soffset - 1);
+                        strB.Append("\r\n ");
+                        for (int i = 0; i < 6; i++)
+                        {
+                            strB.Append("\t\t{");
+                            for (int n = 0; n < 16; n = (n + 4))
+                            {
+                                Array.Copy(m_KEOD_List.ToArray(), n + i * 16, b4Array, 0, 4);
+                                fval = BitConverter.ToSingle(b4Array, 0);
+                                strB.Append(fval.ToString("f10"));
+                                strB.Append(",");
+                            }
+                            strB.Remove(strB.Length - 1, 1);
+                            strB.Append("},\r\n ");
+                        }
+                        content = content.Replace(sPart, strB.ToString());
+                        break;
+
+                }
+            }
+            return content;
+        }
+
+        private string RestoreNTCTable(string content)
+        {
+            Int16 wval = 0;
+            byte[] b4Array = new byte[4];
+            StringBuilder strB = new StringBuilder();
+
+            string sHeader = content.Substring(0, content.IndexOf("\r\n"));
+            strB.Append(sHeader); 
+            strB.Append("\r\n");
+            for (int i = 0; i < m_NTC_List.Count; i = (i + 4))
+            {
+                Array.Copy(m_NTC_List.ToArray(), i, b4Array,0, 4);
+                wval = BitConverter.ToInt16(b4Array, 0);
+                strB.Append(String.Format("{0:d}", wval));
+                strB.Append(",");
+                wval = BitConverter.ToInt16(b4Array, 2);
+                strB.Append(string.Format("{0:d}", wval));
+                strB.Append("\r\n");
+            }
+
+            return strB.ToString();
+        }
+
+        private void UploadHex2Bin(ref TASKMessage msg)
+        {
+            string prjName = "test";
+            string fullpath = FolderMap.m_logs_folder + prjName + DateTime.Now.GetDateTimeFormats('s')[0].ToString().Replace(@":", @"-") + ".bin";
+            var bdata = msg.flashData;
+            SaveFile(fullpath, ref bdata);
         }
         #endregion
     }

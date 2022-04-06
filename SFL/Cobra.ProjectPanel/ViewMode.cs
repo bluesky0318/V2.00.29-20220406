@@ -101,8 +101,7 @@ namespace Cobra.ProjectPanel
                     case "Format":
                         if (!UInt16.TryParse(de.Value.ToString(), out udata))
                             model.type = 0;
-                        else
-                            
+                        else                            
                             model.type = udata;
                         switch ((FILE_TYPE)model.type)
                         {
@@ -126,6 +125,9 @@ namespace Cobra.ProjectPanel
                                 break;
                             case FILE_TYPE.FILE_FD_TABLE:
                                 model.name = "Fault Detection File";
+                                break;
+                            case FILE_TYPE.FILE_FGLITE_TABLE:
+                                model.name = "FGLITE File";
                                 break;
                         }
                         break;
@@ -182,6 +184,9 @@ namespace Cobra.ProjectPanel
                         break;
                     case FILE_TYPE.FILE_PARAM:
                         (fl.userCtrl as Param.ParamUserControl).viewmode.WriteDevice();
+                        break;
+                    case FILE_TYPE.FILE_FGLITE_TABLE:
+                        (fl.userCtrl as Table.FGTableUserControl).WriteDevice();
                         break;
                 }
             }          

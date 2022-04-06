@@ -119,6 +119,21 @@
 				</SFL>
 			</Private>
 		</Element>
+    <Element Guid ="0x000f0003">
+      <PhysicalData>0</PhysicalData>
+      <PhyRef>1</PhyRef>
+      <RegRef>1</RegRef>
+      <SubType>2</SubType>
+      <SubSection>0</SubSection>
+      <Private>
+        <SFL Name ="Project">
+          <Index>2</Index>
+          <Format>8</Format>
+          <Folder>FGLITE Table</Folder>
+          <StartAddress>6B00</StartAddress>
+        </SFL>
+      </Private>
+    </Element>
 	</Section>
 	<Section Name ="BlackBox" Guid ="0x00020000">
 		<Element Guid ="0x00020000">

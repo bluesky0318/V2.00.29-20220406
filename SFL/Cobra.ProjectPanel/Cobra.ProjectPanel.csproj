@@ -64,6 +64,9 @@
     <Compile Include="Services.cs" />
     <Compile Include="Model.cs" />
     <Compile Include="SubUserControl.cs" />
+    <Compile Include="TableUserControl\FGTableUserControl.xaml.cs">
+      <DependentUpon>FGTableUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewMode.cs" />
     <Compile Include="HexUserControl\HexUserControl.xaml.cs">
       <DependentUpon>HexUserControl.xaml</DependentUpon>
@@ -87,6 +90,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ParamUserControl\ParamUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TableUserControl\FGTableUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -17,6 +17,7 @@ namespace Cobra.ProjectPanel
         FILE_SELF_DISCH_TABLE = 0x05,
         FILE_RC_TABLE = 0x06,
         FILE_FD_TABLE = 0x07,
+        FILE_FGLITE_TABLE = 0x08,
     }
 
     public class Proj : INotifyPropertyChanged //详细信息，可变动
