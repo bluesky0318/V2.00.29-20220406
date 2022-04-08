@@ -5,7 +5,7 @@ using Cobra.Common;
 
 namespace Cobra.Blueway
 {
-    public class DEMDeviceManage : IDEMLib2
+    public class DEMDeviceManage : IDEMLib3
     {
         private double m_Proj_Rsense;
         internal double Proj_Rsense
@@ -43,7 +43,16 @@ namespace Cobra.Blueway
             {ElementDefine.IDS_ERR_DEM_AUTHKEY_LEN_ILLEGAL,"The authentication key should be the unique 128bit."},
             {ElementDefine.IDS_ERR_DEM_AUTHKEY_DATA_ILLEGAL,"The authentication key should be the hex char."},
             {ElementDefine.IDS_ERR_DEM_FAILED_AUTHKEY_COMPARE,"Failed to verify the authentication" },
-            {ElementDefine.IDS_ERR_DEM_RECONNECT_CHARGER,"Please Re-connect the charger." }
+            {ElementDefine.IDS_ERR_DEM_RECONNECT_CHARGER,"Please Re-connect the charger." },
+            {ElementDefine.IDS_ERR_DEM_CSV_COLUNM, "The CSV file should be only two columns"},
+            {ElementDefine.IDS_ERR_DEM_CSV_DATA, "Some data failed to be parsed in the CSV file"},
+            {ElementDefine.IDS_ERR_DEM_CSV_TABLE, "The table should be lost in the CSV file"},
+            {ElementDefine.IDS_ERR_DEM_CSV_HEADER, "The table header should be inconsistent with expectation" },
+            {ElementDefine.IDS_ERR_DEM_C_TABLES, "Some tables should be lost in the C file"},
+            {ElementDefine.IDS_ERR_DEM_C_DATA, "Some data failed to be parsed in the C file"},
+            {ElementDefine.IDS_ERR_DEM_FGLITE_BUILD,"Failed to build the FG memory" },
+            {ElementDefine.IDS_ERR_DEM_FGLITE_UPDATE, "Failed to update the FG memory"}
+
         };
         #endregion
 
@@ -161,6 +170,13 @@ namespace Cobra.Blueway
         public UInt32 WriteDevice(ref TASKMessage bgworker)
         {
             return m_dem_bm.WriteDevice(ref bgworker);
+        }
+
+        public UInt32 Verification(ref TASKMessage bgworker)
+        {
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
+            ret = m_dem_bm.Verification(ref bgworker);
+            return ret;
         }
         #endregion
 

@@ -321,6 +321,7 @@ namespace Cobra.ProjectPanel
             string title = string.Empty;
             string fileName = string.Empty;
             ProjFile pfl = null;
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
             switch ((FILE_TYPE)pf.type)
             {
                 case FILE_TYPE.FILE_HEX:
@@ -392,6 +393,11 @@ namespace Cobra.ProjectPanel
                         System.Windows.Forms.FolderBrowserDialog openFolderDialog = new System.Windows.Forms.FolderBrowserDialog();
                         openFolderDialog.Description = title;
                         if (openFolderDialog.ShowDialog() != System.Windows.Forms.DialogResult.OK) return;
+
+                        subTask_Dic.Clear();
+                        subTask_Dic.Add("FGTable", System.IO.Path.Combine(openFolderDialog.SelectedPath));
+                        ret = Verification();
+                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return;
 
                         string path = System.IO.Path.Combine(FolderMap.m_sm_work_folder + pf.folder);
                         if (Directory.Exists(path))
@@ -792,6 +798,40 @@ namespace Cobra.ProjectPanel
             parent.bBusy = false;
         }
         #endregion
+
+        public UInt32 Verification()
+        {
+            msg.owner = this;
+            msg.gm.sflname = sflname;
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
+            if (parent.bBusy)
+            {
+                gm.level = 1;
+                gm.controls = "Write To Device button!";
+                gm.message = LibErrorCode.GetErrorDescription(LibErrorCode.IDS_ERR_EM_THREAD_BKWORKER_BUSY);
+                gm.bupdate = true;
+                CallWarningControl(gm);
+                return LibErrorCode.IDS_ERR_EM_THREAD_BKWORKER_BUSY;
+            }
+            else
+                parent.bBusy = true;
+
+            msg.task = TM.TM_SPEICAL_VERIFICATION;
+            msg.sub_task_json = BuildJsonTask();
+            parent.AccessDevice(ref m_Msg);
+            while (msg.bgworker.IsBusy)
+                System.Windows.Forms.Application.DoEvents();
+            if (msg.errorcode != LibErrorCode.IDS_ERR_SUCCESSFUL)
+            {
+                gm.level = 2;
+                gm.message = LibErrorCode.GetErrorDescription(msg.errorcode);
+                CallWarningControl(gm);
+                parent.bBusy = false;
+                return msg.errorcode;
+            }
+            parent.bBusy = false;
+            return ret;
+        }
         #endregion
 
         #region 通用控件消息响应

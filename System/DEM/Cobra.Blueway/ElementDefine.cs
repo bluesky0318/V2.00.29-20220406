@@ -51,6 +51,16 @@ namespace Cobra.Blueway
         internal const UInt32 IDS_ERR_DEM_AUTHKEY_DATA_ILLEGAL = LibErrorCode.IDS_ERR_SECTION_DYNAMIC_DEM + 0x0007;
         internal const UInt32 IDS_ERR_DEM_FAILED_AUTHKEY_COMPARE = LibErrorCode.IDS_ERR_SECTION_DYNAMIC_DEM + 0x0008;
         internal const UInt32 IDS_ERR_DEM_RECONNECT_CHARGER = LibErrorCode.IDS_ERR_SECTION_DYNAMIC_DEM + 0x0009;
+
+        internal const UInt32 IDS_ERR_DEM_CSV_COLUNM = LibErrorCode.IDS_ERR_SECTION_DYNAMIC_DEM + 0x000A;
+        internal const UInt32 IDS_ERR_DEM_CSV_DATA = LibErrorCode.IDS_ERR_SECTION_DYNAMIC_DEM + 0x000B;
+        internal const UInt32 IDS_ERR_DEM_CSV_TABLE = LibErrorCode.IDS_ERR_SECTION_DYNAMIC_DEM + 0x000C;
+        internal const UInt32 IDS_ERR_DEM_CSV_HEADER = LibErrorCode.IDS_ERR_SECTION_DYNAMIC_DEM + 0x000D;
+        internal const UInt32 IDS_ERR_DEM_C_TABLES = LibErrorCode.IDS_ERR_SECTION_DYNAMIC_DEM + 0x000E;
+        internal const UInt32 IDS_ERR_DEM_C_DATA = LibErrorCode.IDS_ERR_SECTION_DYNAMIC_DEM + 0x000F;
+        internal const UInt32 IDS_ERR_DEM_FGLITE_BUILD = LibErrorCode.IDS_ERR_SECTION_DYNAMIC_DEM + 0x0010;
+        internal const UInt32 IDS_ERR_DEM_FGLITE_UPDATE = LibErrorCode.IDS_ERR_SECTION_DYNAMIC_DEM + 0x0011;
+
         #endregion
         public class BW_HMAC
         {

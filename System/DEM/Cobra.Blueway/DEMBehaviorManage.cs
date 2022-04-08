@@ -24,7 +24,7 @@ namespace Cobra.Blueway
         private object m_lock = new object();
         private Dictionary<string, string> m_Json_Options = null;
         private CCommunicateManager m_Interface = new CCommunicateManager();
-        private readonly string[] csvHeader = { "voltage", "temperature" };
+        private readonly string[] csvHeader = { "Vol", "Temp" };
         private readonly string[] lutHeader = { "ocv_cof", "y_data", "dcap_cof", "keod_cof" };
         private List<byte> m_NTC_List = new List<byte>();
         private List<byte> m_OCV_List = new List<byte>();
@@ -46,10 +46,12 @@ namespace Cobra.Blueway
 
             return m_Interface.OpenDevice(ref parent.m_busoption);
         }
+
         public bool DestroyInterface()
         {
             return m_Interface.CloseDevice();
         }
+
         public bool EnumerateInterface()
         {
             return m_Interface.FindDevices(ref parent.m_busoption);
@@ -70,6 +72,7 @@ namespace Cobra.Blueway
             ret = BlockRead(0x16, 0xF9, ref pval);
             return ret;
         }
+
         internal UInt32 ReadWord(byte reg, ref UInt16 pval)
         {
             UInt32 ret = 0;
@@ -79,6 +82,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         internal UInt32 MTPReadWord(byte reg, ref UInt16 pval)
         {
             UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
@@ -88,6 +92,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         internal UInt32 BlockRead(ref TASKMessage msg)
         {
             UInt32 ret = 0;
@@ -97,6 +102,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         protected UInt32 BlockRead(byte bus_addr, byte cmd, ref TSMBbuffer pval)
         {
             UInt32 ret = 0;
@@ -106,6 +112,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         internal UInt32 ParameterRead(UInt32 reg, ref TSMBbuffer pval)
         {
             byte[] bdata = new byte[] { 0xBB, 0x00, 0x00, 0x00, 0x00, 0x00 };
@@ -124,6 +131,7 @@ namespace Cobra.Blueway
             if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
             return ret;
         }
+
         protected UInt32 WriteWord(byte reg, UInt16 val)
         {
             UInt32 ret = 0;
@@ -133,6 +141,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         internal UInt32 MTPWriteWord(byte reg, UInt16 pval)
         {
             UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
@@ -142,6 +151,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         internal UInt32 APBWriteWord(byte reg, UInt16 pval)
         {
             UInt16 memory_addr = 0;
@@ -200,6 +210,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         internal UInt32 BlockWrite(ref TASKMessage msg)
         {
             UInt32 ret = 0;
@@ -209,6 +220,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         protected UInt32 BlockWrite(byte bus_addr, byte cmd, TSMBbuffer val)
         {
             UInt32 ret = 0;
@@ -218,6 +230,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         internal UInt32 ParameterWrite(UInt32 reg, byte[] pval)
         {
             byte[] bdata = null;
@@ -273,6 +286,7 @@ namespace Cobra.Blueway
             }
             return crc;
         }
+
         protected byte calc_crc_read(byte slave_addr, byte reg_addr, byte[] data)
         {
             byte[] pdata = new byte[5];
@@ -285,6 +299,7 @@ namespace Cobra.Blueway
 
             return crc8_calc(ref pdata, 5);
         }
+
         protected byte calc_crc_write(byte slave_addr, byte reg_addr, byte data0, byte data1)
         {
             byte[] pdata = new byte[4];
@@ -296,6 +311,7 @@ namespace Cobra.Blueway
 
             return crc8_calc(ref pdata, 4);
         }
+
         protected UInt32 OnReadWord(byte reg, ref UInt16 pval)
         {
             UInt16 DataOutLen = 0;
@@ -329,6 +345,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         internal UInt32 OnMTPReadWord(byte reg, ref UInt16 pval)
         {
             UInt16 memory_addr = 0;
@@ -371,6 +388,7 @@ namespace Cobra.Blueway
 
             return ret;
         }
+
         protected UInt32 OnBlockRead(byte bus_addr, byte cmd, ref TSMBbuffer pval)
         {
             var t = pval.bdata;
@@ -393,11 +411,13 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         protected UInt32 OnBlockRead(ref TASKMessage msg)
         {
             UInt32 ret = LibErrorCode.IDS_ERR_I2C_BB_TIMEOUT;
             return ret;
         }
+
         protected UInt32 OnWriteWord(byte reg, UInt16 val)
         {
             UInt16 DataOutLen = 0;
@@ -428,6 +448,7 @@ namespace Cobra.Blueway
 
             return ret;
         }
+
         internal UInt32 OnMTPWriteWord(byte reg, UInt16 pval)
         {
             UInt16 memory_addr = 0;
@@ -475,11 +496,13 @@ namespace Cobra.Blueway
 
             return ret;
         }
+
         protected UInt32 OnBlockWrite(ref TASKMessage msg)
         {
             UInt32 ret = LibErrorCode.IDS_ERR_I2C_BB_TIMEOUT;
             return ret;
         }
+
         protected UInt32 OnBlockWrite(byte bus_addr, byte cmd, TSMBbuffer val)
         {
             UInt16 DataOutLen = 0;
@@ -503,6 +526,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         protected UInt32 OnSetMemMode(ElementDefine.COBRA_MEMD mode)
         {
             UInt16 wdata1 = 0;
@@ -528,6 +552,7 @@ namespace Cobra.Blueway
             ret = OnWriteWord(ElementDefine.MEM_MODE_REG, (UInt16)(wdata | (UInt16)mode)); //i2c_reg(8'hc3), .pkt_in({8'h80,8'h03}
             return ret;
         }
+
         protected UInt32 OnWaitOpCompleted()
         {
             byte bdata = 0;
@@ -578,11 +603,13 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         public UInt32 EpBlockRead()
         {
             UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
             return ret;
         }
+
         public UInt32 Read(ref TASKMessage msg)
         {
             byte bcmd = 0, sbcmd = 0;
@@ -686,7 +713,7 @@ namespace Cobra.Blueway
                         Array.Copy(tsmBuffer.bdata, 1, b4data, 0, b4data.Length);
                         tableData.AddRange(b4data);
                     }
-                    BuildLUTJson(ref msg, tableData);
+                    ret = BuildLUTJson(ref msg, tableData);
                     break;
             }
             return ret;
@@ -751,11 +778,12 @@ namespace Cobra.Blueway
             switch ((ElementDefine.FILE_TYPE)msg.sub_task)
             {
                 case ElementDefine.FILE_TYPE.FILE_FGLITE_TABLE:
-                    byte[] m_tables = GetBytesFromLUT().ToArray();
-                    for (UInt32 i = 0; i < m_tables.Length; i = (i + 4))
+                    ret = GetBytesFromLUT(ref bdata);
+                    if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+                    for (UInt32 i = 0; i < bdata.Length; i = (i + 4))
                     {
                         Array.Clear(b4data, 0, b4data.Length);
-                        Array.Copy(m_tables, i, b4data, 0, 4);
+                        Array.Copy(bdata, i, b4data, 0, 4);
                         ret = ParameterWrite(i + ElementDefine.Project_StartAddress + ElementDefine.LUTTableArea_StartAddress, b4data);
                         if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) break;
                     }
@@ -763,11 +791,13 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         public UInt32 BitOperation(ref TASKMessage msg)
         {
             UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
             return ret;
         }
+
         public UInt32 ConvertHexToPhysical(ref TASKMessage msg)
         {
             Parameter param = null;
@@ -834,6 +864,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         public UInt32 ConvertPhysicalToHex(ref TASKMessage msg)
         {
             Parameter param = null;
@@ -895,6 +926,7 @@ namespace Cobra.Blueway
 
             return ret;
         }
+
         public UInt32 Command(ref TASKMessage msg)
         {
             bool bSwitch = false;
@@ -956,11 +988,13 @@ namespace Cobra.Blueway
                 switch (m_Json_Options["Button"])
                 {
                     case "FullDownloadPrj":
+                        byte[] tabledata = { };
                         msg.controlmsg.message = "Begin to handshake...";
                         msg.controlreq = COMMON_CONTROL.COMMON_CONTROL_WAITTING;
-                        byte[] m_tables = GetBytesFromLUT().ToArray();
+                        ret = GetBytesFromLUT(ref tabledata);
+                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
                         if (msg.flashData != null)
-                            Array.Copy(m_tables, 0, msg.flashData, ElementDefine.LUTTableArea_StartAddress, m_tables.Length);
+                            Array.Copy(tabledata, 0, msg.flashData, ElementDefine.LUTTableArea_StartAddress, tabledata.Length);
                         UploadHex2Bin(ref msg);
                         ret = Handshake(ref msg);
                         if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL)
@@ -1054,6 +1088,7 @@ namespace Cobra.Blueway
             }
             return LibErrorCode.IDS_ERR_SUCCESSFUL;
         }
+
         public UInt32 GetSystemInfor(ref TASKMessage msg)
         {
             byte bcmd = 0;
@@ -1112,11 +1147,13 @@ namespace Cobra.Blueway
             param.phydata = (double)wdata;
             return ret;
         }
+
         public UInt32 GetRegisteInfor(ref TASKMessage msg)
         {
             UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
             return ret;
         }
+
         public UInt32 ReadDevice(ref TASKMessage msg)
         {
             var json = SharedAPI.DeserializeStringToDictionary<string, string>(msg.sub_task_json);
@@ -1148,6 +1185,7 @@ namespace Cobra.Blueway
             }
             return ret;
         }
+
         public UInt32 WriteDevice(ref TASKMessage msg)
         {
             UInt16 wDataOutLength = 0;
@@ -1218,6 +1256,7 @@ namespace Cobra.Blueway
             Array.Copy(rBuffer.bdata, 1, btmp, 4 * (rBuffer.length - 1), (rBuffer.length - 1));
             return ret;
         }
+
         private UInt32 uploadEntireLogArea()
         {
             byte[] bval = new byte[144];
@@ -1233,6 +1272,7 @@ namespace Cobra.Blueway
             return ret;
 
         }
+        
         internal void SaveFile(string fullpath, ref byte[] bdata)
         {
             FileInfo file = new FileInfo(@fullpath);
@@ -1364,34 +1404,29 @@ namespace Cobra.Blueway
             return str.Substring(i1 + str1.Length, i2 - i1 - str2.Length);
         }
 
-        public byte[] IEEE754ForFloatPoint(string fstr, int size)
+        public UInt32 IEEE754ForFloatPoint(string fstr, int size, ref byte[] bArray)
         {
             byte[] nbyte = null;
             float dval = 0;
-            UInt32 wval = 0;
+            UInt32 wval = 0, ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
             switch (size)
             {
                 case 3:
                     if (!UInt32.TryParse(fstr, out wval))
-                    {
-                        wval = 0;
-                        nbyte = new byte[4] { 0, 0, 0, 0 };
-                    }
+                        ret = ElementDefine.IDS_ERR_DEM_C_DATA;
                     else
                         nbyte = BitConverter.GetBytes(wval);
                     break;
                 case 4:
                     if (!float.TryParse(fstr, out dval))
-                    {
-                        dval = 0;
-                        nbyte = new byte[4] { 0, 0, 0, 0 };
-                    }
+                        ret = ElementDefine.IDS_ERR_DEM_C_DATA;
                     else
                         nbyte = BitConverter.GetBytes(dval);
                     break;
             }
             if (!BitConverter.IsLittleEndian) Array.Reverse(nbyte);
-            return nbyte;
+            bArray = nbyte;
+            return ret;
         }
         #endregion
 
@@ -1419,6 +1454,7 @@ namespace Cobra.Blueway
             ret = EnterBootMode(ref msg);
             return ret;
         }
+
         private UInt32 FWHandshake(ref TASKMessage msg)
         {
             UInt32 wval = 0;
@@ -1462,6 +1498,7 @@ namespace Cobra.Blueway
             ret = EnterBootMode(ref msg);
             return ret;
         }
+
         private UInt32 MassErase()
         {
             byte[] bdata = new byte[] { 0x0F, 0xA5, 0x66 };
@@ -1472,6 +1509,7 @@ namespace Cobra.Blueway
             ret = BlockWrite(0x3C, 0xFC, wBuffer);
             return ret;
         }
+
         private UInt32 SetupAddress(UInt32 wval)
         {
             byte[] bdata = new byte[4];
@@ -1486,6 +1524,7 @@ namespace Cobra.Blueway
             ret = BlockWrite(0x3C, 0xF9, wBuffer);
             return ret;
         }
+
         private UInt32 WriteData(byte[] buff)
         {
             if ((buff == null) | (buff.Length != 32)) return ElementDefine.IDS_ERR_DEM_INVALID_BUFFER;
@@ -1496,6 +1535,7 @@ namespace Cobra.Blueway
             ret = BlockWrite(0x3C, 0xF7, wBuffer);
             return ret;
         }
+
         private UInt32 CheckSumVerify(byte[] image)
         {
             UInt32 swSum = 0, hwSum = 0;
@@ -1511,6 +1551,7 @@ namespace Cobra.Blueway
             if (swSum != hwSum) return ElementDefine.IDS_ERR_DEM_CRC16_COMPARE;
             return ret;
         }
+
         private UInt32 ExistFWUpdateMode()
         {
             byte[] bdata = new byte[] { 0x0F, 0xA5, 0xB0 };
@@ -1521,6 +1562,7 @@ namespace Cobra.Blueway
             ret = BlockWrite(0x3C, 0xFE, wBuffer);
             return ret;
         }
+
         private UInt32 Reset()
         {
             byte[] bdata = new byte[] { 0xF0, 0x5A, 0x9C };
@@ -1531,6 +1573,7 @@ namespace Cobra.Blueway
             ret = BlockWrite(0x3C, 0xF0, wBuffer);
             return ret;
         }
+
         private UInt32 HWReset()
         {
             UInt16 wval = 0;
@@ -1544,6 +1587,7 @@ namespace Cobra.Blueway
             ret = APBWriteWord(0x97, wval);
             return ret;
         }
+
         private UInt32 FWVersion(ref UInt32 version)
         {
             byte[] bdata = new byte[] { 0x01, 0x00 };
@@ -1562,6 +1606,7 @@ namespace Cobra.Blueway
             return ret;
 
         }
+
         private UInt32 FGVersion(ref UInt32 version)
         {
             byte[] bdata = new byte[] { 0x02, 0x00 };
@@ -1580,6 +1625,7 @@ namespace Cobra.Blueway
             return ret;
 
         }
+
         private UInt32 FWUpdateMode()
         {
             byte[] bdata = new byte[] { 0x04, 0x00, 0x4F, 0x50, 0x53, 0x49 };
@@ -1595,6 +1641,7 @@ namespace Cobra.Blueway
             return ret;
 
         }
+
         private UInt32 EnterBootMode(ref TASKMessage msg)
         {
             UInt16 wval = 0;
@@ -1624,6 +1671,7 @@ namespace Cobra.Blueway
             } while (DateTime.Now.Subtract(beginTime).TotalMilliseconds < 20000);
             return ret;
         }
+
         private UInt32 ClearLog()
         {
             DateTime dt = DateTime.Now;
@@ -1660,28 +1708,32 @@ namespace Cobra.Blueway
         #endregion
 
         #region FG LIT解析
-        private List<byte> GetBytesFromLUT()
+        private UInt32 GetBytesFromLUT(ref byte[] bArray)
         {
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
             foreach (KeyValuePair<string, string> kvp in m_Json_Options)
             {
                 switch (Path.GetExtension(kvp.Key))
                 {
                     case ".c":
-                        BuildLUTTable(kvp.Value);
+                        ret = BuildLUTTable(kvp.Value);
                         break;
                     case ".csv":
-                        BuildNTCTable(kvp.Value);
+                        ret = BuildNTCTable(kvp.Value);
                         break;
                 }
             }
-            return BuildTableMemory();
+            if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+            ret = BuildTableMemory(ref bArray);
+            return ret;
         }
 
-        private void BuildLUTTable(string content)
+        private UInt32 BuildLUTTable(string content)
         {
             string sPart = string.Empty;
             string[] sdata = null;
             byte[] byteArray = null;
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
 
             m_OCV_List.Clear();
             m_YAXIS_List.Clear();
@@ -1691,6 +1743,7 @@ namespace Cobra.Blueway
             foreach (string source in lutHeader)
             {
                 sPart = GetValue(content, source, ";");
+                if (string.IsNullOrEmpty(sPart)) return ElementDefine.IDS_ERR_DEM_C_TABLES;
                 sPart = sPart.Replace("\n", "").Replace(" ", "").Replace("\t", "").Replace("\r", "");
                 switch (source)
                 {
@@ -1698,7 +1751,8 @@ namespace Cobra.Blueway
                         sdata = GetBetweenStr(sPart, "{", "}").Split(',');
                         foreach (string sd in sdata)
                         {
-                            byteArray = IEEE754ForFloatPoint(sd, 4);
+                            ret = IEEE754ForFloatPoint(sd, 4, ref byteArray);
+                            if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
                             m_OCV_List.AddRange(byteArray);
                         }
                         break;
@@ -1706,7 +1760,8 @@ namespace Cobra.Blueway
                         sdata = GetBetweenStr(sPart, "{", "}").Split(',');
                         foreach (string sd in sdata)
                         {
-                            byteArray = IEEE754ForFloatPoint(sd, 3);
+                            ret = IEEE754ForFloatPoint(sd, 3, ref byteArray);
+                            if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
                             m_YAXIS_List.AddRange(byteArray);
                         }
                         break;
@@ -1716,7 +1771,8 @@ namespace Cobra.Blueway
                         foreach (string sd in sdata)
                         {
                             if (string.IsNullOrEmpty(sd)) continue;
-                            byteArray = IEEE754ForFloatPoint(sd, 4);
+                            ret = IEEE754ForFloatPoint(sd, 4, ref byteArray);
+                            if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
                             m_DCAP_List.AddRange(byteArray);
                         }
                         break;
@@ -1726,35 +1782,54 @@ namespace Cobra.Blueway
                         foreach (string sd in sdata)
                         {
                             if (string.IsNullOrEmpty(sd)) continue;
-                            byteArray = IEEE754ForFloatPoint(sd, 4);
+                            ret = IEEE754ForFloatPoint(sd, 4, ref byteArray);
+                            if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
                             m_KEOD_List.AddRange(byteArray);
                         }
                         break;
-
                 }
             }
+            if ((m_OCV_List.Count == 0) | (m_OCV_List.Count == 0) | (m_OCV_List.Count == 0) | (m_OCV_List.Count == 0))
+                ret = ElementDefine.IDS_ERR_DEM_C_TABLES;
+            return ret;
         }
 
-        private void BuildNTCTable(string content)
+        private UInt32 BuildNTCTable(string content)
         {
             byte[] nbyte;
             short sval = 0;
-            string[] sdata = content.Split(new char[2] { '\r', '\n' });
+            bool bHeader = true;
+            string[] sdata = content.TrimEnd().Split(new string[] { "\r\n" }, StringSplitOptions.None);
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
             m_NTC_List.Clear();
             foreach (string ss in sdata)
             {
                 string[] spart = ss.Split(',');
-                if (spart.Length != 2) continue;
-                if (!short.TryParse(spart[0], out sval)) continue;
+                if (spart.Length != 2) return ElementDefine.IDS_ERR_DEM_CSV_COLUNM;
+                foreach (string sh in csvHeader)
+                {
+                    if (!bHeader) break;
+                    if (ss.Contains(sh)) continue;
+                    return ElementDefine.IDS_ERR_DEM_CSV_HEADER;
+                }
+                if(bHeader)
+                {
+                    bHeader = false;
+                    continue;
+                }
+                if (!short.TryParse(spart[0], out sval)) return ElementDefine.IDS_ERR_DEM_CSV_DATA;
                 nbyte = BitConverter.GetBytes(sval);
                 m_NTC_List.AddRange(nbyte);
-                if (!short.TryParse(spart[1], out sval)) continue;
+                if (!short.TryParse(spart[1], out sval)) return ElementDefine.IDS_ERR_DEM_CSV_DATA;
                 nbyte = BitConverter.GetBytes(sval);
                 m_NTC_List.AddRange(nbyte);
             }
+            if (m_NTC_List.Count == 0)
+                ret = ElementDefine.IDS_ERR_DEM_CSV_TABLE;
+            return ret;
         }
 
-        private List<byte> BuildTableMemory()
+        private UInt32 BuildTableMemory(ref byte[] bArray)
         {
             UInt32 NTCAddr = 0, NTCSize = 0;
             UInt32 OCVAddr = 0, OCVSize = 0;
@@ -1763,68 +1838,85 @@ namespace Cobra.Blueway
             UInt32 KEODAddr = 0, KEODSize = 0;
             UInt32 LUTCheckSum = 0, LUTSize = 0, LUTVer = 1;
             List<byte> m_tableData = new List<byte>();
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
 
-            NTCAddr = 52;
-            NTCSize = (UInt32)m_NTC_List.Count;
-            OCVAddr = (NTCAddr + NTCSize);
-            OCVSize = (UInt32)m_OCV_List.Count;
-            YAXISAddr = (NTCAddr + NTCSize + OCVSize);
-            YAXISSize = (UInt32)m_YAXIS_List.Count;
-            DCAPAddr = (NTCAddr + NTCSize + OCVSize + YAXISSize);
-            DCAPSize = (UInt32)m_DCAP_List.Count;
-            KEODAddr = (NTCAddr + NTCSize + OCVSize + YAXISSize + DCAPSize);
-            KEODSize = (UInt32)m_KEOD_List.Count;
-            LUTSize = (NTCAddr + NTCSize + OCVSize + YAXISSize + DCAPSize + KEODSize - 8);
+            try
+            {
+                NTCAddr = 52;
+                NTCSize = (UInt32)m_NTC_List.Count;
+                OCVAddr = (NTCAddr + NTCSize);
+                OCVSize = (UInt32)m_OCV_List.Count;
+                YAXISAddr = (NTCAddr + NTCSize + OCVSize);
+                YAXISSize = (UInt32)m_YAXIS_List.Count;
+                DCAPAddr = (NTCAddr + NTCSize + OCVSize + YAXISSize);
+                DCAPSize = (UInt32)m_DCAP_List.Count;
+                KEODAddr = (NTCAddr + NTCSize + OCVSize + YAXISSize + DCAPSize);
+                KEODSize = (UInt32)m_KEOD_List.Count;
+                LUTSize = (NTCAddr + NTCSize + OCVSize + YAXISSize + DCAPSize + KEODSize - 8);
 
-            m_tableData.AddRange(BitConverter.GetBytes(LUTSize));
-            m_tableData.AddRange(BitConverter.GetBytes(LUTVer));
-            m_tableData.AddRange(BitConverter.GetBytes(NTCAddr));
-            m_tableData.AddRange(BitConverter.GetBytes(NTCSize));
-            m_tableData.AddRange(BitConverter.GetBytes(OCVAddr));
-            m_tableData.AddRange(BitConverter.GetBytes(OCVSize));
-            m_tableData.AddRange(BitConverter.GetBytes(YAXISAddr));
-            m_tableData.AddRange(BitConverter.GetBytes(YAXISSize));
-            m_tableData.AddRange(BitConverter.GetBytes(DCAPAddr));
-            m_tableData.AddRange(BitConverter.GetBytes(DCAPSize));
-            m_tableData.AddRange(BitConverter.GetBytes(KEODAddr));
-            m_tableData.AddRange(BitConverter.GetBytes(KEODSize));
-            m_tableData.AddRange(m_NTC_List);
-            m_tableData.AddRange(m_OCV_List);
-            m_tableData.AddRange(m_YAXIS_List);
-            m_tableData.AddRange(m_DCAP_List);
-            m_tableData.AddRange(m_KEOD_List);
-            LUTCheckSum = crc32_calc(m_tableData.ToArray());
-            m_tableData.InsertRange(0, BitConverter.GetBytes(LUTCheckSum));
-            return m_tableData;
+                m_tableData.AddRange(BitConverter.GetBytes(LUTSize));
+                m_tableData.AddRange(BitConverter.GetBytes(LUTVer));
+                m_tableData.AddRange(BitConverter.GetBytes(NTCAddr));
+                m_tableData.AddRange(BitConverter.GetBytes(NTCSize));
+                m_tableData.AddRange(BitConverter.GetBytes(OCVAddr));
+                m_tableData.AddRange(BitConverter.GetBytes(OCVSize));
+                m_tableData.AddRange(BitConverter.GetBytes(YAXISAddr));
+                m_tableData.AddRange(BitConverter.GetBytes(YAXISSize));
+                m_tableData.AddRange(BitConverter.GetBytes(DCAPAddr));
+                m_tableData.AddRange(BitConverter.GetBytes(DCAPSize));
+                m_tableData.AddRange(BitConverter.GetBytes(KEODAddr));
+                m_tableData.AddRange(BitConverter.GetBytes(KEODSize));
+                m_tableData.AddRange(m_NTC_List);
+                m_tableData.AddRange(m_OCV_List);
+                m_tableData.AddRange(m_YAXIS_List);
+                m_tableData.AddRange(m_DCAP_List);
+                m_tableData.AddRange(m_KEOD_List);
+                LUTCheckSum = crc32_calc(m_tableData.ToArray());
+                m_tableData.InsertRange(0, BitConverter.GetBytes(LUTCheckSum));
+                bArray = m_tableData.ToArray();
+            }
+            catch
+            {
+                ret = ElementDefine.IDS_ERR_DEM_FGLITE_BUILD;
+            }
+            return ret;
         }
 
-        private void BuildLUTJson(ref TASKMessage msg, List<byte> tableData)
+        private UInt32 BuildLUTJson(ref TASKMessage msg, List<byte> tableData)
         {
             int dicCount = m_Json_Options.Count;
             string[] strKey = new string[dicCount];
-            string cContent = string.Empty, csvContent = string.Empty;
-            RestoreTables(tableData);
+            string content = string.Empty;
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
+            ret = RestoreTables(tableData);
+            if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
 
             m_Json_Options.Keys.CopyTo(strKey, 0);
             for (int i = 0; i < strKey.Length; i++)
             {
                 if (m_Json_Options.ContainsKey(strKey[i]))
                 {
+                    content = m_Json_Options[strKey[i]];
                     switch (Path.GetExtension(strKey[i]))
                     {
                         case ".c":
-                            m_Json_Options[strKey[i]] = RestoreLUTTable(m_Json_Options[strKey[i]]);
+                            ret = RestoreLUTTable(ref content);
+                            if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+                            m_Json_Options[strKey[i]] = content;
                             break;
                         case ".csv":
-                            m_Json_Options[strKey[i]] = RestoreNTCTable(m_Json_Options[strKey[i]]); 
+                            ret = RestoreNTCTable(ref content);
+                            if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+                            m_Json_Options[strKey[i]] = content;
                             break;
                     }
                 }
             }
             msg.sub_task_json = SharedAPI.SerializeDictionaryToJsonString(m_Json_Options);
+            return ret;
         }
 
-        private void RestoreTables(List<byte> tableData)
+        private UInt32 RestoreTables(List<byte> tableData)
         {
             UInt32 NTCAddr = 0, NTCSize = 0;
             UInt32 OCVAddr = 0, OCVSize = 0;
@@ -1834,29 +1926,38 @@ namespace Cobra.Blueway
             UInt32 LUTCheckSum = 0, LUTSize = 0, LUTVer = 1;
             byte[] b4Array = new byte[4];
             byte[] tableBytes = tableData.ToArray();
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
 
-            LUTCheckSum = BitConverter.ToUInt32(tableBytes, 0);
-            LUTSize = BitConverter.ToUInt32(tableBytes, 4);
-            LUTVer = BitConverter.ToUInt32(tableBytes, 8);
-            NTCAddr = BitConverter.ToUInt32(tableBytes, 12);
-            NTCSize = BitConverter.ToUInt32(tableBytes, 16);
-            OCVAddr = BitConverter.ToUInt32(tableBytes, 20);
-            OCVSize = BitConverter.ToUInt32(tableBytes, 24);
-            YAXISAddr = BitConverter.ToUInt32(tableBytes, 28);
-            YAXISSize = BitConverter.ToUInt32(tableBytes, 32);
-            DCAPAddr = BitConverter.ToUInt32(tableBytes, 36);
-            DCAPSize = BitConverter.ToUInt32(tableBytes, 40);
-            KEODAddr = BitConverter.ToUInt32(tableBytes, 44);
-            KEODSize = BitConverter.ToUInt32(tableBytes, 48);
+            try
+            {
+                LUTCheckSum = BitConverter.ToUInt32(tableBytes, 0);
+                LUTSize = BitConverter.ToUInt32(tableBytes, 4);
+                LUTVer = BitConverter.ToUInt32(tableBytes, 8);
+                NTCAddr = BitConverter.ToUInt32(tableBytes, 12);
+                NTCSize = BitConverter.ToUInt32(tableBytes, 16);
+                OCVAddr = BitConverter.ToUInt32(tableBytes, 20);
+                OCVSize = BitConverter.ToUInt32(tableBytes, 24);
+                YAXISAddr = BitConverter.ToUInt32(tableBytes, 28);
+                YAXISSize = BitConverter.ToUInt32(tableBytes, 32);
+                DCAPAddr = BitConverter.ToUInt32(tableBytes, 36);
+                DCAPSize = BitConverter.ToUInt32(tableBytes, 40);
+                KEODAddr = BitConverter.ToUInt32(tableBytes, 44);
+                KEODSize = BitConverter.ToUInt32(tableBytes, 48);
 
-            m_NTC_List = tableData.GetRange((int)NTCAddr, (int)NTCSize);
-            m_OCV_List = tableData.GetRange((int)OCVAddr, (int)OCVSize);
-            m_YAXIS_List = tableData.GetRange((int)YAXISAddr, (int)YAXISSize);
-            m_DCAP_List = tableData.GetRange((int)DCAPAddr, (int)DCAPSize);
-            m_KEOD_List = tableData.GetRange((int)KEODAddr, (int)KEODSize);
+                m_NTC_List = tableData.GetRange((int)NTCAddr, (int)NTCSize);
+                m_OCV_List = tableData.GetRange((int)OCVAddr, (int)OCVSize);
+                m_YAXIS_List = tableData.GetRange((int)YAXISAddr, (int)YAXISSize);
+                m_DCAP_List = tableData.GetRange((int)DCAPAddr, (int)DCAPSize);
+                m_KEOD_List = tableData.GetRange((int)KEODAddr, (int)KEODSize);
+            }
+            catch
+            {
+                ret = ElementDefine.IDS_ERR_DEM_FGLITE_UPDATE;
+            }
+            return ret;
         }
 
-        private string RestoreLUTTable(string content)
+        private UInt32 RestoreLUTTable(ref string content)
         {
             UInt32 wval = 0;
             float fval = 0;
@@ -1865,6 +1966,8 @@ namespace Cobra.Blueway
             byte[] b4Array = new byte[4];
             int sindex = 0, eoffset = 0, soffset = 0;
             StringBuilder strB = new StringBuilder();
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
+
             foreach (string source in lutHeader)
             {
                 strB.Clear();
@@ -1916,9 +2019,9 @@ namespace Cobra.Blueway
                         for (int i = 0; i < 6; i++)
                         {
                             strB.Append("\t\t{");
-                            for(int n = 0; n < 16; n = (n + 4))
+                            for (int n = 0; n < 16; n = (n + 4))
                             {
-                                Array.Copy(m_DCAP_List.ToArray(), n+i*16, b4Array, 0, 4);
+                                Array.Copy(m_DCAP_List.ToArray(), n + i * 16, b4Array, 0, 4);
                                 fval = BitConverter.ToSingle(b4Array, 0);
                                 strB.Append(fval.ToString("f10"));
                                 strB.Append(",");
@@ -1950,24 +2053,25 @@ namespace Cobra.Blueway
                         }
                         content = content.Replace(sPart, strB.ToString());
                         break;
-
                 }
             }
-            return content;
+            return ret;
         }
 
-        private string RestoreNTCTable(string content)
+        private UInt32 RestoreNTCTable(ref string content)
         {
             Int16 wval = 0;
             byte[] b4Array = new byte[4];
             StringBuilder strB = new StringBuilder();
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
 
             string sHeader = content.Substring(0, content.IndexOf("\r\n"));
-            strB.Append(sHeader); 
+            if (sHeader.Split(',').Length != 2) return ElementDefine.IDS_ERR_DEM_CSV_COLUNM;
+            strB.Append(sHeader);
             strB.Append("\r\n");
             for (int i = 0; i < m_NTC_List.Count; i = (i + 4))
             {
-                Array.Copy(m_NTC_List.ToArray(), i, b4Array,0, 4);
+                Array.Copy(m_NTC_List.ToArray(), i, b4Array, 0, 4);
                 wval = BitConverter.ToInt16(b4Array, 0);
                 strB.Append(String.Format("{0:d}", wval));
                 strB.Append(",");
@@ -1975,8 +2079,8 @@ namespace Cobra.Blueway
                 strB.Append(string.Format("{0:d}", wval));
                 strB.Append("\r\n");
             }
-
-            return strB.ToString();
+            content = strB.ToString();
+            return ret;
         }
 
         private void UploadHex2Bin(ref TASKMessage msg)
@@ -1985,6 +2089,62 @@ namespace Cobra.Blueway
             string fullpath = FolderMap.m_logs_folder + prjName + DateTime.Now.GetDateTimeFormats('s')[0].ToString().Replace(@":", @"-") + ".bin";
             var bdata = msg.flashData;
             SaveFile(fullpath, ref bdata);
+        }
+
+        internal UInt32 Verification(ref TASKMessage msg)
+        {
+            string filePath = string.Empty;
+            string content = string.Empty;
+            string type = string.Empty;
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
+            m_Json_Options = SharedAPI.DeserializeStringToDictionary<string, string>(msg.sub_task_json);
+            if (m_Json_Options.ContainsKey("FGTable"))
+            {
+                filePath = m_Json_Options["FGTable"];
+                switch (Path.GetExtension(m_Json_Options["FGTable"]))
+                {
+                    case ".c":
+                        ret = SharedAPI.FileIsOpen(filePath);
+                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+                        content = System.IO.File.ReadAllText(filePath, Encoding.Default);
+                        ret = BuildLUTTable(content);
+                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+                        break;
+                    case ".csv":
+                        ret = SharedAPI.FileIsOpen(filePath);
+                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+                        content = System.IO.File.ReadAllText(filePath, Encoding.Default);
+                        ret = BuildNTCTable(content);
+                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+                        break;
+                    default:
+                        {
+                            foreach (string file in System.IO.Directory.GetFiles(filePath))
+                            {
+                                type = System.IO.Path.GetExtension(file);
+                                switch (type)
+                                {
+                                    case ".c":
+                                        ret = SharedAPI.FileIsOpen(file);
+                                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+                                        content = System.IO.File.ReadAllText(file, Encoding.Default);
+                                        ret = BuildLUTTable(content);
+                                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+                                        break;
+                                    case ".csv":
+                                        ret = SharedAPI.FileIsOpen(file);
+                                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+                                        content = System.IO.File.ReadAllText(file, Encoding.Default);
+                                        ret = BuildNTCTable(content);
+                                        if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return ret;
+                                        break;
+                                }
+                            }
+                        }
+                        break;
+                }
+            }
+            return ret;
         }
         #endregion
     }

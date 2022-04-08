@@ -87,31 +87,29 @@ namespace Cobra.ProjectPanel.Table
         public override void SaveFile(ProjFile pf)
         {
             string type = string.Empty;
-            string filename = string.Empty;
-            string targetpathfile = string.Empty;
             foreach (string file in System.IO.Directory.GetFiles(pf.folderPath))
             {
                 type = System.IO.Path.GetExtension(file);
                 switch (type)
                 {
                     case ".c":
-                        if(string.Compare(file,m_cPath) != 0)
-                        {
-                            File.Delete(file);
-                            targetpathfile = System.IO.Path.Combine(Path.GetDirectoryName(file), Path.GetFileName(m_cPath));
-                            File.Copy(m_cPath, targetpathfile);
-                        }
+                        SaveFile(file, crichTB);
                         break;
                     case ".csv":
-                        if (string.Compare(file, m_csvPath) != 0)
-                        {
-                            File.Delete(file);
-                            targetpathfile = System.IO.Path.Combine(Path.GetDirectoryName(file), Path.GetFileName(m_csvPath));
-                            File.Copy(m_csvPath, targetpathfile);
-                        }
+                        SaveFile(file, csvrichTB);
                         break;
                 }
             }
+        }
+
+        private void SaveFile(string filename, RichTextBox richTextBox)
+        {
+            if (string.IsNullOrEmpty(filename))
+            {
+                throw new ArgumentNullException();
+            }
+            range = new TextRange(richTextBox.Document.ContentStart, richTextBox.Document.ContentEnd);
+            File.WriteAllText(filename, range.Text, Encoding.Default);
         }
 
         public override void CloseFile()
@@ -122,6 +120,7 @@ namespace Cobra.ProjectPanel.Table
         private void LoadCSV_Click(object sender, RoutedEventArgs e)
         {
             string fullpath = string.Empty;
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
             Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
 
             openFileDialog.Title = "Load CSV File";
@@ -132,6 +131,11 @@ namespace Cobra.ProjectPanel.Table
             openFileDialog.RestoreDirectory = true;
             openFileDialog.InitialDirectory = FolderMap.m_currentproj_folder;
             if (openFileDialog.ShowDialog() == false) return;
+
+            (parent as MainControl).subTask_Dic.Clear();
+            (parent as MainControl).subTask_Dic.Add("FGTable", openFileDialog.FileName);
+            ret = (parent as MainControl).Verification();
+            if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return;
 
             m_csvPath = openFileDialog.FileName;
             string text = File.ReadAllText(m_csvPath, Encoding.Default);
@@ -145,6 +149,7 @@ namespace Cobra.ProjectPanel.Table
         private void LoadCFile_Click(object sender, RoutedEventArgs e)
         {
             string fullpath = string.Empty;
+            UInt32 ret = LibErrorCode.IDS_ERR_SUCCESSFUL;
             Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
 
             openFileDialog.Title = "Load FGLite File";
@@ -155,6 +160,11 @@ namespace Cobra.ProjectPanel.Table
             openFileDialog.RestoreDirectory = true;
             openFileDialog.InitialDirectory = FolderMap.m_currentproj_folder;
             if (openFileDialog.ShowDialog() == false) return;
+
+            (parent as MainControl).subTask_Dic.Clear();
+            (parent as MainControl).subTask_Dic.Add("FGTable", openFileDialog.FileName);
+            ret = (parent as MainControl).Verification();
+            if (ret != LibErrorCode.IDS_ERR_SUCCESSFUL) return;
 
             m_cPath = openFileDialog.FileName;
             range = new TextRange(crichTB.Document.ContentStart, crichTB.Document.ContentEnd);
